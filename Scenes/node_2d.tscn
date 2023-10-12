@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=29 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_q7g41"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_vhrjn"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://70ed4h7eq6uj" path="res://Assets/Textures/Background/CityDay/5.png" id="9_ccyi1"]
 [ext_resource type="Script" path="res://Scripts/FallZone.gd" id="10_4mhfg"]
 [ext_resource type="PackedScene" uid="uid://k73i0e7vpwbf" path="res://Scenes/Ambiente/PlataformaMovel.tscn" id="11_h71dx"]
+[ext_resource type="Script" path="res://Scripts/FireZone.gd" id="11_wxh1e"]
+[ext_resource type="PackedScene" uid="uid://bjkcp2jbiabgs" path="res://Scenes/Itens/AtomoBase.tscn" id="12_64aog"]
+[ext_resource type="PackedScene" uid="uid://qykltn38fadx" path="res://Scenes/modal-game-over.tscn" id="14_4g0gv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
 texture = ExtResource("1_q7g41")
@@ -578,6 +581,52 @@ size = Vector2(120, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsgnm"]
 size = Vector2(296, 35.25)
 
+[sub_resource type="Curve" id="Curve_2uljy"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_td4sx"]
+curve = SubResource("Curve_2uljy")
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c4c0r"]
+
+[sub_resource type="Gradient" id="Gradient_cajge"]
+offsets = PackedFloat32Array(0, 0.792593, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.481481, 0.481481, 0.481481, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dsqi6"]
+gradient = SubResource("Gradient_cajge")
+
+[sub_resource type="Curve" id="Curve_jodci"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.547368), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_jaqgm"]
+curve = SubResource("Curve_jodci")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1keqw"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(130, 1, 1)
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 90.0
+gravity = Vector3(0, -200, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+angular_velocity_curve = SubResource("CurveTexture_td4sx")
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+scale_min = 2.0
+scale_max = 4.0
+scale_curve = SubResource("CurveTexture_jaqgm")
+color = Color(1, 0.662745, 0, 1)
+color_ramp = SubResource("GradientTexture1D_dsqi6")
+color_initial_ramp = SubResource("GradientTexture1D_c4c0r")
+hue_variation_max = 0.3
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mooex"]
 size = Vector2(32, 96)
 
@@ -599,7 +648,7 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786441, 917510, 21, 786442, 983046, 21, 786447, 917510, 21, 786448, 983046, 21, 786453, 917510, 21, 786454, 983046, 21, 24, 1048582, 14)
 
 [node name="Player" parent="." instance=ExtResource("3_xlkhy")]
-position = Vector2(168, -72)
+position = Vector2(184, 96)
 collision_mask = 6
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -667,6 +716,8 @@ texture_filter = 2
 texture_repeat = 3
 texture = ExtResource("9_ccyi1")
 
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("14_4g0gv")]
+
 [node name="FallZone" type="Area2D" parent="."]
 position = Vector2(984, 440)
 script = ExtResource("10_4mhfg")
@@ -677,15 +728,25 @@ shape = SubResource("RectangleShape2D_d0aqy")
 debug_color = Color(1, 0, 0, 0.392157)
 
 [node name="FireZone" type="Area2D" parent="."]
-position = Vector2(2064, 416)
+show_behind_parent = true
+position = Vector2(2046, 416)
+input_pickable = false
 script = ExtResource("10_4mhfg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireZone"]
 shape = SubResource("RectangleShape2D_vsgnm")
 debug_color = Color(1, 0, 0, 0.392157)
+script = ExtResource("11_wxh1e")
 metadata/_edit_lock_ = true
 
+[node name="GPUParticles2D" type="GPUParticles2D" parent="FireZone"]
+amount = 3500
+process_material = SubResource("ParticleProcessMaterial_1keqw")
+
 [node name="LevelProps" type="Node" parent="."]
+
+[node name="Area2D" parent="LevelProps" instance=ExtResource("12_64aog")]
+position = Vector2(1856, 192)
 
 [node name="AnimatableBody2D" parent="." instance=ExtResource("11_h71dx")]
 position = Vector2(976, 256)
