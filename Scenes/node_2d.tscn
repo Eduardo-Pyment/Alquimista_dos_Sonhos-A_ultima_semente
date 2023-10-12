@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=21 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_q7g41"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_vhrjn"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://70ed4h7eq6uj" path="res://Assets/Textures/Background/CityDay/5.png" id="9_ccyi1"]
 [ext_resource type="Script" path="res://Scripts/FallZone.gd" id="10_4mhfg"]
 [ext_resource type="PackedScene" uid="uid://k73i0e7vpwbf" path="res://Scenes/Ambiente/PlataformaMovel.tscn" id="11_h71dx"]
+[ext_resource type="PackedScene" uid="uid://bt5gqx1a1xh4e" path="res://Scenes/hidrogenios.tscn" id="12_0sg0q"]
+[ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/oxigenio.tscn" id="13_hifxp"]
+[ext_resource type="PackedScene" uid="uid://bk6t51v2413ci" path="res://Scenes/maquina_agua.tscn" id="14_eu4ur"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
 texture = ExtResource("1_q7g41")
@@ -600,6 +603,7 @@ layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786
 
 [node name="Player" parent="." instance=ExtResource("3_xlkhy")]
 position = Vector2(168, -72)
+collision_layer = 2
 collision_mask = 6
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -703,6 +707,22 @@ shape = SubResource("RectangleShape2D_mooex")
 
 [node name="Sprite2D" parent="AnimatableBody2D2" index="1"]
 region_rect = Rect2(128, 0, 32, 96)
+
+[node name="Átomos" type="Node2D" parent="."]
+
+[node name="Hidrogenios" parent="Átomos" instance=ExtResource("12_0sg0q")]
+position = Vector2(375, 326)
+
+[node name="Hidrogenios2" parent="Átomos" instance=ExtResource("12_0sg0q")]
+position = Vector2(458, 326)
+
+[node name="oxigenio" parent="Átomos" instance=ExtResource("13_hifxp")]
+position = Vector2(416, 326)
+collision_layer = 4
+collision_mask = 2
+
+[node name="Maquina_agua" parent="." instance=ExtResource("14_eu4ur")]
+position = Vector2(529, 333)
 
 [connection signal="body_entered" from="FallZone" to="FallZone" method="_on_body_entered"]
 [connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
