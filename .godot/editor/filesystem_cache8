@@ -1,0 +1,55 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1697211203
+default_bus_layout.tres::AudioBusLayout::5317020090769701337::1697201525::0::1::::<><>::
+icon.svg::CompressedTexture2D::5493417388209191555::1697201525::1697201525::1::::<><>::
+README.md::TextFile::-1::1697201525::0::1::::<><>::
+::res://Assets/::1697201525
+::res://Assets/Textures/::1697201525
+::res://Assets/Textures/Animation/::1697201525
+::res://Assets/Textures/Animation/Player/::1697201566
+Player.gd::GDScript::-1::1697201525::0::1::::<>CharacterBody2D<>::
+playerPlaceholder.png::CompressedTexture2D::920267965494819079::1697201525::1697201566::1::::<><>::
+::res://Assets/Textures/Animation/Player/PlayerAnim/::1697201525
+Character Idle 48x48.png::CompressedTexture2D::3416966588148891129::1697201525::1697201525::1::::<><>::
+player jump 48x48.png::CompressedTexture2D::9060837862592682700::1697201525::1697201525::1::::<><>::
+player land 48x48.png::CompressedTexture2D::1358554939368801258::1697201525::1697201525::1::::<><>::
+run cycle 48x48.png::CompressedTexture2D::6588590433928616703::1697201525::1697201525::1::::<><>::
+::res://Assets/Textures/Background/::1697201525
+::res://Assets/Textures/Background/CityDay/::1697201525
+1.png::CompressedTexture2D::7722111070487875577::1697201525::1697201525::1::::<><>::
+2.png::CompressedTexture2D::7352096586456266::1697201525::1697201525::1::::<><>::
+3.png::CompressedTexture2D::5807008000425876513::1697201525::1697201525::1::::<><>::
+4.png::CompressedTexture2D::477570280433883763::1697201525::1697201525::1::::<><>::
+5.png::CompressedTexture2D::2297902201072040621::1697201525::1697201525::1::::<><>::
+::res://Assets/Textures/Itens/::1697201525
+::res://Assets/Textures/Itens/Moleculas/::1697201637
+Death_(32 x 32).png::CompressedTexture2D::4008270040361510217::1697201525::1697201525::1::::<><>::
+hidrogenio.png::CompressedTexture2D::4787482025988359249::1697201525::1697201525::1::::<><>::
+oxigenio.png::CompressedTexture2D::744730478891442644::1697201525::1697201525::1::::<><>::
+::res://Assets/Textures/Tiles/::1697201525
+level_tileset.png::CompressedTexture2D::1328510602523107428::1697201525::1697201525::1::::<><>::
+Tileset.png::CompressedTexture2D::560379506502959863::1697201525::1697201525::1::::<><>::
+::res://Scenes/::1697209888
+hidrogenios.tscn::PackedScene::3782334168334212690::1697201525::0::1::::<><>::res://Scripts/hidrogenios.gd<>uid://bxdvve8dcly7r
+maquina_agua.tscn::PackedScene::3153513426443548668::1697201525::0::1::::<><>::res://Scripts/maquina_agua.gd<>uid://s6sm1dwswbei
+modal-game-over.tscn::PackedScene::1173194397309169013::1697209888::0::1::::<><>::res://Scripts/GUI/HUD.gd
+node_2d.tscn::PackedScene::5700015994562190647::1697209888::0::1::::<><>::uid://s6sm1dwswbei::::res://Assets/Textures/Tiles/level_tileset.png<>uid://h8pmsdo7vejn::::res://Assets/Textures/Tiles/Tileset.png<>uid://dc2epskdddoys::::res://Scenes/player.tscn<>res://Scripts/ParallaxBackground.gd<>uid://diawbnsbkshpp::::res://Assets/Textures/Background/CityDay/1.png<>uid://dtc8xburpks::::res://Assets/Textures/Background/CityDay/2.png<>uid://coy7tq2bvgjin::::res://Assets/Textures/Background/CityDay/3.png<>uid://g2lroy6n5dcd::::res://Assets/Textures/Background/CityDay/4.png<>uid://70ed4h7eq6uj::::res://Assets/Textures/Background/CityDay/5.png<>uid://qykltn38fadx::::res://Scenes/modal-game-over.tscn<>res://Scripts/FallZone.gd<>uid://k73i0e7vpwbf::::res://Scenes/Ambiente/PlataformaMovel.tscn<>uid://bt5gqx1a1xh4e::::res://Scenes/hidrogenios.tscn<>uid://cx73sewvijfmk::::res://Scenes/oxigenio.tscn<>uid://bk6t51v2413ci::::res://Scenes/maquina_agua.tscn
+oxigenio.tscn::PackedScene::6454977324322901150::1697201525::0::1::::<><>::uid://ku0uqed7tyho
+player.tscn::PackedScene::7355648553603418146::1697209888::0::1::::<><>::res://Assets/Textures/Animation/Player/Player.gd<>uid://boxg68gxu5if6::::res://Assets/Textures/Animation/Player/PlayerAnim/Character Idle 48x48.png<>res://Scripts/MainCamera.gd<>uid://d2dew8hlcr6h1::::res://Assets/Textures/Animation/Player/PlayerAnim/player jump 48x48.png<>uid://c04tee34pcmbn::::res://Assets/Textures/Animation/Player/PlayerAnim/run cycle 48x48.png<>uid://tmdg31oaxsi1::::res://Assets/Textures/Animation/Player/PlayerAnim/player land 48x48.png
+::res://Scenes/Ambiente/::1697201525
+PlataformaMovel.tscn::PackedScene::769664207404519751::1697201525::0::1::::<><>::res://Scripts/PlataformaMovel_0.gd<>uid://s6sm1dwswbei
+::res://Scenes/Itens/::1697201525
+AtomoBase.tscn::PackedScene::3038913706959917762::1697201525::0::1::::<><>::res://Scripts/MoleculaBase.gd<>uid://dudtvjkvyir14
+::res://Scripts/::1697201525
+FallZone.gd::GDScript::-1::1697201525::0::1::::<>Area2D<>::
+FireZone.gd::GDScript::-1::1697201525::0::1::::<>CollisionShape2D<>::
+Globais.gd::GDScript::-1::1697201525::0::1::::<>Node<>::
+hidrogenios.gd::GDScript::-1::1697201525::0::1::::<>Area2D<>::
+MainCamera.gd::GDScript::-1::1697201525::0::1::::<>Camera2D<>::
+maquina_agua.gd::GDScript::-1::1697201525::0::1::::<>Area2D<>::
+MoleculaBase.gd::GDScript::-1::1697201525::0::1::::<>Area2D<>::
+oxigenio.gd::GDScript::-1::1697201525::0::1::::<>Area2D<>::
+ParallaxBackground.gd::GDScript::-1::1697201525::0::1::::<>ParallaxBackground<>::
+PlataformaMovel_0.gd::GDScript::-1::1697201525::0::1::::<>AnimatableBody2D<>::
+::res://Scripts/GUI/::1697201525
+HUD.gd::GDScript::-1::1697201525::0::1::::<>Control<>::
