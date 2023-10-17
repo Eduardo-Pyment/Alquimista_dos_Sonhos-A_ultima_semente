@@ -1,10 +1,1 @@
-res://Scenes/hidrogenios.tscn
-res://Scripts/hidrogenios.gd
 res://Scenes/node_2d.tscn
-res://Scenes/oxigenio.tscn
-res://Scenes/oxigenio.gd
-res://Maquina_agua.gd
-res://collision.gd
-res://Scenes/maquina_agua.tscn
-res://Scenes/player.tscn
-res://Scripts/maquina_agua.gd
