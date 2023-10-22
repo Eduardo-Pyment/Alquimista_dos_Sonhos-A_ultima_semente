@@ -1,1 +1,2 @@
-res://Scenes/node_2d.tscn
+res://Scenes/modal-game-over.tscn
+res://Scripts/GUI/HUD.gd
