@@ -1,1 +1,10 @@
 res://Scenes/node_2d.tscn
+res://IntroSi.gd
+res://IntroUnirios.gd
+res://Scenes/player.tscn
+res://MenuPrincipal.gd
+res://Menus/MenuPrincipal/intro_si.tscn
+res://Menus/MenuPrincipal/intro_unirios.tscn
+res://Menus/MenuPrincipal/menu_principal.tscn
+res://Menus/MenuPrincipal/menu_opcoes.tscn
+res://Menus/MenuPrincipal/menu_opcoes.gd

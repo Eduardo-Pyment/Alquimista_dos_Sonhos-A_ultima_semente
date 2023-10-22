@@ -1,0 +1,148 @@
+[gd_scene load_steps=12 format=3 uid="uid://bknqejho563gi"]
+
+[ext_resource type="Texture2D" uid="uid://c18x3bge5r4n" path="res://Assets/AssetsMenu/backgorundmenu.jpg" id="1_0muhw"]
+[ext_resource type="Script" path="res://Menus/MenuPrincipal/menu_opcoes.gd" id="1_sxb11"]
+[ext_resource type="Texture2D" uid="uid://cfe4i7r8qqxn7" path="res://Assets/AssetsMenu/bgPreto.png" id="2_8t830"]
+[ext_resource type="Texture2D" uid="uid://djfksgdymsc41" path="res://Assets/AssetsMenu/alquimista1.png" id="3_avjlv"]
+[ext_resource type="Texture2D" uid="uid://bfhkiwk3ofdmr" path="res://Assets/AssetsMenu/MenuDeOpcoes.png" id="4_kjblx"]
+[ext_resource type="Texture2D" uid="uid://5q5i1hm4krf0" path="res://Assets/AssetsMenu/voltar1.png" id="5_ml0wb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iel70"]
+bg_color = Color(0.00784314, 0.345098, 0.345098, 0)
+border_width_left = 8
+border_color = Color(0.137255, 0.352941, 0.356863, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0gsi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hn0ra"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_occfa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_bottom = 65
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="Theme" id="Theme_0bfgg"]
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_iel70")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_e0gsi")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_hn0ra")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_occfa")
+
+[node name="MenuOpcoes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sxb11")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_right = 1904.0
+offset_bottom = 1080.0
+scale = Vector2(0.420978, 0.420978)
+texture = ExtResource("1_0muhw")
+
+[node name="BgScroll" type="Sprite2D" parent="."]
+position = Vector2(384, 304)
+scale = Vector2(0.306888, 0.361364)
+texture = ExtResource("2_8t830")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(384, 64)
+scale = Vector2(0.213035, 0.213035)
+texture = ExtResource("3_avjlv")
+
+[node name="MenuOpcoes" type="Sprite2D" parent="."]
+position = Vector2(384, 168)
+scale = Vector2(0.209255, 0.209255)
+texture = ExtResource("4_kjblx")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(500, 380)
+layout_mode = 0
+offset_left = 224.0
+offset_top = 192.0
+offset_right = 732.0
+offset_bottom = 572.0
+scale = Vector2(0.645346, 0.63457)
+theme = SubResource("Theme_0bfgg")
+horizontal_scroll_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="ScrollContainer"]
+custom_minimum_size = Vector2(500, 640)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Control" type="Control" parent="ScrollContainer/ColorRect"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Voltar" type="Button" parent="ScrollContainer/ColorRect/Control"]
+layout_mode = 2
+offset_left = 185.947
+offset_top = 542.1
+offset_right = 735.947
+offset_bottom = 767.1
+scale = Vector2(0.232085, 0.232085)
+icon = ExtResource("5_ml0wb")
+
+[node name="VolumeMusica" type="Label" parent="ScrollContainer/ColorRect/Control"]
+layout_mode = 0
+offset_left = 99.7075
+offset_top = 40.1769
+offset_right = 262.708
+offset_bottom = 66.1769
+scale = Vector2(1.70619, 1.76764)
+text = "VOLUME DA MÚSICA:"
+
+[node name="MusicaSlider" type="HSlider" parent="ScrollContainer/ColorRect/Control"]
+layout_mode = 0
+offset_left = 62.3172
+offset_top = 113.463
+offset_right = 451.092
+offset_bottom = 129.463
+scale = Vector2(1, 1.25077)
+
+[node name="SFXVolume" type="Label" parent="ScrollContainer/ColorRect/Control"]
+layout_mode = 0
+offset_left = 99.7075
+offset_top = 214.318
+offset_right = 274.708
+offset_bottom = 240.318
+scale = Vector2(1.68086, 1.74586)
+text = "VOLUME DOS EFEITOS:
+"
+
+[node name="SFXSlider" type="HSlider" parent="ScrollContainer/ColorRect/Control"]
+layout_mode = 0
+offset_left = 62.3172
+offset_top = 286.637
+offset_right = 450.317
+offset_bottom = 302.637
+scale = Vector2(1, 1.37797)
+
+[node name="TelaCheia" type="Label" parent="ScrollContainer/ColorRect/Control"]
+layout_mode = 0
+offset_left = 99.1716
+offset_top = 428.637
+offset_right = 183.172
+offset_bottom = 454.637
+scale = Vector2(2.09026, 2.09026)
+text = "Tela Cheia:"
+
+[node name="CheckButton" type="CheckButton" parent="ScrollContainer/ColorRect/Control/TelaCheia"]
+layout_mode = 0
+offset_left = 118.611
+offset_top = 6.03119
+offset_right = 162.611
+offset_bottom = 30.0312
+
+[connection signal="pressed" from="ScrollContainer/ColorRect/Control/Voltar" to="." method="_on_voltar_pressed"]
