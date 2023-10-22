@@ -629,7 +629,7 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786441, 917510, 21, 786442, 983046, 21, 786447, 917510, 21, 786448, 983046, 21, 786453, 917510, 21, 786454, 983046, 21, 24, 1048582, 14)
 
 [node name="Player" parent="." instance=ExtResource("3_xlkhy")]
-position = Vector2(1632, 144)
+position = Vector2(416, 200)
 collision_layer = 2
 collision_mask = 6
 

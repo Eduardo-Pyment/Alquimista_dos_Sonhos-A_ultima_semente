@@ -26,17 +26,29 @@ func _physics_process(delta):
 		CayTimer.start()
 	if PuloDisponivel == true && Input.is_action_just_pressed("ui_accept"):
 		velocity.y = -VelocidadePulo
+		$CPUParticles2D.emitting = true
+		$CPUParticles2D.position.y = $PlayerSprite2D.position.y + 20
+		$CPUParticles2D.position.x = $PlayerSprite2D.position.x / 2
 		
 	# Add the gravity.
 	# Implementa a gravidade.
 	if not is_on_floor():
 		velocity.y += Gravidade * delta
 
+	if is_on_floor() and Input.is_action_just_pressed("ui_right"):
+		$CPUParticles2D.emitting = true	
+		$CPUParticles2D.scale.x = 1
+		$CPUParticles2D.position.y = $PlayerSprite2D.position.y+10
+	if is_on_floor() and Input.is_action_just_pressed("ui_left"):
+		$CPUParticles2D.emitting = true	
+		$CPUParticles2D.scale.x = -1
+		$CPUParticles2D.position.y = $PlayerSprite2D.position.y+10
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direcao = Input.get_axis("ui_left", "ui_right")
 	if direcao:
 		velocity.x = lerp(velocity.x, direcao * VelocidadeHorizontal, 0.2)
+
 	else:
 		velocity.x = lerp(velocity.x, 0.0, 0.2)
 	
@@ -51,7 +63,7 @@ func animacao_player():
 		animacao = "PlayerPulo"
 	elif velocity.x > 100 || velocity.x < -100:
 		animacao = "PlayerCorrer"
-	
+		
 	if $AnimationPlayer.assigned_animation != animacao:
 		$AnimationPlayer.play(animacao)
 		
