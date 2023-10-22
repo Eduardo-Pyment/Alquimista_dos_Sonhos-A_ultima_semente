@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dc2epskdddoys"]
+[gd_scene load_steps=16 format=3 uid="uid://dc2epskdddoys"]
 
 [ext_resource type="Script" path="res://Assets/Textures/Animation/Player/Player.gd" id="1_rgexs"]
 [ext_resource type="Texture2D" uid="uid://boxg68gxu5if6" path="res://Assets/Textures/Animation/Player/PlayerAnim/Character Idle 48x48.png" id="2_yenmy"]
@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://d2dew8hlcr6h1" path="res://Assets/Textures/Animation/Player/PlayerAnim/player jump 48x48.png" id="4_x5ujh"]
 [ext_resource type="Texture2D" uid="uid://c04tee34pcmbn" path="res://Assets/Textures/Animation/Player/PlayerAnim/run cycle 48x48.png" id="5_swewj"]
 [ext_resource type="Texture2D" uid="uid://tmdg31oaxsi1" path="res://Assets/Textures/Animation/Player/PlayerAnim/player land 48x48.png" id="6_8bb4c"]
+
+[sub_resource type="Gradient" id="Gradient_jycna"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_xtg0w"]
+max_value = 200.0
+_data = [Vector2(0, 0), 0.0, 177.506, 0, 0, Vector2(0.586902, 77.6507), 121.129, 121.129, 0, 0, Vector2(1, 200), 616.656, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qwji5"]
 height = 34.0
@@ -223,6 +231,28 @@ _data = {
 position = Vector2(347, 220)
 collision_mask = 2
 script = ExtResource("1_rgexs")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-8.04001, 13.025)
+rotation = -3.14159
+emitting = false
+amount = 20
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+lifetime_randomness = 0.36
+emission_shape = 3
+emission_rect_extents = Vector2(5, 1)
+spread = 29.27
+gravity = Vector2(0, -25.265)
+initial_velocity_min = 38.83
+initial_velocity_max = 38.83
+angle_min = 24.1
+angle_max = 80.0
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+color_ramp = SubResource("Gradient_jycna")
+anim_speed_curve = SubResource("Curve_xtg0w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_qwji5")
