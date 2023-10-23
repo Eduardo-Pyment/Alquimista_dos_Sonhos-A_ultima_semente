@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 res://Menus/MenuPrincipal/menu_opcoes.tscn
 res://Menus/MenuPrincipal/menu_opcoes.gd
 res://Prefabs/MusicController.tscn
@@ -7,3 +8,8 @@ res://Scripts/MusicController.gd
 res://Menus/MenuPrincipal/MenuPrincipal.gd
 res://Menus/MenuPrincipal/IntroUnirios.gd
 res://Menus/MenuPrincipal/MenuOpcoes.gd
+=======
+res://Scenes/node_2d.tscn
+res://Scenes/player.tscn
+res://Scenes/maquina_agua.tscn
+>>>>>>> 7e370f9fc4f1049154da06be9a9e1c7e47f56cc7
