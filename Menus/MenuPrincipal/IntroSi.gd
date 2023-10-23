@@ -1,6 +1,7 @@
 extends Node2D
 
 func _ready():
+	MusicController.stop_music()
 	$AnimationPlayer.play("Fade In")
 	await(get_tree().create_timer(4)).timeout
 	$AnimationPlayer.play("Fade Out")

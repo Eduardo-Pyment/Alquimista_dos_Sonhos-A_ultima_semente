@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfe4i7r8qqxn7"
-path="res://.godot/imported/bgPreto.png-d2fc880b7452a93c8264ec9dfb185def.ctex"
+uid="uid://qw26640142bh"
+path="res://.godot/imported/sair.png-2bc5007feadd80914003ef1088e1e155.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AssetsMenu/bgPreto.png"
-dest_files=["res://.godot/imported/bgPreto.png-d2fc880b7452a93c8264ec9dfb185def.ctex"]
+source_file="res://Assets/AssetsMenu/sair.png"
+dest_files=["res://.godot/imported/sair.png-2bc5007feadd80914003ef1088e1e155.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5q5i1hm4krf0"
-path="res://.godot/imported/voltar1.png-40afc203e6e01ad4576ae23670560351.ctex"
+uid="uid://d1du1a5xfvhsb"
+path="res://.godot/imported/bgMenuOpcoes.jpg-02460e30b3ad892d6fbc6d106dce97f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AssetsMenu/voltar1.png"
-dest_files=["res://.godot/imported/voltar1.png-40afc203e6e01ad4576ae23670560351.ctex"]
+source_file="res://Assets/AssetsMenu/bgMenuOpcoes.jpg"
+dest_files=["res://.godot/imported/bgMenuOpcoes.jpg-02460e30b3ad892d6fbc6d106dce97f2.ctex"]
 
 [params]
 

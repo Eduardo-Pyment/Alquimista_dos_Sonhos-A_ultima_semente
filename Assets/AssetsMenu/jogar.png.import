@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7tevdn18fg7m"
-path="res://.godot/imported/opcoes1.png-a01983e1ee45bff831e0ae20203d6954.ctex"
+uid="uid://df2rfmyk1wpyt"
+path="res://.godot/imported/jogar.png-5dd6f5ee251b4da62fb9cd570f7dc7af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/AssetsMenu/opcoes1.png"
-dest_files=["res://.godot/imported/opcoes1.png-a01983e1ee45bff831e0ae20203d6954.ctex"]
+source_file="res://Assets/AssetsMenu/jogar.png"
+dest_files=["res://.godot/imported/jogar.png-5dd6f5ee251b4da62fb9cd570f7dc7af.ctex"]
 
 [params]
 

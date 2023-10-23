@@ -1,10 +1,9 @@
-res://Scenes/node_2d.tscn
-res://IntroSi.gd
-res://IntroUnirios.gd
-res://Scenes/player.tscn
-res://MenuPrincipal.gd
-res://Menus/MenuPrincipal/intro_si.tscn
-res://Menus/MenuPrincipal/intro_unirios.tscn
-res://Menus/MenuPrincipal/menu_principal.tscn
 res://Menus/MenuPrincipal/menu_opcoes.tscn
 res://Menus/MenuPrincipal/menu_opcoes.gd
+res://Prefabs/MusicController.tscn
+res://default_bus_layout.tres
+res://Menus/MenuPrincipal/IntroSi.gd
+res://Scripts/MusicController.gd
+res://Menus/MenuPrincipal/MenuPrincipal.gd
+res://Menus/MenuPrincipal/IntroUnirios.gd
+res://Menus/MenuPrincipal/MenuOpcoes.gd

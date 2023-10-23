@@ -5,7 +5,7 @@ func _ready():
 
 func _on_jogar_pressed():
 	get_tree().change_scene_to_file("res://Scenes/node_2d.tscn")
-
+	MusicController.stop_music()
 
 
 func _on_opcoes_pressed():
