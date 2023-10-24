@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-res://Menus/MenuPrincipal/menu_opcoes.tscn
-res://Menus/MenuPrincipal/menu_opcoes.gd
-res://Prefabs/MusicController.tscn
-res://default_bus_layout.tres
-res://Menus/MenuPrincipal/IntroSi.gd
-res://Scripts/MusicController.gd
-res://Menus/MenuPrincipal/MenuPrincipal.gd
-res://Menus/MenuPrincipal/IntroUnirios.gd
+res://Menus/MenuPrincipal/intro_si.tscn
 res://Menus/MenuPrincipal/MenuOpcoes.gd
-=======
-res://Scenes/node_2d.tscn
-res://Scenes/player.tscn
-res://Scenes/maquina_agua.tscn
->>>>>>> 7e370f9fc4f1049154da06be9a9e1c7e47f56cc7
+res://Menus/MenuPrincipal/menu_opcoes.tscn
+res://Menus/MenuPrincipal/options_constants.gd
