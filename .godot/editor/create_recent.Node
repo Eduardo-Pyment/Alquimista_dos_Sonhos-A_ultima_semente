@@ -1,0 +1,15 @@
+Timer
+Label
+CollisionShape2D
+Area2D
+RayCast2D
+TextureRect
+HBoxContainer
+MarginContainer
+Control
+CanvasLayer
+RichTextLabel
+GPUParticles2D
+Sprite2D
+AnimatedSprite2D
+AnimationPlayer
