@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 res://Scenes/node_2d.tscn
 res://Scenes/player.tscn
 res://Scenes/maquina_agua.tscn
 res://Dicas.tscn
 res://dicas_caixa.tscn
+=======
+res://Menus/MenuPrincipal/intro_si.tscn
+res://Menus/MenuPrincipal/MenuOpcoes.gd
+res://Menus/MenuPrincipal/menu_opcoes.tscn
+res://Menus/MenuPrincipal/options_constants.gd
+>>>>>>> bcbd2143c091e540f01fa16fe0f577e55a2910ed
