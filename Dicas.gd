@@ -24,3 +24,7 @@ func _input(event):
 		# Verifica se a tecla pressionada é "Enter".
 		if is_visible():
 			hide()  # Oculta o controle quando a tecla "Enter" é pressionada.
+
+
+func _on_timer_timeout():
+	pass # Replace with function body.

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bk6t51v2413ci"]
+[gd_scene load_steps=9 format=3 uid="uid://bk6t51v2413ci"]
 
 [ext_resource type="Script" path="res://Scripts/maquina_agua.gd" id="1_pfoxp"]
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="3_6tmxj"]
+[ext_resource type="Texture2D" uid="uid://dh8qadmgci8wf" path="res://Assets/Textures/U.I/placeholder_uparrow.png" id="3_cljn2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apu4s"]
-size = Vector2(32, 31)
+size = Vector2(46, 35.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w8elg"]
 atlas = ExtResource("3_6tmxj")
@@ -21,6 +22,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_a317l"]
+atlas = ExtResource("3_cljn2")
+region = Rect2(17, 11, 168, 168)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bihqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a317l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Maquina_agua" type="Area2D"]
 z_index = -1
 collision_layer = 4
@@ -28,11 +44,17 @@ collision_mask = 2
 script = ExtResource("1_pfoxp")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, -1.25)
 shape = SubResource("RectangleShape2D_apu4s")
 
 [node name="animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_yc0mb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -43)
+scale = Vector2(0.190476, 0.190476)
+sprite_frames = SubResource("SpriteFrames_bihqm")
+frame_progress = 0.266959
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

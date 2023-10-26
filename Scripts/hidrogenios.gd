@@ -20,7 +20,3 @@ func _on_body_entered(body):
 	print(Globais.hidrogenio)
 func _on_animated_sprite_2d_animation_finished():
 	queue_free()
-
-
-func _on_body_exited(body):
-	pass # Replace with function body.

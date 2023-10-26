@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 res://Scripts
-res://Scenes
+=======
+<<<<<<< HEAD
+=======
+res://Assets/Textures/U.I
+>>>>>>> 7e370f9fc4f1049154da06be9a9e1c7e47f56cc7
+res://Scripts
+res://Menus/MenuPrincipal
+res://Prefabs
+res://Sounds
+res://Assets/Textures/Itens/Moleculas
+>>>>>>> bcbd2143c091e540f01fa16fe0f577e55a2910ed
 res://
+res://Assets/Textures/U.I
 res://Assets/Textures/Itens/Moleculas
 res://Scenes/Itens

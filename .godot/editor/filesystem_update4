@@ -1,8 +1,3 @@
+res://Menus/MenuPrincipal/intro_si.tscn
+res://Menus/MenuPrincipal/menu_opcoes.tscn
 res://Scenes/node_2d.tscn
-res://Scenes/modal-game-over.tscn
-res://Dicas.tscn
-res://dicas_caixa.tscn
-res://Scenes/oxigenio.tscn
-res://Scenes/hidrogenios.tscn
-res://Scenes/player.tscn
-res://Scenes/Ambiente/PlataformaMovel.tscn
