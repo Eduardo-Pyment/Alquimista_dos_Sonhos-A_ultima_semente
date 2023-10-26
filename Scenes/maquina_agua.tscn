@@ -51,8 +51,9 @@ shape = SubResource("RectangleShape2D_apu4s")
 sprite_frames = SubResource("SpriteFrames_yc0mb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -43)
-scale = Vector2(0.190476, 0.190476)
+texture_filter = 1
+position = Vector2(-1.19209e-07, -37)
+scale = Vector2(0.136905, 0.136905)
 sprite_frames = SubResource("SpriteFrames_bihqm")
 frame_progress = 0.266959
 

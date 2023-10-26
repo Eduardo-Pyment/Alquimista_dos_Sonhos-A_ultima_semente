@@ -17,7 +17,8 @@ func _process(delta):
 
 func _on_body_entered(body):
 	inside = true
-	$AnimatedSprite2D.modulate.a += 1 
+	if body.name == "Player":
+		$AnimatedSprite2D.modulate.a += 1 
 
 func _on_body_exited(body):
 	inside = false

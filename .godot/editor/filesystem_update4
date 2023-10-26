@@ -1,7 +1,5 @@
 res://Menus/MenuPrincipal/intro_si.tscn
 res://Menus/MenuPrincipal/menu_opcoes.tscn
 res://Scenes/node_2d.tscn
-res://Scripts/FallZone.gd
-res://Menus/MenuPrincipal/IntroSi.gd
-res://Menus/MenuPrincipal/MenuOpcoes.gd
-res://Scripts/word.gd
+res://Scenes/maquina_agua.tscn
+res://Scripts/maquina_agua.gd

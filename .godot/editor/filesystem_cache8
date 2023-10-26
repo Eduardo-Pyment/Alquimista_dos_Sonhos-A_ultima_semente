@@ -1,165 +1,167 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698288547
-default_bus_layout.tres::AudioBusLayout::5317020090769701337::1698276460::0::1::::<><>::
-Dicas.gd::GDScript::-1::1698208366::0::1::::<>Control<>::
-Dicas.tscn::PackedScene::4350545218928213900::1698275330::0::1::::<><>::res://Dicas.gd<>uid://drml5pl3jre1j
-dicas_caixa.tscn::PackedScene::5048193896120575661::1698275330::0::1::::<><>::uid://b28o3x22q71d5
-icon.svg::CompressedTexture2D::5493417388209191555::1698196636::1698196636::1::::<><>::
-README.md::TextFile::-1::1698196636::0::1::::<><>::
-::res://Alquimista_dos_Sonhos-A_ultima_semente/::1698196636
-::res://Assets/::1698276460
-::res://Assets/AssetsMenu/::1698276460
-backgorundmenu.jpg::CompressedTexture2D::196097715380490971::1698276460::1698276460::1::::<><>::
-bgMenuOpcoes.jpg::CompressedTexture2D::8991625936823844057::1698276460::1698276460::1::::<><>::
-bgscroll.png::CompressedTexture2D::5133819884264355734::1698276460::1698276460::1::::<><>::
-jogar.png::CompressedTexture2D::7566986254321122959::1698276460::1698276460::1::::<><>::
-logo.png::CompressedTexture2D::7801923167691557388::1698276460::1698276460::1::::<><>::
-logoMenuOpcoes.png::CompressedTexture2D::2752438174693433533::1698276460::1698276460::1::::<><>::
-opcoes.png::CompressedTexture2D::2285546722265373212::1698276460::1698276460::1::::<><>::
-sair.png::CompressedTexture2D::1170134201408563453::1698276460::1698276460::1::::<><>::
-Simbolo.png::CompressedTexture2D::8383254503788777834::1698276460::1698276460::1::::<><>::
-unirios.png::CompressedTexture2D::6726135035726213071::1698276460::1698276460::1::::<><>::
-voltar.png::CompressedTexture2D::2140532526345287399::1698276460::1698276460::1::::<><>::
-::res://Assets/Textures/::1698196636
-::res://Assets/Textures/Animation/::1698201718
-::res://Assets/Textures/Animation/Dicas/::1698201747
-pngtree-black-gray-pixel-art-text-box-png-image_3230494.png::CompressedTexture2D::8377967192840142309::1697594882::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Dicas/hf-free-complete/::1698201718
-::res://Assets/Textures/Animation/Dicas/hf-free-complete/compass-pro-v1.1/::1698201747
-compass-pro-v1.1.png::CompressedTexture2D::9052956234252105572::1535376095::1698201747::1::::<><>::
-CompassPro.otf::FontFile::4484281242934796194::1535375960::1698201747::1::::<><>::
-CompassPro.svg::CompressedTexture2D::2323711197752177042::1535375960::1698201747::1::::<><>::
-CompassPro.ttf::FontFile::5037252760009326213::1535375960::1698201747::1::::<><>::
-CompassPro.woff::FontFile::4087765279294536535::1535375960::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/::1698201747
-equipment-pro-v1.1.png::CompressedTexture2D::427231895851111420::1535376394::1698201747::1::::<><>::
-EquipmentPro.otf::FontFile::6264413276741053153::1535377256::1698201747::1::::<><>::
-EquipmentPro.svg::CompressedTexture2D::939593388504216056::1535377256::1698201747::1::::<><>::
-EquipmentPro.ttf::FontFile::7995766537649868493::1535377256::1698201747::1::::<><>::
-EquipmentPro.woff::FontFile::3323008358741615189::1535377256::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Dicas/hf-free-complete/expression-pro-v1.1/::1698201747
-expression-pro-v1.1.png::CompressedTexture2D::1474980927591349139::1535377726::1698201747::1::::<><>::
-ExpressionPro.otf::FontFile::4764606212303668845::1535377682::1698201747::1::::<><>::
-ExpressionPro.svg::CompressedTexture2D::1697514273890465487::1535377682::1698201747::1::::<><>::
-ExpressionPro.ttf::FontFile::3434934376305753103::1535377682::1698201747::1::::<><>::
-ExpressionPro.woff::FontFile::645185932997565383::1535377682::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Dicas/hf-free-complete/futile-pro-v1/::1698201747
-futile-pro-v1.png::CompressedTexture2D::6159845787716161419::1535375075::1698201747::1::::<><>::
-FutilePro.otf::FontFile::8090145037836606652::1535375024::1698201747::1::::<><>::
-FutilePro.svg::CompressedTexture2D::5406854379329927931::1535375024::1698201747::1::::<><>::
-FutilePro.ttf::FontFile::7316365301259470182::1535375024::1698201747::1::::<><>::
-FutilePro.woff::FontFile::752038809214215901::1535375024::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Dicas/hf-free-complete/matchup-pro-v1.1/::1698201747
-matchup-pro-v1.1.png::CompressedTexture2D::8736229340714418221::1535377878::1698201747::1::::<><>::
-MatchupPro.otf::FontFile::4932845242115789444::1535377940::1698201747::1::::<><>::
-MatchupPro.svg::CompressedTexture2D::8404364561057194430::1535377940::1698201747::1::::<><>::
-MatchupPro.ttf::FontFile::7753667722113427825::1535377940::1698201747::1::::<><>::
-MatchupPro.woff::FontFile::850909783058869306::1535377940::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Hud/::1698201747
-timer sprit0.png::CompressedTexture2D::4967113897400954744::1697897927::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/::1698201718
-LICENSE.txt::TextFile::-1::1593868726::0::1::::<><>::
-::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Common Pick-ups/::1698201747
-Coin (16 x 16).png::CompressedTexture2D::7135547128575358211::1594132264::1698201747::1::::<><>::
-Health_Kit (16 x 16).png::CompressedTexture2D::5789781585044054457::1594132408::1698201747::1::::<><>::
-Heart_Spin (16 x 16).png::CompressedTexture2D::8720835405274409994::1594132378::1698201747::1::::<><>::
-Small_Coin (16 x 16).png::CompressedTexture2D::4421739266825613413::1594132330::1698201747::1::::<><>::
-Treasure_Chest (32 x 16).png::CompressedTexture2D::1857185422419568717::1594132452::1698201747::1::::<><>::
-Wrapped_Presents (16 x 16).png::CompressedTexture2D::5771895922601916180::1594132488::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Effects/::1698201747
-Bright_Sparkle (16 x 16).png::CompressedTexture2D::7003010293425522812::1594070908::1698201747::1::::<><>::
-Cloud_Poof (16 x 16).png::CompressedTexture2D::7481468215098550870::1594070640::1698201747::1::::<><>::
-Dust (16 x 16).png::CompressedTexture2D::8092985894854553468::1594070508::1698201747::1::::<><>::
-Explosion_Poof (16 x 16).png::CompressedTexture2D::6411891644975738077::1594070736::1698201747::1::::<><>::
-Yellow_Sparkle (16 x 16).png::CompressedTexture2D::1147638705794658979::1594070970::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Food Items/::1698201747
-Bottled_Drinks (16 x 16).png::CompressedTexture2D::1692983483583605737::1594071892::1698201747::1::::<><>::
-Burger_&_Fries (16 x 16).png::CompressedTexture2D::3562028605261629291::1594072008::1698201747::1::::<><>::
-Cake_Slices (16 x 16).png::CompressedTexture2D::6692947929447562696::1594071962::1698201747::1::::<><>::
-Chocolate_Bars (16 x 16).png::CompressedTexture2D::3435242344131549634::1594071606::1698201747::1::::<><>::
-Fruits (16 x 16).png::CompressedTexture2D::4046110490412146830::1594071574::1698201747::1::::<><>::
-Grilled_Panini (16 x 16).png::CompressedTexture2D::5415052621949488737::1594072032::1698201747::1::::<><>::
-Ice_Cream_Cones (16 x 16).png::CompressedTexture2D::7868190073335603142::1594071764::1698201747::1::::<><>::
-Milk_Cartons (16 x 16).png::CompressedTexture2D::152869233843989613::1594071870::1698201747::1::::<><>::
-Pancake_Stack (16 x 16).png::CompressedTexture2D::3209256836428626022::1594072044::1698201747::1::::<><>::
-Salad_Bowl (16 x 16).png::CompressedTexture2D::1736687785024165366::1594071916::1698201747::1::::<><>::
-Sushi_Variety (16 x 16).png::CompressedTexture2D::3758008327346259597::1594071840::1698201747::1::::<><>::
-Wrapped_Candies (16 x 16).png::CompressedTexture2D::8913875462513549907::1594071806::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/::1698201747
-Health_Indicator_Black_Outline (8 x 8).png::CompressedTexture2D::7245559581517641928::1594133686::1698201747::1::::<><>::
-Health_Indicator_White_Outline (8 x 8).png::CompressedTexture2D::4234593256197420732::1594133712::1698201747::1::::<><>::
-Mouse_Icons_Outlined (16 x 16).png::CompressedTexture2D::2712833255658176399::1594133770::1698201747::1::::<><>::
-Mouse_Icons_Outlined_Drop-shadowed (16 x 16).png::CompressedTexture2D::4322233512500771526::1594133812::1698201747::1::::<><>::
-Speech_Emotes (16 x 16).png::CompressedTexture2D::7210428545853136781::1594071242::1698201747::1::::<><>::
-Timer_Coin_Numbers_Drop-shadowed (8 x 8).png::CompressedTexture2D::5356798820012310430::1594133632::1698201747::1::::<><>::
-Timer_Coin_Numbers_Outlined (8 x 8).png::CompressedTexture2D::7333099884914297550::1594133594::1698201747::1::::<><>::
-::res://Assets/Textures/Animation/Player/::1698255092
-Player.gd::GDScript::-1::1698255092::0::1::::<>CharacterBody2D<>::
-playerPlaceholder.png::CompressedTexture2D::920267965494819079::1698196636::1698196636::1::::<><>::
-::res://Assets/Textures/Animation/Player/PlayerAnim/::1698196636
-Character Idle 48x48.png::CompressedTexture2D::3416966588148891129::1698196636::1698196636::1::::<><>::
-player jump 48x48.png::CompressedTexture2D::9060837862592682700::1698196636::1698196636::1::::<><>::
-player land 48x48.png::CompressedTexture2D::1358554939368801258::1698196636::1698196636::1::::<><>::
-run cycle 48x48.png::CompressedTexture2D::6588590433928616703::1698196636::1698196636::1::::<><>::
-::res://Assets/Textures/Background/::1698196636
-::res://Assets/Textures/Background/CityDay/::1698196636
-1.png::CompressedTexture2D::7722111070487875577::1698196636::1698196636::1::::<><>::
-2.png::CompressedTexture2D::7352096586456266::1698196636::1698196636::1::::<><>::
-3.png::CompressedTexture2D::5807008000425876513::1698196636::1698196636::1::::<><>::
-4.png::CompressedTexture2D::477570280433883763::1698196636::1698196636::1::::<><>::
-5.png::CompressedTexture2D::2297902201072040621::1698196636::1698196636::1::::<><>::
-::res://Assets/Textures/Itens/::1698196636
-::res://Assets/Textures/Itens/Moleculas/::1698196636
-Death_(32 x 32).png::CompressedTexture2D::4008270040361510217::1698196636::1698196636::1::::<><>::
-hidrogenio.png::CompressedTexture2D::4787482025988359249::1698196636::1698196636::1::::<><>::
-hidrogenio_32x32.png::CompressedTexture2D::8570423670781442229::1698196636::1698196636::1::::<><>::
-hidrogen_32x32.png::CompressedTexture2D::8570423670781442229::1698196636::1698196636::1::::<><>::
-oxigenio.png::CompressedTexture2D::744730478891442644::1698196636::1698196636::1::::<><>::
-oxigenio_32x32.png::CompressedTexture2D::3957429342106009708::1698196636::1698196636::1::::<><>::
-oxigen_32x32.png::CompressedTexture2D::3957429342106009708::1698196636::1698196636::1::::<><>::
-::res://Assets/Textures/Tiles/::1698196636
-level_tileset.png::CompressedTexture2D::1328510602523107428::1698196636::1698196636::1::::<><>::
-Tileset.png::CompressedTexture2D::560379506502959863::1698196636::1698196636::1::::<><>::
-::res://Assets/Textures/U.I/::1698196636
-placeholder_uparrow.png::CompressedTexture2D::7719680070697107861::1698196636::1698196636::1::::<><>::
-::res://Menus/::1698276460
-::res://Menus/MenuPrincipal/::1698280140
-IntroSi.gd::GDScript::-1::1698276460::0::1::::<>Node2D<>::
-IntroUnirios.gd::GDScript::-1::1698276460::0::1::::<>Node2D<>::
-intro_si.tscn::PackedScene::6423559703401441122::1698280140::0::1::::<><>::res://Menus/MenuPrincipal/IntroSi.gd<>uid://dro58hi3wtgn7::::res://Assets/AssetsMenu/Simbolo.png
-intro_unirios.tscn::PackedScene::6238064105730019673::1698276460::0::1::::<><>::res://Menus/MenuPrincipal/IntroUnirios.gd<>uid://c23gpxkoj2h1x
-MenuOpcoes.gd::GDScript::-1::1698276460::0::1::::<>Control<>::
-MenuPrincipal.gd::GDScript::-1::1698276460::0::1::::<>Control<>::
-menu_opcoes.tscn::PackedScene::3116125130137304220::1698280140::0::1::::<><>::uid://c18x3bge5r4n::::res://Assets/AssetsMenu/backgorundmenu.jpg<>res://Menus/MenuPrincipal/MenuOpcoes.gd<>uid://cfe4i7r8qqxn7::::res://Assets/AssetsMenu/bgscroll.png<>uid://djfksgdymsc41::::res://Assets/AssetsMenu/logo.png<>uid://bfhkiwk3ofdmr::::res://Assets/AssetsMenu/logoMenuOpcoes.png<>uid://5q5i1hm4krf0::::res://Assets/AssetsMenu/voltar.png
-menu_principal.tscn::PackedScene::8492304225500678759::1698276460::0::1::::<><>::res://Menus/MenuPrincipal/MenuPrincipal.gd<>uid://c18x3bge5r4n
-OpcoesConstants.gd::GDScript::-1::1698276460::0::1::::OptionsConstants<>Node<>::
-::res://Prefabs/::1698276460
-MusicController.tscn::PackedScene::1638545510309510060::1698276460::0::1::::<><>::res://Scripts/MusicController.gd<>uid://bfxd1kttyelg5
-::res://Scenes/::1698280140
-hidrogenios.tscn::PackedScene::3782334168334212690::1698196636::0::1::::<><>::res://Scripts/hidrogenios.gd<>uid://bxdvve8dcly7r
-maquina_agua.tscn::PackedScene::3153513426443548668::1698275330::0::1::::<><>::res://Scripts/maquina_agua.gd<>uid://s6sm1dwswbei
-modal-game-over.tscn::PackedScene::1173194397309169013::1698196636::0::1::::<><>::res://Scripts/GUI/HUD.gd
-node_2d.tscn::PackedScene::5700015994562190647::1698280140::0::1::::<><>::uid://s6sm1dwswbei::::res://Assets/Textures/Tiles/level_tileset.png<>uid://h8pmsdo7vejn::::res://Assets/Textures/Tiles/Tileset.png<>uid://dc2epskdddoys::::res://Scenes/player.tscn<>res://Scripts/ParallaxBackground.gd<>uid://diawbnsbkshpp::::res://Assets/Textures/Background/CityDay/1.png<>uid://dtc8xburpks::::res://Assets/Textures/Background/CityDay/2.png<>uid://coy7tq2bvgjin::::res://Assets/Textures/Background/CityDay/3.png<>uid://g2lroy6n5dcd::::res://Assets/Textures/Background/CityDay/4.png<>uid://70ed4h7eq6uj::::res://Assets/Textures/Background/CityDay/5.png<>uid://qykltn38fadx::::res://Scenes/modal-game-over.tscn<>res://Scripts/FallZone.gd<>uid://k73i0e7vpwbf::::res://Scenes/Ambiente/PlataformaMovel.tscn<>uid://bt5gqx1a1xh4e::::res://Scenes/hidrogenios.tscn<>uid://cx73sewvijfmk::::res://Scenes/oxigenio.tscn<>uid://bk6t51v2413ci::::res://Scenes/maquina_agua.tscn<>uid://cd6nasnw2a8wn::::res://dicas_caixa.tscn<>res://Scripts/word.gd<>uid://dl6hdvk5712j6::::res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf<>uid://dbh2kpys1adoa::::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png
-oxigenio.tscn::PackedScene::6454977324322901150::1698196636::0::1::::<><>::uid://ku0uqed7tyho
-player.tscn::PackedScene::7355648553603418146::1698275330::0::1::::<><>::res://Assets/Textures/Animation/Player/Player.gd<>uid://boxg68gxu5if6
-::res://Scenes/Ambiente/::1698196636
-PlataformaMovel.tscn::PackedScene::769664207404519751::1698196636::0::1::::<><>::res://Scripts/PlataformaMovel_0.gd<>uid://s6sm1dwswbei
-::res://Scenes/Itens/::1698196636
-AtomoBase.tscn::PackedScene::3038913706959917762::1698196636::0::1::::<><>::res://Scripts/MoleculaBase.gd<>uid://dudtvjkvyir14
-::res://Scripts/::1698276460
-FallZone.gd::GDScript::-1::1698208958::0::1::::<>Area2D<>::
-FireZone.gd::GDScript::-1::1698196636::0::1::::<>CollisionShape2D<>::
-Globais.gd::GDScript::-1::1698209321::0::1::::<>Node<>::
-hidrogenios.gd::GDScript::-1::1698196636::0::1::::<>Area2D<>::
-MainCamera.gd::GDScript::-1::1698196636::0::1::::<>Camera2D<>::
-maquina_agua.gd::GDScript::-1::1698209172::0::1::::<>Area2D<>::
-MoleculaBase.gd::GDScript::-1::1698196636::0::1::::<>Area2D<>::
-MusicController.gd::GDScript::-1::1698276460::0::1::::<>Node2D<>::
-oxigenio.gd::GDScript::-1::1698211196::0::1::::<>Area2D<>::
-ParallaxBackground.gd::GDScript::-1::1698196636::0::1::::<>ParallaxBackground<>::
-PlataformaMovel_0.gd::GDScript::-1::1698196636::0::1::::<>AnimatableBody2D<>::
-word.gd::GDScript::-1::1698210467::0::1::::<>Control<>::
-::res://Scripts/GUI/::1698196636
-HUD.gd::GDScript::-1::1698196636::0::1::::<>Control<>::
-::res://Sounds/::1698276460
-On the Delta - John Patitucci (online-audio-converter.com).ogg::AudioStreamOggVorbis::2785074727326765142::1698276460::1698276460::1::::<><>::
+::res://::1698352404
+default_bus_layout.tres::AudioBusLayout::5317020090769701337::1698332469::0::1::::<><>::
+Dicas.gd::GDScript::-1::1698332469::0::1::::<>Control<>::
+Dicas.tscn::PackedScene::4350545218928213900::1698332469::0::1::::<><>::res://Dicas.gd<>uid://drml5pl3jre1j
+dicas_caixa.gd::GDScript::-1::1698332469::0::1::::<>Control<>::
+dicas_caixa.tscn::PackedScene::5048193896120575661::1698332469::0::1::::<><>::uid://b28o3x22q71d5
+gitignore.txt::TextFile::-1::1698332469::0::1::::<><>::
+icon.svg::CompressedTexture2D::5493417388209191555::1698332469::1698332469::1::::<><>::
+README.md::TextFile::-1::1698332469::0::1::::<><>::
+::res://Alquimista_dos_Sonhos-A_ultima_semente/::1698332469
+::res://Assets/::1698332469
+::res://Assets/AssetsMenu/::1698332469
+backgorundmenu.jpg::CompressedTexture2D::196097715380490971::1698332469::1698332469::1::::<><>::
+bgMenuOpcoes.jpg::CompressedTexture2D::8991625936823844057::1698332469::1698332469::1::::<><>::
+bgscroll.png::CompressedTexture2D::5133819884264355734::1698332469::1698332469::1::::<><>::
+jogar.png::CompressedTexture2D::7566986254321122959::1698332469::1698332469::1::::<><>::
+logo.png::CompressedTexture2D::7801923167691557388::1698332469::1698332469::1::::<><>::
+logoMenuOpcoes.png::CompressedTexture2D::2752438174693433533::1698332469::1698332469::1::::<><>::
+opcoes.png::CompressedTexture2D::2285546722265373212::1698332469::1698332469::1::::<><>::
+sair.png::CompressedTexture2D::1170134201408563453::1698332469::1698332469::1::::<><>::
+Simbolo.png::CompressedTexture2D::8383254503788777834::1698332469::1698332469::1::::<><>::
+unirios.png::CompressedTexture2D::6726135035726213071::1698332469::1698332469::1::::<><>::
+voltar.png::CompressedTexture2D::2140532526345287399::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/::1698332469
+::res://Assets/Textures/Animation/::1698332469
+::res://Assets/Textures/Animation/Dicas/::1698332469
+pngtree-black-gray-pixel-art-text-box-png-image_3230494.png::CompressedTexture2D::8377967192840142309::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Dicas/hf-free-complete/::1698332469
+::res://Assets/Textures/Animation/Dicas/hf-free-complete/compass-pro-v1.1/::1698352404
+compass-pro-v1.1.png::CompressedTexture2D::9052956234252105572::1698332469::1698332469::1::::<><>::
+CompassPro.otf::FontFile::4484281242934796194::1698332469::1698332469::1::::<><>::
+CompassPro.svg::CompressedTexture2D::2323711197752177042::1698332469::1698352412::1::::<><>::
+CompassPro.ttf::FontFile::5037252760009326213::1698332469::1698332469::1::::<><>::
+CompassPro.woff::FontFile::4087765279294536535::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/::1698352404
+equipment-pro-v1.1.png::CompressedTexture2D::427231895851111420::1698332469::1698332469::1::::<><>::
+EquipmentPro.otf::FontFile::6264413276741053153::1698332469::1698332469::1::::<><>::
+EquipmentPro.svg::CompressedTexture2D::939593388504216056::1698332469::1698352412::1::::<><>::
+EquipmentPro.ttf::FontFile::7995766537649868493::1698332469::1698332469::1::::<><>::
+EquipmentPro.woff::FontFile::3323008358741615189::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Dicas/hf-free-complete/expression-pro-v1.1/::1698352404
+expression-pro-v1.1.png::CompressedTexture2D::1474980927591349139::1698332469::1698332469::1::::<><>::
+ExpressionPro.otf::FontFile::4764606212303668845::1698332469::1698332469::1::::<><>::
+ExpressionPro.svg::CompressedTexture2D::1697514273890465487::1698332469::1698352412::1::::<><>::
+ExpressionPro.ttf::FontFile::3434934376305753103::1698332469::1698332469::1::::<><>::
+ExpressionPro.woff::FontFile::645185932997565383::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Dicas/hf-free-complete/futile-pro-v1/::1698352404
+futile-pro-v1.png::CompressedTexture2D::6159845787716161419::1698332469::1698332469::1::::<><>::
+FutilePro.otf::FontFile::8090145037836606652::1698332469::1698332469::1::::<><>::
+FutilePro.svg::CompressedTexture2D::5406854379329927931::1698332469::1698352412::1::::<><>::
+FutilePro.ttf::FontFile::7316365301259470182::1698332469::1698332469::1::::<><>::
+FutilePro.woff::FontFile::752038809214215901::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Dicas/hf-free-complete/matchup-pro-v1.1/::1698352404
+matchup-pro-v1.1.png::CompressedTexture2D::8736229340714418221::1698332469::1698332469::1::::<><>::
+MatchupPro.otf::FontFile::4932845242115789444::1698332469::1698332469::1::::<><>::
+MatchupPro.svg::CompressedTexture2D::8404364561057194430::1698332469::1698352412::1::::<><>::
+MatchupPro.ttf::FontFile::7753667722113427825::1698332469::1698332469::1::::<><>::
+MatchupPro.woff::FontFile::850909783058869306::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Hud/::1698332469
+timer sprit0.png::CompressedTexture2D::4967113897400954744::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/::1698332469
+LICENSE.txt::TextFile::-1::1698332469::0::1::::<><>::
+::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Common Pick-ups/::1698332469
+Coin (16 x 16).png::CompressedTexture2D::7135547128575358211::1698332469::1698332469::1::::<><>::
+Health_Kit (16 x 16).png::CompressedTexture2D::5789781585044054457::1698332469::1698332469::1::::<><>::
+Heart_Spin (16 x 16).png::CompressedTexture2D::8720835405274409994::1698332469::1698332469::1::::<><>::
+Small_Coin (16 x 16).png::CompressedTexture2D::4421739266825613413::1698332469::1698332469::1::::<><>::
+Treasure_Chest (32 x 16).png::CompressedTexture2D::1857185422419568717::1698332469::1698332469::1::::<><>::
+Wrapped_Presents (16 x 16).png::CompressedTexture2D::5771895922601916180::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Effects/::1698332469
+Bright_Sparkle (16 x 16).png::CompressedTexture2D::7003010293425522812::1698332469::1698332469::1::::<><>::
+Cloud_Poof (16 x 16).png::CompressedTexture2D::7481468215098550870::1698332469::1698332469::1::::<><>::
+Dust (16 x 16).png::CompressedTexture2D::8092985894854553468::1698332469::1698332469::1::::<><>::
+Explosion_Poof (16 x 16).png::CompressedTexture2D::6411891644975738077::1698332469::1698332469::1::::<><>::
+Yellow_Sparkle (16 x 16).png::CompressedTexture2D::1147638705794658979::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Food Items/::1698332469
+Bottled_Drinks (16 x 16).png::CompressedTexture2D::1692983483583605737::1698332469::1698332469::1::::<><>::
+Burger_&_Fries (16 x 16).png::CompressedTexture2D::3562028605261629291::1698332469::1698332469::1::::<><>::
+Cake_Slices (16 x 16).png::CompressedTexture2D::6692947929447562696::1698332469::1698332469::1::::<><>::
+Chocolate_Bars (16 x 16).png::CompressedTexture2D::3435242344131549634::1698332469::1698332469::1::::<><>::
+Fruits (16 x 16).png::CompressedTexture2D::4046110490412146830::1698332469::1698332469::1::::<><>::
+Grilled_Panini (16 x 16).png::CompressedTexture2D::5415052621949488737::1698332469::1698332469::1::::<><>::
+Ice_Cream_Cones (16 x 16).png::CompressedTexture2D::7868190073335603142::1698332469::1698332469::1::::<><>::
+Milk_Cartons (16 x 16).png::CompressedTexture2D::152869233843989613::1698332469::1698332469::1::::<><>::
+Pancake_Stack (16 x 16).png::CompressedTexture2D::3209256836428626022::1698332469::1698332469::1::::<><>::
+Salad_Bowl (16 x 16).png::CompressedTexture2D::1736687785024165366::1698332469::1698332469::1::::<><>::
+Sushi_Variety (16 x 16).png::CompressedTexture2D::3758008327346259597::1698332469::1698332469::1::::<><>::
+Wrapped_Candies (16 x 16).png::CompressedTexture2D::8913875462513549907::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/::1698332469
+Health_Indicator_Black_Outline (8 x 8).png::CompressedTexture2D::7245559581517641928::1698332469::1698332469::1::::<><>::
+Health_Indicator_White_Outline (8 x 8).png::CompressedTexture2D::4234593256197420732::1698332469::1698332469::1::::<><>::
+Mouse_Icons_Outlined (16 x 16).png::CompressedTexture2D::2712833255658176399::1698332469::1698332469::1::::<><>::
+Mouse_Icons_Outlined_Drop-shadowed (16 x 16).png::CompressedTexture2D::4322233512500771526::1698332469::1698332469::1::::<><>::
+Speech_Emotes (16 x 16).png::CompressedTexture2D::7210428545853136781::1698332469::1698332469::1::::<><>::
+Timer_Coin_Numbers_Drop-shadowed (8 x 8).png::CompressedTexture2D::5356798820012310430::1698332469::1698332469::1::::<><>::
+Timer_Coin_Numbers_Outlined (8 x 8).png::CompressedTexture2D::7333099884914297550::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Player/::1698334326
+Player.gd::GDScript::-1::1698334326::0::1::::<>CharacterBody2D<>::
+playerPlaceholder.png::CompressedTexture2D::920267965494819079::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Animation/Player/PlayerAnim/::1698332469
+Character Idle 48x48.png::CompressedTexture2D::3416966588148891129::1698332469::1698332469::1::::<><>::
+player jump 48x48.png::CompressedTexture2D::9060837862592682700::1698332469::1698332469::1::::<><>::
+player land 48x48.png::CompressedTexture2D::1358554939368801258::1698332469::1698332469::1::::<><>::
+run cycle 48x48.png::CompressedTexture2D::6588590433928616703::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Background/::1698332469
+::res://Assets/Textures/Background/CityDay/::1698332469
+1.png::CompressedTexture2D::7722111070487875577::1698332469::1698332469::1::::<><>::
+2.png::CompressedTexture2D::7352096586456266::1698332469::1698332469::1::::<><>::
+3.png::CompressedTexture2D::5807008000425876513::1698332469::1698332469::1::::<><>::
+4.png::CompressedTexture2D::477570280433883763::1698332469::1698332469::1::::<><>::
+5.png::CompressedTexture2D::2297902201072040621::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Itens/::1698332469
+::res://Assets/Textures/Itens/Moleculas/::1698332469
+Death_(32 x 32).png::CompressedTexture2D::4008270040361510217::1698332469::1698332469::1::::<><>::
+hidrogenio.png::CompressedTexture2D::4787482025988359249::1698332469::1698332469::1::::<><>::
+hidrogenio_32x32.png::CompressedTexture2D::8570423670781442229::1698332469::1698332469::1::::<><>::
+hidrogen_32x32.png::CompressedTexture2D::8570423670781442229::1698332469::1698332469::1::::<><>::
+oxigenio.png::CompressedTexture2D::744730478891442644::1698332469::1698332469::1::::<><>::
+oxigenio_32x32.png::CompressedTexture2D::3957429342106009708::1698332469::1698332469::1::::<><>::
+oxigen_32x32.png::CompressedTexture2D::3957429342106009708::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/Tiles/::1698332469
+level_tileset.png::CompressedTexture2D::1328510602523107428::1698332469::1698332469::1::::<><>::
+Tileset.png::CompressedTexture2D::560379506502959863::1698332469::1698332469::1::::<><>::
+::res://Assets/Textures/U.I/::1698332469
+placeholder_uparrow.png::CompressedTexture2D::7719680070697107861::1698332469::1698332469::1::::<><>::
+::res://Menus/::1698332469
+::res://Menus/MenuPrincipal/::1698352404
+IntroSi.gd::GDScript::-1::1698332469::0::1::::<>Node2D<>::
+IntroUnirios.gd::GDScript::-1::1698332469::0::1::::<>Node2D<>::
+intro_si.tscn::PackedScene::6423559703401441122::1698352280::0::1::::<><>::res://Menus/MenuPrincipal/IntroSi.gd<>uid://dro58hi3wtgn7::::res://Assets/AssetsMenu/Simbolo.png
+intro_unirios.tscn::PackedScene::6238064105730019673::1698332469::0::1::::<><>::res://Menus/MenuPrincipal/IntroUnirios.gd<>uid://c23gpxkoj2h1x
+MenuOpcoes.gd::GDScript::-1::1698332469::0::1::::<>Control<>::
+MenuPrincipal.gd::GDScript::-1::1698332469::0::1::::<>Control<>::
+menu_opcoes.tscn::PackedScene::3116125130137304220::1698352280::0::1::::<><>::uid://c18x3bge5r4n::::res://Assets/AssetsMenu/backgorundmenu.jpg<>res://Menus/MenuPrincipal/MenuOpcoes.gd<>uid://cfe4i7r8qqxn7::::res://Assets/AssetsMenu/bgscroll.png<>uid://djfksgdymsc41::::res://Assets/AssetsMenu/logo.png<>uid://bfhkiwk3ofdmr::::res://Assets/AssetsMenu/logoMenuOpcoes.png<>uid://5q5i1hm4krf0::::res://Assets/AssetsMenu/voltar.png
+menu_principal.tscn::PackedScene::8492304225500678759::1698332469::0::1::::<><>::res://Menus/MenuPrincipal/MenuPrincipal.gd<>uid://c18x3bge5r4n
+OpcoesConstants.gd::GDScript::-1::1698332469::0::1::::OptionsConstants<>Node<>::
+::res://Prefabs/::1698332469
+MusicController.tscn::PackedScene::1638545510309510060::1698332469::0::1::::<><>::res://Scripts/MusicController.gd<>uid://bfxd1kttyelg5
+::res://Scenes/::1698352404
+hidrogenios.tscn::PackedScene::3782334168334212690::1698332469::0::1::::<><>::res://Scripts/hidrogenios.gd<>uid://bxdvve8dcly7r
+maquina_agua.tscn::PackedScene::3153513426443548668::1698332469::0::1::::<><>::res://Scripts/maquina_agua.gd<>uid://s6sm1dwswbei
+modal-game-over.tscn::PackedScene::1173194397309169013::1698332469::0::1::::<><>::res://Scripts/GUI/HUD.gd
+node_2d.tscn::PackedScene::5700015994562190647::1698352281::0::1::::<><>::uid://s6sm1dwswbei::::res://Assets/Textures/Tiles/level_tileset.png<>uid://h8pmsdo7vejn::::res://Assets/Textures/Tiles/Tileset.png<>uid://dc2epskdddoys::::res://Scenes/player.tscn<>res://Scripts/ParallaxBackground.gd<>uid://diawbnsbkshpp::::res://Assets/Textures/Background/CityDay/1.png<>uid://dtc8xburpks::::res://Assets/Textures/Background/CityDay/2.png<>uid://coy7tq2bvgjin::::res://Assets/Textures/Background/CityDay/3.png<>uid://g2lroy6n5dcd::::res://Assets/Textures/Background/CityDay/4.png<>uid://70ed4h7eq6uj::::res://Assets/Textures/Background/CityDay/5.png<>uid://qykltn38fadx::::res://Scenes/modal-game-over.tscn<>res://Scripts/FallZone.gd<>uid://k73i0e7vpwbf::::res://Scenes/Ambiente/PlataformaMovel.tscn<>uid://bt5gqx1a1xh4e::::res://Scenes/hidrogenios.tscn<>uid://cx73sewvijfmk::::res://Scenes/oxigenio.tscn<>uid://bk6t51v2413ci::::res://Scenes/maquina_agua.tscn<>uid://cd6nasnw2a8wn::::res://dicas_caixa.tscn<>res://Scripts/word.gd<>uid://dl6hdvk5712j6::::res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf<>uid://dbh2kpys1adoa::::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png
+oxigenio.tscn::PackedScene::6454977324322901150::1698332469::0::1::::<><>::uid://ku0uqed7tyho
+player.tscn::PackedScene::7355648553603418146::1698332469::0::1::::<><>::res://Assets/Textures/Animation/Player/Player.gd<>uid://boxg68gxu5if6
+::res://Scenes/Ambiente/::1698332469
+PlataformaMovel.tscn::PackedScene::769664207404519751::1698332469::0::1::::<><>::res://Scripts/PlataformaMovel_0.gd<>uid://s6sm1dwswbei
+::res://Scenes/Itens/::1698332469
+AtomoBase.tscn::PackedScene::3038913706959917762::1698332469::0::1::::<><>::res://Scripts/MoleculaBase.gd<>uid://dudtvjkvyir14
+::res://Scripts/::1698334326
+FallZone.gd::GDScript::-1::1698334326::0::1::::<>Area2D<>::
+FireZone.gd::GDScript::-1::1698332469::0::1::::<>CollisionShape2D<>::
+Globais.gd::GDScript::-1::1698334326::0::1::::<>Node<>::
+hidrogenios.gd::GDScript::-1::1698332469::0::1::::<>Area2D<>::
+MainCamera.gd::GDScript::-1::1698332469::0::1::::<>Camera2D<>::
+maquina_agua.gd::GDScript::-1::1698334323::0::1::::<>Area2D<>::
+MoleculaBase.gd::GDScript::-1::1698332469::0::1::::<>Area2D<>::
+MusicController.gd::GDScript::-1::1698332469::0::1::::<>Node2D<>::
+oxigenio.gd::GDScript::-1::1698332469::0::1::::<>Area2D<>::
+ParallaxBackground.gd::GDScript::-1::1698332469::0::1::::<>ParallaxBackground<>::
+PlataformaMovel_0.gd::GDScript::-1::1698332469::0::1::::<>AnimatableBody2D<>::
+word.gd::GDScript::-1::1698334326::0::1::::<>Control<>::
+::res://Scripts/GUI/::1698332469
+HUD.gd::GDScript::-1::1698332469::0::1::::<>Control<>::
+::res://Sounds/::1698332469
+On the Delta - John Patitucci (online-audio-converter.com).ogg::AudioStreamOggVorbis::2785074727326765142::1698332469::1698332469::1::::<><>::
