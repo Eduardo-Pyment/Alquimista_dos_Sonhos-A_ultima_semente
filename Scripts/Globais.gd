@@ -3,7 +3,7 @@ extends Node
 var hidrogenio := 0
 var oxigenio := 0
 var agua := 0
-var player_life := 2
+var player_life := 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

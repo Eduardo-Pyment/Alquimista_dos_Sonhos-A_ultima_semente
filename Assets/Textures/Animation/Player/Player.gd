@@ -13,7 +13,7 @@ var recovering: bool = false
 var recovery_duration: float = 0.1
 
 @export var TempoPuloAlturaMax: float = 0.3
-@export var PuloAltura: float = 50
+@export var PuloAltura: float = 70
 @export var PuloDistancia: int = 3
 
 signal player_morreu()
