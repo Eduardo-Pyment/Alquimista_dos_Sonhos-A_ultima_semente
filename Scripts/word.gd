@@ -19,7 +19,7 @@ func _ready():
 	timer_numero.text = str("%02d" % padrao_minutos ) + ":" + str("%02d" % padrao_segundos)
 	control.time_is_up.connect(reload_game)
 	player.player_morreu.connect(reload_game)
-	Globais.player_life = 3
+	Globais.player_life = 2
 	reset_clock_timer()	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
