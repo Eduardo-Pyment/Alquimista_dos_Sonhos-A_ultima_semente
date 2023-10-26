@@ -3,3 +3,4 @@ res://Menus/MenuPrincipal/menu_opcoes.tscn
 res://Scenes/node_2d.tscn
 res://Scenes/maquina_agua.tscn
 res://Scripts/maquina_agua.gd
+res://Scripts/FallZone.gd
