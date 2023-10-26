@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=33 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_q7g41"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_vhrjn"]
@@ -580,11 +580,8 @@ physics_layer_0/collision_layer = 2
 sources/7 = SubResource("TileSetAtlasSource_h2bo8")
 sources/2 = SubResource("TileSetAtlasSource_lme7t")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0aqy"]
-size = Vector2(120, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsgnm"]
-size = Vector2(296, 35.25)
+size = Vector2(256, 35.25)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_viaf5"]
 
@@ -657,7 +654,7 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786441, 917510, 21, 786442, 983046, 21, 786447, 917510, 21, 786448, 983046, 21, 786453, 917510, 21, 786454, 983046, 21, 24, 1048582, 14)
 
 [node name="Player" parent="." instance=ExtResource("3_xlkhy")]
-position = Vector2(192, 200)
+position = Vector2(144, 96)
 collision_layer = 2
 collision_mask = 6
 
@@ -730,17 +727,6 @@ texture = ExtResource("9_ccyi1")
 offset_left = -128.0
 offset_right = -128.0
 
-[node name="FallZone" type="Area2D" parent="."]
-position = Vector2(984, 440)
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("10_4mhfg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FallZone"]
-position = Vector2(-8, 0)
-shape = SubResource("RectangleShape2D_d0aqy")
-debug_color = Color(1, 0, 0, 0.392157)
-
 [node name="FireZone" type="Area2D" parent="."]
 position = Vector2(2064, 416)
 collision_layer = 8
@@ -748,6 +734,12 @@ collision_mask = 2
 script = ExtResource("10_4mhfg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireZone"]
+position = Vector2(-16, 0)
+shape = SubResource("RectangleShape2D_vsgnm")
+debug_color = Color(1, 0, 0, 0.392157)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="FireZone"]
+position = Vector2(-1088, 40)
 shape = SubResource("RectangleShape2D_vsgnm")
 debug_color = Color(1, 0, 0, 0.392157)
 
@@ -865,7 +857,6 @@ offset_bottom = 34.0
 text = "03"
 label_settings = SubResource("LabelSettings_pt2se")
 
-[connection signal="body_entered" from="FallZone" to="FallZone" method="_on_body_entered"]
 [connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
 [connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
 

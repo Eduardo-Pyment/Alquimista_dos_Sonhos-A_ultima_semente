@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698278502
+::res://::1698288547
 default_bus_layout.tres::AudioBusLayout::5317020090769701337::1698276460::0::1::::<><>::
 Dicas.gd::GDScript::-1::1698208366::0::1::::<>Control<>::
 Dicas.tscn::PackedScene::4350545218928213900::1698275330::0::1::::<><>::res://Dicas.gd<>uid://drml5pl3jre1j
@@ -123,23 +123,23 @@ Tileset.png::CompressedTexture2D::560379506502959863::1698196636::1698196636::1:
 ::res://Assets/Textures/U.I/::1698196636
 placeholder_uparrow.png::CompressedTexture2D::7719680070697107861::1698196636::1698196636::1::::<><>::
 ::res://Menus/::1698276460
-::res://Menus/MenuPrincipal/::1698278436
+::res://Menus/MenuPrincipal/::1698280140
 IntroSi.gd::GDScript::-1::1698276460::0::1::::<>Node2D<>::
 IntroUnirios.gd::GDScript::-1::1698276460::0::1::::<>Node2D<>::
-intro_si.tscn::PackedScene::6423559703401441122::1698278436::0::1::::<><>::res://Menus/MenuPrincipal/IntroSi.gd<>uid://dro58hi3wtgn7::::res://Assets/AssetsMenu/Simbolo.png
+intro_si.tscn::PackedScene::6423559703401441122::1698280140::0::1::::<><>::res://Menus/MenuPrincipal/IntroSi.gd<>uid://dro58hi3wtgn7::::res://Assets/AssetsMenu/Simbolo.png
 intro_unirios.tscn::PackedScene::6238064105730019673::1698276460::0::1::::<><>::res://Menus/MenuPrincipal/IntroUnirios.gd<>uid://c23gpxkoj2h1x
 MenuOpcoes.gd::GDScript::-1::1698276460::0::1::::<>Control<>::
 MenuPrincipal.gd::GDScript::-1::1698276460::0::1::::<>Control<>::
-menu_opcoes.tscn::PackedScene::3116125130137304220::1698278248::0::1::::<><>::uid://c18x3bge5r4n::::res://Assets/AssetsMenu/backgorundmenu.jpg<>res://Menus/MenuPrincipal/MenuOpcoes.gd<>uid://cfe4i7r8qqxn7::::res://Assets/AssetsMenu/bgscroll.png<>uid://djfksgdymsc41::::res://Assets/AssetsMenu/logo.png<>uid://bfhkiwk3ofdmr::::res://Assets/AssetsMenu/logoMenuOpcoes.png<>uid://5q5i1hm4krf0::::res://Assets/AssetsMenu/voltar.png
+menu_opcoes.tscn::PackedScene::3116125130137304220::1698280140::0::1::::<><>::uid://c18x3bge5r4n::::res://Assets/AssetsMenu/backgorundmenu.jpg<>res://Menus/MenuPrincipal/MenuOpcoes.gd<>uid://cfe4i7r8qqxn7::::res://Assets/AssetsMenu/bgscroll.png<>uid://djfksgdymsc41::::res://Assets/AssetsMenu/logo.png<>uid://bfhkiwk3ofdmr::::res://Assets/AssetsMenu/logoMenuOpcoes.png<>uid://5q5i1hm4krf0::::res://Assets/AssetsMenu/voltar.png
 menu_principal.tscn::PackedScene::8492304225500678759::1698276460::0::1::::<><>::res://Menus/MenuPrincipal/MenuPrincipal.gd<>uid://c18x3bge5r4n
 OpcoesConstants.gd::GDScript::-1::1698276460::0::1::::OptionsConstants<>Node<>::
 ::res://Prefabs/::1698276460
 MusicController.tscn::PackedScene::1638545510309510060::1698276460::0::1::::<><>::res://Scripts/MusicController.gd<>uid://bfxd1kttyelg5
-::res://Scenes/::1698275330
+::res://Scenes/::1698280140
 hidrogenios.tscn::PackedScene::3782334168334212690::1698196636::0::1::::<><>::res://Scripts/hidrogenios.gd<>uid://bxdvve8dcly7r
 maquina_agua.tscn::PackedScene::3153513426443548668::1698275330::0::1::::<><>::res://Scripts/maquina_agua.gd<>uid://s6sm1dwswbei
 modal-game-over.tscn::PackedScene::1173194397309169013::1698196636::0::1::::<><>::res://Scripts/GUI/HUD.gd
-node_2d.tscn::PackedScene::5700015994562190647::1698275330::0::1::::<><>::uid://s6sm1dwswbei
+node_2d.tscn::PackedScene::5700015994562190647::1698280140::0::1::::<><>::uid://s6sm1dwswbei::::res://Assets/Textures/Tiles/level_tileset.png<>uid://h8pmsdo7vejn::::res://Assets/Textures/Tiles/Tileset.png<>uid://dc2epskdddoys::::res://Scenes/player.tscn<>res://Scripts/ParallaxBackground.gd<>uid://diawbnsbkshpp::::res://Assets/Textures/Background/CityDay/1.png<>uid://dtc8xburpks::::res://Assets/Textures/Background/CityDay/2.png<>uid://coy7tq2bvgjin::::res://Assets/Textures/Background/CityDay/3.png<>uid://g2lroy6n5dcd::::res://Assets/Textures/Background/CityDay/4.png<>uid://70ed4h7eq6uj::::res://Assets/Textures/Background/CityDay/5.png<>uid://qykltn38fadx::::res://Scenes/modal-game-over.tscn<>res://Scripts/FallZone.gd<>uid://k73i0e7vpwbf::::res://Scenes/Ambiente/PlataformaMovel.tscn<>uid://bt5gqx1a1xh4e::::res://Scenes/hidrogenios.tscn<>uid://cx73sewvijfmk::::res://Scenes/oxigenio.tscn<>uid://bk6t51v2413ci::::res://Scenes/maquina_agua.tscn<>uid://cd6nasnw2a8wn::::res://dicas_caixa.tscn<>res://Scripts/word.gd<>uid://dl6hdvk5712j6::::res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf<>uid://dbh2kpys1adoa::::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png
 oxigenio.tscn::PackedScene::6454977324322901150::1698196636::0::1::::<><>::uid://ku0uqed7tyho
 player.tscn::PackedScene::7355648553603418146::1698275330::0::1::::<><>::res://Assets/Textures/Animation/Player/Player.gd<>uid://boxg68gxu5if6
 ::res://Scenes/Ambiente/::1698196636
