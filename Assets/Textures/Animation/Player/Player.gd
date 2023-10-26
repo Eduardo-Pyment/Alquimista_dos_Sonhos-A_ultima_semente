@@ -19,6 +19,7 @@ var recovery_duration: float = 0.1
 signal player_morreu()
 
 func _ready():
+	Globais.agua = 0
 	Gravidade = (2 * PuloAltura / pow(TempoPuloAlturaMax, 2))
 	VelocidadePulo = Gravidade * TempoPuloAlturaMax
 	$CPUParticles2D.emitting = false  # Desliga as partículas iniciais
