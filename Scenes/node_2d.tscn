@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=34 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_q7g41"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_vhrjn"]
@@ -15,6 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://bt5gqx1a1xh4e" path="res://Scenes/hidrogenios.tscn" id="12_0sg0q"]
 [ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/oxigenio.tscn" id="13_hifxp"]
 [ext_resource type="PackedScene" uid="uid://bk6t51v2413ci" path="res://Scenes/maquina_agua.tscn" id="14_eu4ur"]
+[ext_resource type="PackedScene" uid="uid://cd6nasnw2a8wn" path="res://dicas_caixa.tscn" id="16_vy370"]
+[ext_resource type="Script" path="res://Scripts/word.gd" id="17_ucyse"]
+[ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="18_ww05s"]
+[ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="19_6bkpe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
 texture = ExtResource("1_q7g41")
@@ -611,6 +615,30 @@ color_initial_ramp = SubResource("GradientTexture1D_viaf5")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mooex"]
 size = Vector2(32, 96)
 
+[sub_resource type="LabelSettings" id="LabelSettings_dvf8b"]
+line_spacing = 0.0
+font = ExtResource("18_ww05s")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rplnc"]
+line_spacing = 0.0
+font = ExtResource("18_ww05s")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_32bcc"]
+line_spacing = 0.0
+font = ExtResource("18_ww05s")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pt2se"]
+line_spacing = 0.0
+font = ExtResource("18_ww05s")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
 [node name="Level 1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -629,7 +657,7 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786441, 917510, 21, 786442, 983046, 21, 786447, 917510, 21, 786448, 983046, 21, 786453, 917510, 21, 786454, 983046, 21, 24, 1048582, 14)
 
 [node name="Player" parent="." instance=ExtResource("3_xlkhy")]
-position = Vector2(416, 200)
+position = Vector2(192, 200)
 collision_layer = 2
 collision_mask = 6
 
@@ -704,6 +732,8 @@ offset_right = -128.0
 
 [node name="FallZone" type="Area2D" parent="."]
 position = Vector2(984, 440)
+collision_layer = 8
+collision_mask = 2
 script = ExtResource("10_4mhfg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallZone"]
@@ -713,12 +743,13 @@ debug_color = Color(1, 0, 0, 0.392157)
 
 [node name="FireZone" type="Area2D" parent="."]
 position = Vector2(2064, 416)
+collision_layer = 8
+collision_mask = 2
 script = ExtResource("10_4mhfg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireZone"]
 shape = SubResource("RectangleShape2D_vsgnm")
 debug_color = Color(1, 0, 0, 0.392157)
-metadata/_edit_lock_ = true
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="FireZone"]
 show_behind_parent = true
@@ -732,18 +763,18 @@ fract_delta = false
 [node name="Átomos" type="Node2D" parent="LevelProps"]
 
 [node name="Hidrogenios" parent="LevelProps/Átomos" instance=ExtResource("12_0sg0q")]
-position = Vector2(375, 326)
+position = Vector2(952, 80)
 
 [node name="Hidrogenios2" parent="LevelProps/Átomos" instance=ExtResource("12_0sg0q")]
-position = Vector2(458, 326)
+position = Vector2(2048, 176)
 
 [node name="oxigenio" parent="LevelProps/Átomos" instance=ExtResource("13_hifxp")]
-position = Vector2(416, 326)
+position = Vector2(1288, 192)
 collision_layer = 4
 collision_mask = 2
 
 [node name="Maquina_agua" parent="LevelProps" instance=ExtResource("14_eu4ur")]
-position = Vector2(529, 333)
+position = Vector2(1768, 368)
 
 [node name="AnimatableBody2D" parent="." instance=ExtResource("11_h71dx")]
 position = Vector2(976, 256)
@@ -762,7 +793,80 @@ shape = SubResource("RectangleShape2D_mooex")
 [node name="Sprite2D" parent="AnimatableBody2D2" index="1"]
 region_rect = Rect2(128, 0, 32, 96)
 
+[node name="Dicas" parent="." instance=ExtResource("16_vy370")]
+offset_left = 1496.0
+offset_top = 24.0
+offset_right = 2072.0
+offset_bottom = 400.0
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_ucyse")
+padrao_minutos = 0
+padrao_segundos = 30
+
+[node name="clock_timer" type="Timer" parent="HUD/Control"]
+autostart = true
+
+[node name="container" type="MarginContainer" parent="HUD/Control"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 881.002
+offset_bottom = 448.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="timer_hud" type="HBoxContainer" parent="HUD/Control/container"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="timer_container" type="Label" parent="HUD/Control/container/timer_hud"]
+layout_mode = 2
+text = "Timer: "
+label_settings = SubResource("LabelSettings_dvf8b")
+
+[node name="timer_numero" type="Label" parent="HUD/Control/container/timer_hud"]
+layout_mode = 2
+text = "00:00"
+label_settings = SubResource("LabelSettings_rplnc")
+
+[node name="coraçao vida" type="TextureRect" parent="HUD/Control"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 65.0
+offset_bottom = 40.0
+texture = ExtResource("19_6bkpe")
+
+[node name="x" type="Label" parent="HUD/Control/coraçao vida"]
+custom_minimum_size = Vector2(40, 23)
+layout_mode = 0
+offset_left = 41.0
+offset_top = 8.0
+offset_right = 81.0
+offset_bottom = 34.0
+text = "X	"
+label_settings = SubResource("LabelSettings_32bcc")
+
+[node name="vida" type="Label" parent="HUD/Control/coraçao vida"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 8.0
+offset_right = 99.0
+offset_bottom = 34.0
+text = "03"
+label_settings = SubResource("LabelSettings_pt2se")
+
 [connection signal="body_entered" from="FallZone" to="FallZone" method="_on_body_entered"]
 [connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
+[connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
 
 [editable path="AnimatableBody2D2"]

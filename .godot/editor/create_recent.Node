@@ -1,5 +1,4 @@
-AudioStreamPlayer
-Button
+AnimatedSprite2D
 Sprite2D
 CheckButton
 Label
@@ -15,5 +14,5 @@ AnimationPlayer
 GPUParticles2D
 CollisionShape2D
 Area2D
-AnimatedSprite2D
+AnimationPlayer
 CanvasLayer

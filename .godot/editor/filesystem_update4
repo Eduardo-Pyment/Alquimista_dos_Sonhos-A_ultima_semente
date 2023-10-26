@@ -1,4 +1,3 @@
+res://Scenes/node_2d.tscn
 res://Menus/MenuPrincipal/intro_si.tscn
-res://Menus/MenuPrincipal/MenuOpcoes.gd
 res://Menus/MenuPrincipal/menu_opcoes.tscn
-res://Menus/MenuPrincipal/options_constants.gd

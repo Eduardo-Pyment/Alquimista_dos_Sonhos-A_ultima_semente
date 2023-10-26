@@ -12,8 +12,8 @@ func _process(delta):
 		if Globais.hidrogenio >= 2 and Globais.oxigenio >= 1:
 			Globais.hidrogenio -= 2
 			Globais.oxigenio -= 1
-			Globais.agua +=1
-			print("agua = ",Globais.agua)
+			Globais.agua += 1
+			print("Água =", Globais.agua)
 
 func _on_body_entered(body):
 	inside = true
