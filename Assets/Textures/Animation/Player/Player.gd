@@ -109,6 +109,15 @@ func take_damage(knockback_force := Vector2.ZERO):
 		queue_free()
 		emit_signal("player_morreu")
 
+func morte(knockback_force := Vector2.ZERO):
+	if knockback_force != Vector2.ZERO:
+			knockback_vector = knockback_force
+			player_sprite_2d.modulate = Color(1, 0, 0, 1)
+			recovery_duration = 0.1
+			recovering = true
+			queue_free()
+			emit_signal("player_morreu")
+	
 # Parte relacionada à água e interação
 var inside = false
 

@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1698633391
+::res://::1698635602
 default_bus_layout.tres::AudioBusLayout::5317020090769701337::1698283636::0::1::::<><>::
 Dicas.gd::GDScript::-1::1698283636::0::1::::<>Control<>::
 Dicas.tscn::PackedScene::4350545218928213900::1698283636::0::1::::<><>::res://Dicas.gd<>uid://drml5pl3jre1j
@@ -94,8 +94,8 @@ Mouse_Icons_Outlined_Drop-shadowed (16 x 16).png::CompressedTexture2D::432223351
 Speech_Emotes (16 x 16).png::CompressedTexture2D::7210428545853136781::1698283636::1698283636::1::::<><>::
 Timer_Coin_Numbers_Drop-shadowed (8 x 8).png::CompressedTexture2D::5356798820012310430::1698283636::1698283636::1::::<><>::
 Timer_Coin_Numbers_Outlined (8 x 8).png::CompressedTexture2D::7333099884914297550::1698283636::1698283636::1::::<><>::
-::res://Assets/Textures/Animation/Player/::1698632035
-Player.gd::GDScript::-1::1698632035::0::1::::<>CharacterBody2D<>::
+::res://Assets/Textures/Animation/Player/::1698634607
+Player.gd::GDScript::-1::1698634607::0::1::::<>CharacterBody2D<>::
 playerPlaceholder.png::CompressedTexture2D::920267965494819079::1698283636::1698283636::1::::<><>::
 ::res://Assets/Textures/Animation/Player/PlayerAnim/::1697639076
 Character Idle 48x48.png::CompressedTexture2D::3416966588148891129::1698283636::1698283636::1::::<><>::
@@ -134,47 +134,47 @@ Tileset.png::CompressedTexture2D::560379506502959863::1698283636::1698283636::1:
 ::res://Assets/Textures/U.I/::1698296303
 placeholder_uparrow.png::CompressedTexture2D::7719680070697107861::1698283636::1698283636::1::::<><>::
 ::res://Menus/::1698296303
-::res://Menus/MenuPrincipal/::1698633346
+::res://Menus/MenuPrincipal/::1698635245
 IntroSi.gd::GDScript::-1::1698283636::0::1::::<>Node2D<>::
 IntroUnirios.gd::GDScript::-1::1698283636::0::1::::<>Node2D<>::
-intro_si.tscn::PackedScene::6423559703401441122::1698633346::0::1::::<><>::res://Menus/MenuPrincipal/IntroSi.gd<>uid://dro58hi3wtgn7::::res://Assets/AssetsMenu/Simbolo.png
+intro_si.tscn::PackedScene::6423559703401441122::1698635245::0::1::::<><>::res://Menus/MenuPrincipal/IntroSi.gd<>uid://dro58hi3wtgn7::::res://Assets/AssetsMenu/Simbolo.png
 intro_unirios.tscn::PackedScene::6238064105730019673::1698283636::0::1::::<><>::res://Menus/MenuPrincipal/IntroUnirios.gd<>uid://c23gpxkoj2h1x
 MenuOpcoes.gd::GDScript::-1::1698283636::0::1::::<>Control<>::
 MenuPrincipal.gd::GDScript::-1::1698283636::0::1::::<>Control<>::
-menu_opcoes.tscn::PackedScene::3116125130137304220::1698633346::0::1::::<><>::uid://c18x3bge5r4n::::res://Assets/AssetsMenu/backgorundmenu.jpg<>res://Menus/MenuPrincipal/MenuOpcoes.gd<>uid://cfe4i7r8qqxn7::::res://Assets/AssetsMenu/bgscroll.png<>uid://djfksgdymsc41::::res://Assets/AssetsMenu/logo.png<>uid://bfhkiwk3ofdmr::::res://Assets/AssetsMenu/logoMenuOpcoes.png<>uid://5q5i1hm4krf0::::res://Assets/AssetsMenu/voltar.png
+menu_opcoes.tscn::PackedScene::3116125130137304220::1698635245::0::1::::<><>::uid://c18x3bge5r4n::::res://Assets/AssetsMenu/backgorundmenu.jpg<>res://Menus/MenuPrincipal/MenuOpcoes.gd<>uid://cfe4i7r8qqxn7::::res://Assets/AssetsMenu/bgscroll.png<>uid://djfksgdymsc41::::res://Assets/AssetsMenu/logo.png<>uid://bfhkiwk3ofdmr::::res://Assets/AssetsMenu/logoMenuOpcoes.png<>uid://5q5i1hm4krf0::::res://Assets/AssetsMenu/voltar.png
 menu_principal.tscn::PackedScene::8492304225500678759::1698283636::0::1::::<><>::res://Menus/MenuPrincipal/MenuPrincipal.gd<>uid://c18x3bge5r4n
 OpcoesConstants.gd::GDScript::-1::1698283636::0::1::::OptionsConstants<>Node<>::
 ::res://Prefabs/::1698296303
 MusicController.tscn::PackedScene::1638545510309510060::1698283636::0::1::::<><>::res://Scripts/MusicController.gd<>uid://bfxd1kttyelg5
-::res://Scenes/::1698633346
+::res://Scenes/::1698635246
 Dicas.tscn::PackedScene::5338319208403268628::1697742603::0::1::::<><>::uid://drml5pl3jre1j
 dicas_caixa.tscn::PackedScene::4563243543832574006::1697742604::0::1::::<><>::uid://cib6lqced2i8k
 hidrogenios.tscn::PackedScene::3782334168334212690::1698283636::0::1::::<><>::res://Scripts/hidrogenios.gd<>uid://bxdvve8dcly7r
 maquina_agua.tscn::PackedScene::3153513426443548668::1698283636::0::1::::<><>::res://Scripts/maquina_agua.gd<>uid://s6sm1dwswbei
 modal-game-over.tscn::PackedScene::1173194397309169013::1698283636::0::1::::<><>::res://Scripts/GUI/HUD.gd
-node_2d.tscn::PackedScene::5700015994562190647::1698633346::0::1::::<><>::uid://s6sm1dwswbei::::res://Assets/Textures/Tiles/level_tileset.png<>uid://h8pmsdo7vejn::::res://Assets/Textures/Tiles/Tileset.png<>uid://dc2epskdddoys::::res://Scenes/player.tscn<>res://Scripts/ParallaxBackground.gd<>uid://diawbnsbkshpp::::res://Assets/Textures/Background/CityDay/1.png<>uid://dtc8xburpks::::res://Assets/Textures/Background/CityDay/2.png<>uid://coy7tq2bvgjin::::res://Assets/Textures/Background/CityDay/3.png<>uid://g2lroy6n5dcd::::res://Assets/Textures/Background/CityDay/4.png<>uid://70ed4h7eq6uj::::res://Assets/Textures/Background/CityDay/5.png<>uid://qykltn38fadx::::res://Scenes/modal-game-over.tscn<>res://Scripts/FallZone.gd<>uid://k73i0e7vpwbf::::res://Scenes/Ambiente/PlataformaMovel.tscn<>uid://bt5gqx1a1xh4e::::res://Scenes/hidrogenios.tscn<>uid://cx73sewvijfmk::::res://Scenes/oxigenio.tscn<>uid://bk6t51v2413ci::::res://Scenes/maquina_agua.tscn<>uid://cd6nasnw2a8wn::::res://dicas_caixa.tscn<>res://Scripts/word.gd<>uid://dl6hdvk5712j6::::res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf<>uid://dbh2kpys1adoa::::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png<>res://Scripts/Morte void.gd
+node_2d.tscn::PackedScene::5700015994562190647::1698635246::0::1::::<><>::uid://s6sm1dwswbei::::res://Assets/Textures/Tiles/level_tileset.png<>uid://h8pmsdo7vejn::::res://Assets/Textures/Tiles/Tileset.png<>uid://dc2epskdddoys::::res://Scenes/player.tscn<>res://Scripts/ParallaxBackground.gd<>uid://diawbnsbkshpp::::res://Assets/Textures/Background/CityDay/1.png<>uid://dtc8xburpks::::res://Assets/Textures/Background/CityDay/2.png<>uid://coy7tq2bvgjin::::res://Assets/Textures/Background/CityDay/3.png<>uid://g2lroy6n5dcd::::res://Assets/Textures/Background/CityDay/4.png<>uid://70ed4h7eq6uj::::res://Assets/Textures/Background/CityDay/5.png<>uid://qykltn38fadx::::res://Scenes/modal-game-over.tscn<>res://Scripts/FallZone.gd<>uid://k73i0e7vpwbf::::res://Scenes/Ambiente/PlataformaMovel.tscn<>uid://bt5gqx1a1xh4e::::res://Scenes/hidrogenios.tscn<>uid://cx73sewvijfmk::::res://Scenes/oxigenio.tscn<>uid://bk6t51v2413ci::::res://Scenes/maquina_agua.tscn<>uid://cd6nasnw2a8wn::::res://dicas_caixa.tscn<>res://Scripts/word.gd<>uid://dl6hdvk5712j6::::res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf<>uid://dbh2kpys1adoa::::res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png<>res://Scripts/morte_void.gd
 oxigenio.tscn::PackedScene::6454977324322901150::1698283636::0::1::::<><>::uid://ku0uqed7tyho
 player.tscn::PackedScene::7355648553603418146::1698283636::0::1::::<><>::res://Assets/Textures/Animation/Player/Player.gd<>uid://boxg68gxu5if6
 ::res://Scenes/Ambiente/::1698211140
 PlataformaMovel.tscn::PackedScene::769664207404519751::1698283636::0::1::::<><>::res://Scripts/PlataformaMovel_0.gd<>uid://s6sm1dwswbei
 ::res://Scenes/Itens/::1697639076
 AtomoBase.tscn::PackedScene::3038913706959917762::1698283636::0::1::::<><>::res://Scripts/MoleculaBase.gd<>uid://dudtvjkvyir14
-::res://Scripts/::1698633346
+::res://Scripts/::1698634832
 Dicas.gd::GDScript::-1::1697743634::0::1::::<>Control<>::
 dicas_caixa.gd::GDScript::-1::1697743709::0::1::::<>Control<>::
-FallZone.gd::GDScript::-1::1698632035::0::1::::<>Area2D<>::
+FallZone.gd::GDScript::-1::1698634832::0::1::::<>Area2D<>::
 FireZone.gd::GDScript::-1::1698283636::0::1::::<>CollisionShape2D<>::
 Globais.gd::GDScript::-1::1698283636::0::1::::<>Node<>::
 hidrogenios.gd::GDScript::-1::1698283636::0::1::::<>Area2D<>::
 MainCamera.gd::GDScript::-1::1698283636::0::1::::<>Camera2D<>::
 maquina_agua.gd::GDScript::-1::1698283636::0::1::::<>Area2D<>::
 MoleculaBase.gd::GDScript::-1::1698283636::0::1::::<>Area2D<>::
-Morte void.gd::GDScript::-1::1698633346::0::1::::<>Area2D<>::
+morte_void.gd::GDScript::-1::1698634832::0::1::::<>Area2D<>::
 MusicController.gd::GDScript::-1::1698283636::0::1::::<>Node2D<>::
 oxigenio.gd::GDScript::-1::1698283636::0::1::::<>Area2D<>::
 ParallaxBackground.gd::GDScript::-1::1698283636::0::1::::<>ParallaxBackground<>::
 PlataformaMovel_0.gd::GDScript::-1::1698283636::0::1::::<>AnimatableBody2D<>::
-word.gd::GDScript::-1::1698632219::0::1::::<>Control<>::
+word.gd::GDScript::-1::1698634395::0::1::::<>Control<>::
 ::res://Scripts/GUI/::1697743786
 HUD.gd::GDScript::-1::1698283636::0::1::::<>Control<>::
 ::res://Sounds/::1698296303
