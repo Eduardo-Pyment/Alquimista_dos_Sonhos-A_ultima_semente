@@ -1,4 +1,7 @@
 res://Menus/MenuPrincipal/intro_si.tscn
+<<<<<<< HEAD
 res://Menus/MenuPrincipal/menu_opcoes.tscn
 res://Scenes/node_2d.tscn
 res://Scenes/Morte_Void.tscn
+=======
+>>>>>>> origin/main

@@ -4,7 +4,10 @@ extends CharacterBody2D
 @onready var PlayerRaycast = $CheckChaoRaycasts
 @onready var player_sprite_2d = $PlayerSprite2D
 
+<<<<<<< HEAD
 var VelocidadeHorizontal = 250
+=======
+>>>>>>> origin/main
 var Gravidade: float
 var VelocidadePulo: float
 var PuloDisponivel: bool
@@ -12,6 +15,10 @@ var knockback_vector: Vector2 = Vector2.ZERO
 var recovering: bool = false
 var recovery_duration: float = 0.1
 
+<<<<<<< HEAD
+=======
+@export var VelocidadeHorizontal = 250
+>>>>>>> origin/main
 @export var TempoPuloAlturaMax: float = 0.3
 @export var PuloAltura: float = 70
 @export var PuloDistancia: int = 3
@@ -19,14 +26,23 @@ var recovery_duration: float = 0.1
 signal player_morreu()
 
 func _ready():
+<<<<<<< HEAD
 	Globais.hidrogenio = 0
 	Globais.oxigenio = 0
 	Globais.agua = 0  # Define a quantidade de água como zero
+=======
+	Globais.oxigenio = 0
+	Globais.hidrogenio = 0 
+	Globais.agua = 0
+>>>>>>> origin/main
 	Gravidade = (2 * PuloAltura / pow(TempoPuloAlturaMax, 2))
 	VelocidadePulo = Gravidade * TempoPuloAlturaMax
 	$CPUParticles2D.emitting = false  # Desliga as partículas iniciais
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 func _physics_process(delta):
 	# Handle Jump.
 	if is_on_floor():
@@ -88,7 +104,11 @@ func animacao_player():
 	if $AnimationPlayer.assigned_animation != animacao:
 		$AnimationPlayer.play(animacao)
 
+<<<<<<< HEAD
 func _on_hurtbox_body_entered(body):
+=======
+func _on_hurtbox_body_entered(_body):
+>>>>>>> origin/main
 	var knockback_force = Vector2.ZERO
 	if $Raydireita.is_colliding():
 		knockback_force = Vector2(-200, -200)
@@ -109,6 +129,7 @@ func take_damage(knockback_force := Vector2.ZERO):
 		queue_free()
 		emit_signal("player_morreu")
 
+<<<<<<< HEAD
 func morte(knockback_force := Vector2.ZERO):
 	if knockback_force != Vector2.ZERO:
 			knockback_vector = knockback_force
@@ -122,6 +143,12 @@ func morte(knockback_force := Vector2.ZERO):
 var inside = false
 
 func _process(delta):
+=======
+# Parte relacionada à água e interação
+var inside = false
+
+func _process(_delta):
+>>>>>>> origin/main
 	if Input.is_action_just_pressed("ui_up") and inside == true:
 		if Globais.hidrogenio >= 2 and Globais.oxigenio >= 1:
 			Globais.hidrogenio -= 2
@@ -129,10 +156,18 @@ func _process(delta):
 			Globais.agua += 1
 			print("Água =", Globais.agua)
 
+<<<<<<< HEAD
 func _on_body_entered(body):
 	inside = true
 	$AnimatedSprite2D.modulate.a += 1
 
 func _on_body_exited(body):
+=======
+func _on_body_entered(_body):
+	inside = true
+	$AnimatedSprite2D.modulate.a += 1
+
+func _on_body_exited(_body):
+>>>>>>> origin/main
 	inside = false
 	$AnimatedSprite2D.modulate.a = 0
