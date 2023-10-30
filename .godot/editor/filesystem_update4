@@ -1,5 +1,4 @@
-res://Scenes/node_2d.tscn
-res://Scripts/Void.gd
-res://Scenes/Morte_Void.tscn
 res://Menus/MenuPrincipal/intro_si.tscn
 res://Menus/MenuPrincipal/menu_opcoes.tscn
+res://Scenes/node_2d.tscn
+res://Scenes/Morte_Void.tscn
