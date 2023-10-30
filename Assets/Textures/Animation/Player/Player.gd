@@ -19,6 +19,8 @@ var recovery_duration: float = 0.1
 signal player_morreu()
 
 func _ready():
+	Globais.oxigenio = 0
+	Globais.hidrogenio = 0 
 	Globais.agua = 0
 	Gravidade = (2 * PuloAltura / pow(TempoPuloAlturaMax, 2))
 	VelocidadePulo = Gravidade * TempoPuloAlturaMax
