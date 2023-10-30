@@ -24,6 +24,7 @@ MusicController="*res://Prefabs/MusicController.tscn"
 
 window/size/viewport_width=768
 window/size/viewport_height=448
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [filesystem]
@@ -38,6 +39,7 @@ import/blender/enabled=false
 2d_render/layer_4="Enemies"
 2d_render/layer_5="Hazards"
 2d_physics/layer_1="World"
+2d_navigation/layer_1="Bolhas"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Objects"
 2d_physics/layer_4="Enemies"

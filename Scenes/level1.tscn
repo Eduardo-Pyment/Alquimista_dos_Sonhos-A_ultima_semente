@@ -1,9 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=36 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_521p8"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_ls6pi"]
 [ext_resource type="PackedScene" uid="uid://dc2epskdddoys" path="res://Scenes/player.tscn" id="3_45bo3"]
-[ext_resource type="PackedScene" uid="uid://mxy0jcmtv3mh" path="res://Scenes/Itens/atomo_flutuante.tscn" id="4_x4tn6"]
 [ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="5_o41q3"]
 [ext_resource type="Texture2D" uid="uid://diawbnsbkshpp" path="res://Assets/Textures/Background/CityDay/1.png" id="6_72cee"]
 [ext_resource type="Texture2D" uid="uid://dtc8xburpks" path="res://Assets/Textures/Background/CityDay/2.png" id="7_km6va"]
@@ -12,14 +11,15 @@
 [ext_resource type="Texture2D" uid="uid://70ed4h7eq6uj" path="res://Assets/Textures/Background/CityDay/5.png" id="10_ylrpr"]
 [ext_resource type="PackedScene" uid="uid://qykltn38fadx" path="res://Scenes/modal-game-over.tscn" id="11_xiekv"]
 [ext_resource type="Script" path="res://Scripts/FallZone.gd" id="12_3hpm8"]
-[ext_resource type="PackedScene" uid="uid://bt5gqx1a1xh4e" path="res://Scenes/hidrogenios.tscn" id="13_unura"]
-[ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/oxigenio.tscn" id="14_snl5y"]
+[ext_resource type="PackedScene" uid="uid://bt5gqx1a1xh4e" path="res://Scenes/Itens/hidrogenios.tscn" id="13_unura"]
+[ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/Itens/oxigenio.tscn" id="14_snl5y"]
 [ext_resource type="PackedScene" uid="uid://bk6t51v2413ci" path="res://Scenes/maquina_agua.tscn" id="15_pejlj"]
 [ext_resource type="PackedScene" uid="uid://k73i0e7vpwbf" path="res://Scenes/Ambiente/PlataformaMovel.tscn" id="16_4tjrt"]
 [ext_resource type="PackedScene" uid="uid://cd6nasnw2a8wn" path="res://dicas_caixa.tscn" id="17_t6xsv"]
 [ext_resource type="Script" path="res://Scripts/word.gd" id="18_ygq04"]
 [ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="19_u5f3r"]
 [ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="20_0ef6r"]
+[ext_resource type="PackedScene" uid="uid://bglfag0avg81y" path="res://Scenes/Itens/hidrogenio2.tscn" id="20_sridr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
 texture = ExtResource("1_521p8")
@@ -615,6 +615,30 @@ color = Color(1, 0.498039, 0, 1)
 color_ramp = SubResource("GradientTexture1D_q80w3")
 color_initial_ramp = SubResource("GradientTexture1D_viaf5")
 
+[sub_resource type="GDScript" id="GDScript_tb7qc"]
+script/source = "extends \"res://Scripts/itens/hidrogenios.gd\"
+
+func _ready():
+	$animation.play(\"idle\")
+		
+func _on_body_entered(_body):
+	$animation.play(\"collected\")
+	#remover a colisão dupla // espera a colisão acabar para computar a coleta
+	Globais.hidrogenio += hidro
+	print(Globais.hidrogenio)
+	call_deferred(\"spawn_atomo\")
+	await $collision.call_deferred(\"queue_free\") 
+	
+func spawn_atomo():
+	var hidrogenio_flutuante = load(\"res://Scenes/Itens/H_flutuante.tscn\")
+	var novo_atomo = hidrogenio_flutuante.instantiate()
+	get_node(\"/root/Level1/Hidrogenio\").add_child(novo_atomo)	
+		
+func _on_animated_sprite_2d_animation_finished():
+	pass
+	
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mooex"]
 size = Vector2(32, 96)
 
@@ -642,11 +666,10 @@ font = ExtResource("19_u5f3r")
 font_size = 18
 shadow_color = Color(0, 0, 0, 0.6)
 
-[node name="Level 1" type="Node2D"]
+[node name="Level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
-position = Vector2(-1, 0)
 tile_set = SubResource("TileSet_elkec")
 format = 2
 layer_0/name = "BaseTiles"
@@ -663,16 +686,11 @@ layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786
 navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_45bo3")]
-position = Vector2(104, 32)
+unique_name_in_owner = true
+position = Vector2(1624, 112)
 collision_layer = 2
 collision_mask = 6
-VelocidadeHorizontal = 190
-
-[node name="AtomoFlutuante" parent="." node_paths=PackedStringArray("AlvoMovimento") instance=ExtResource("4_x4tn6")]
-position = Vector2(384, 224)
-motion_mode = 0
-wall_min_slide_angle = 0.0
-AlvoMovimento = NodePath("../Player")
+VelocidadeHorizontal = 170
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
@@ -768,21 +786,20 @@ fract_delta = false
 
 [node name="LevelProps" type="Node" parent="."]
 
-[node name="Átomos" type="Node2D" parent="LevelProps"]
+[node name="Maquina_agua" parent="LevelProps" instance=ExtResource("15_pejlj")]
+position = Vector2(1768, 352)
 
-[node name="Hidrogenios" parent="LevelProps/Átomos" instance=ExtResource("13_unura")]
-position = Vector2(536, 320)
+[node name="Hidrogenio" parent="." instance=ExtResource("13_unura")]
+position = Vector2(1216, 80)
+script = SubResource("GDScript_tb7qc")
 
-[node name="Hidrogenios2" parent="LevelProps/Átomos" instance=ExtResource("13_unura")]
-position = Vector2(584, 320)
+[node name="Hidrogenio2" parent="." instance=ExtResource("20_sridr")]
+position = Vector2(1664, 200)
 
-[node name="oxigenio" parent="LevelProps/Átomos" instance=ExtResource("14_snl5y")]
-position = Vector2(488, 320)
+[node name="Oxigenio" parent="." instance=ExtResource("14_snl5y")]
+position = Vector2(2224, 160)
 collision_layer = 4
 collision_mask = 2
-
-[node name="Maquina_agua" parent="LevelProps" instance=ExtResource("15_pejlj")]
-position = Vector2(1768, 368)
 
 [node name="AnimatableBody2D" parent="." instance=ExtResource("16_4tjrt")]
 position = Vector2(976, 256)
@@ -802,12 +819,14 @@ shape = SubResource("RectangleShape2D_mooex")
 region_rect = Rect2(128, 0, 32, 96)
 
 [node name="Dicas" parent="." instance=ExtResource("17_t6xsv")]
+visible = false
 offset_left = 1496.0
 offset_top = 24.0
 offset_right = 2072.0
 offset_bottom = 400.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
