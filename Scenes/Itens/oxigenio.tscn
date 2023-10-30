@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://cx73sewvijfmk"]
 
-[ext_resource type="Script" path="res://Scripts/oxigenio.gd" id="1_yvwff"]
+[ext_resource type="Script" path="res://Scripts/itens/oxigenio.gd" id="1_vrvk4"]
 [ext_resource type="Texture2D" uid="uid://cakle07l6o546" path="res://Assets/Textures/Itens/Moleculas/coleta_animação_32x32.png" id="2_btjt5"]
 [ext_resource type="Texture2D" uid="uid://tmw2hv0xf8wb" path="res://Assets/Textures/Itens/Moleculas/oxigenio_animation_32x32.png" id="3_a28gi"]
 
@@ -89,6 +89,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uipyl")
+}, {
+"duration": 1.0,
+"texture": null
 }],
 "loop": false,
 "name": &"collected",
@@ -119,13 +122,13 @@ animations = [{
 radius = 14.0
 
 [node name="oxigenio" type="Area2D"]
-script = ExtResource("1_yvwff")
+script = ExtResource("1_vrvk4")
 
 [node name="animation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_r07me")
 animation = &"idle"
-frame_progress = 0.681606
+autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_d02gj")

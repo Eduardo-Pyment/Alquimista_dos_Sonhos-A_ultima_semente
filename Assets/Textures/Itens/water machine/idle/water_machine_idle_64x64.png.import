@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwnajvib0qmee"
-path="res://.godot/imported/oxigen_32x32.png-2188f44d92e26f0e773325ad86b5c37b.ctex"
+uid="uid://dikdbghof1tqv"
+path="res://.godot/imported/water_machine_idle_64x64.png-269d852b896cf1b364e1b5f3423c69ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Itens/Moleculas/oxigen_32x32.png"
-dest_files=["res://.godot/imported/oxigen_32x32.png-2188f44d92e26f0e773325ad86b5c37b.ctex"]
+source_file="res://Assets/Textures/Itens/water machine/idle/water_machine_idle_64x64.png"
+dest_files=["res://.godot/imported/water_machine_idle_64x64.png-269d852b896cf1b364e1b5f3423c69ae.ctex"]
 
 [params]
 

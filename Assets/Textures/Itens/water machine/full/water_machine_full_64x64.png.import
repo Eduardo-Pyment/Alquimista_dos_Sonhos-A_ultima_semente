@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dudtvjkvyir14"
-path="res://.godot/imported/hidrogen_32x32.png-971eea6090d91a2bb187d5779d325bac.ctex"
+uid="uid://uvjk8i5wqint"
+path="res://.godot/imported/water_machine_full_64x64.png-9c96a1b2242f55d3099b5843261885d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Itens/Moleculas/hidrogen_32x32.png"
-dest_files=["res://.godot/imported/hidrogen_32x32.png-971eea6090d91a2bb187d5779d325bac.ctex"]
+source_file="res://Assets/Textures/Itens/water machine/full/water_machine_full_64x64.png"
+dest_files=["res://.godot/imported/water_machine_full_64x64.png-9c96a1b2242f55d3099b5843261885d1.ctex"]
 
 [params]
 

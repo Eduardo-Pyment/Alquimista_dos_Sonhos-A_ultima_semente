@@ -1,16 +1,19 @@
 [gd_scene load_steps=10 format=3 uid="uid://mxy0jcmtv3mh"]
 
-[ext_resource type="Texture2D" uid="uid://fmbn2c4wuwnj" path="res://Assets/Textures/Itens/Moleculas/hidrogenio_animation_32x32.png" id="1_fse5n"]
+[ext_resource type="Texture2D" uid="uid://fmbn2c4wuwnj" path="res://Assets/Textures/Itens/Moleculas/hidrogenio_animation_32x32.png" id="1_550lh"]
 
 [sub_resource type="GDScript" id="GDScript_r48vn"]
 script/source = "extends CharacterBody2D
 
 @export var VelocidadeMovimeto: float = 200.0
-@export var AlvoMovimento: Node2D
-@export var AgenteNavegacao: NavigationAgent2D
+@onready var AlvoMovimento = get_node(\"/root/Level1/Player\")
+@onready var AgenteNavegacao = get_node(\"NavigationAgent2D\")
 
 func _ready():
-	call_deferred(\"actor_setup\")	
+	print(AlvoMovimento)
+	AlvoMovimento = get_node(\"/root/Level1/Player\")
+	call_deferred(\"actor_setup\")
+	print(AlvoMovimento)
 		
 func actor_setup():
 	await get_tree().physics_frame
@@ -19,10 +22,9 @@ func actor_setup():
 func set_alvo_movimento(PontoAlvo: Vector2):
 	AgenteNavegacao.target_position = PontoAlvo
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if AgenteNavegacao.is_navigation_finished():
-		return
-		
+		return		
 	var PosicaoAgenteAtual: Vector2 = global_position
 	var ProximaPosicaoCaminho: Vector2 = AgenteNavegacao.get_next_path_position()
 	var NovaVelocidade: Vector2 = ProximaPosicaoCaminho - PosicaoAgenteAtual
@@ -34,30 +36,30 @@ func _physics_process(delta):
 
 func _on_timer_timeout():
 	set_alvo_movimento(AlvoMovimento.position)
-	
+	actor_setup()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8a1jc"]
 radius = 16.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qc3pp"]
-atlas = ExtResource("1_fse5n")
+atlas = ExtResource("1_550lh")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wx25p"]
-atlas = ExtResource("1_fse5n")
+atlas = ExtResource("1_550lh")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0yv6x"]
-atlas = ExtResource("1_fse5n")
+atlas = ExtResource("1_550lh")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hyfv"]
-atlas = ExtResource("1_fse5n")
+atlas = ExtResource("1_550lh")
 region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vfxhs"]
-atlas = ExtResource("1_fse5n")
+atlas = ExtResource("1_550lh")
 region = Rect2(0, 128, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hgcvl"]
@@ -83,15 +85,13 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="AtomoFlutuante" type="CharacterBody2D" node_paths=PackedStringArray("AgenteNavegacao")]
+[node name="H_flutuante" type="CharacterBody2D"]
 light_mask = 2
 visibility_layer = 2
 z_index = -1
 scale = Vector2(0.7, 0.7)
-collision_mask = 0
 motion_mode = 1
 script = SubResource("GDScript_r48vn")
-AgenteNavegacao = NodePath("NavigationAgent2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8a1jc")

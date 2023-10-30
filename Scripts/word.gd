@@ -23,7 +23,7 @@ func _ready():
 	reset_clock_timer()	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	vida.text = str(Globais.player_life).pad_zeros(3)
 	
 	if minutos == 0 and segundos == 0:
