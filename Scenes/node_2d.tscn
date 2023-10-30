@@ -807,8 +807,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("17_ucyse")
-padrao_minutos = 0
-padrao_segundos = 30
 
 [node name="clock_timer" type="Timer" parent="HUD/Control"]
 autostart = true

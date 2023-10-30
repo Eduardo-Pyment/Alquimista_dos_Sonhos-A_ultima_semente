@@ -1,3 +1,6 @@
+Timer
+CollisionShape2D
+Area2D
 AnimatedSprite2D
 Sprite2D
 CheckButton
@@ -12,7 +15,5 @@ VBoxContainer
 MarginContainer
 AnimationPlayer
 GPUParticles2D
-CollisionShape2D
-Area2D
 AnimationPlayer
 CanvasLayer
