@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=34 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_q7g41"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_vhrjn"]
@@ -19,7 +19,7 @@
 [ext_resource type="Script" path="res://Scripts/word.gd" id="17_ucyse"]
 [ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="18_ww05s"]
 [ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="19_6bkpe"]
-[ext_resource type="Script" path="res://Scripts/morte_void.gd" id="20_wfxik"]
+[ext_resource type="PackedScene" uid="uid://bwuewocqxtp77" path="res://Scenes/Morte_Void.tscn" id="20_dgbna"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
 texture = ExtResource("1_q7g41")
@@ -581,9 +581,6 @@ physics_layer_0/collision_layer = 2
 sources/7 = SubResource("TileSetAtlasSource_h2bo8")
 sources/2 = SubResource("TileSetAtlasSource_lme7t")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng86g"]
-size = Vector2(129, 16)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsgnm"]
 size = Vector2(296, 35.25)
 
@@ -662,14 +659,8 @@ position = Vector2(192, 200)
 collision_layer = 2
 collision_mask = 6
 
-[node name="morte_void" type="Area2D" parent="."]
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("20_wfxik")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="morte_void"]
-position = Vector2(976, 440)
-shape = SubResource("RectangleShape2D_ng86g")
+[node name="Morte_Void" parent="." instance=ExtResource("20_dgbna")]
+position = Vector2(920, 440)
 
 [node name="FireZone" type="Area2D" parent="."]
 position = Vector2(2064, 416)
@@ -862,7 +853,6 @@ offset_bottom = 34.0
 text = "03"
 label_settings = SubResource("LabelSettings_pt2se")
 
-[connection signal="body_entered" from="morte_void" to="morte_void" method="_on_body_entered"]
 [connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
 [connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
 
