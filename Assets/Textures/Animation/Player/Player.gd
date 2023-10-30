@@ -4,7 +4,6 @@ extends CharacterBody2D
 @onready var PlayerRaycast = $CheckChaoRaycasts
 @onready var player_sprite_2d = $PlayerSprite2D
 
-var VelocidadeHorizontal = 250
 var Gravidade: float
 var VelocidadePulo: float
 var PuloDisponivel: bool
@@ -12,6 +11,7 @@ var knockback_vector: Vector2 = Vector2.ZERO
 var recovering: bool = false
 var recovery_duration: float = 0.1
 
+@export var VelocidadeHorizontal = 250
 @export var TempoPuloAlturaMax: float = 0.3
 @export var PuloAltura: float = 70
 @export var PuloDistancia: int = 3
