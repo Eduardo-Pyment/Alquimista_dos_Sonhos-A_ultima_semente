@@ -1,29 +1,29 @@
 [gd_scene load_steps=37 format=3 uid="uid://cnheov3f87dsx"]
 
-[ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_521p8"]
-[ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_ls6pi"]
-[ext_resource type="PackedScene" uid="uid://dc2epskdddoys" path="res://Scenes/player.tscn" id="3_45bo3"]
-[ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="5_o41q3"]
-[ext_resource type="Texture2D" uid="uid://diawbnsbkshpp" path="res://Assets/Textures/Background/CityDay/1.png" id="6_72cee"]
-[ext_resource type="Texture2D" uid="uid://dtc8xburpks" path="res://Assets/Textures/Background/CityDay/2.png" id="7_km6va"]
-[ext_resource type="Texture2D" uid="uid://coy7tq2bvgjin" path="res://Assets/Textures/Background/CityDay/3.png" id="8_bxmqk"]
-[ext_resource type="Texture2D" uid="uid://g2lroy6n5dcd" path="res://Assets/Textures/Background/CityDay/4.png" id="9_k43ay"]
-[ext_resource type="Texture2D" uid="uid://70ed4h7eq6uj" path="res://Assets/Textures/Background/CityDay/5.png" id="10_ylrpr"]
-[ext_resource type="PackedScene" uid="uid://qykltn38fadx" path="res://Scenes/modal-game-over.tscn" id="11_xiekv"]
-[ext_resource type="Script" path="res://Scripts/FallZone.gd" id="12_3hpm8"]
-[ext_resource type="PackedScene" uid="uid://bt5gqx1a1xh4e" path="res://Scenes/Itens/hidrogenios.tscn" id="13_unura"]
-[ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/Itens/oxigenio.tscn" id="14_snl5y"]
-[ext_resource type="PackedScene" uid="uid://bk6t51v2413ci" path="res://Scenes/maquina_agua.tscn" id="15_pejlj"]
-[ext_resource type="PackedScene" uid="uid://k73i0e7vpwbf" path="res://Scenes/Ambiente/PlataformaMovel.tscn" id="16_4tjrt"]
-[ext_resource type="PackedScene" uid="uid://cd6nasnw2a8wn" path="res://dicas_caixa.tscn" id="17_t6xsv"]
-[ext_resource type="Script" path="res://Scripts/word.gd" id="18_ygq04"]
-[ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="19_u5f3r"]
-[ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="20_0ef6r"]
-[ext_resource type="PackedScene" uid="uid://bglfag0avg81y" path="res://Scenes/Itens/hidrogenio2.tscn" id="20_sridr"]
-[ext_resource type="PackedScene" uid="uid://bpopvs3826o1e" path="res://Scenes/Morte_Void.tscn" id="21_w53vh"]
+[ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
+[ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
+[ext_resource type="PackedScene" uid="uid://dc2epskdddoys" path="res://Scenes/player.tscn" id="3_3lnc8"]
+[ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="4_0jjo4"]
+[ext_resource type="Texture2D" uid="uid://diawbnsbkshpp" path="res://Assets/Textures/Background/CityDay/1.png" id="5_hi3b3"]
+[ext_resource type="Texture2D" uid="uid://dtc8xburpks" path="res://Assets/Textures/Background/CityDay/2.png" id="6_boq0m"]
+[ext_resource type="Texture2D" uid="uid://coy7tq2bvgjin" path="res://Assets/Textures/Background/CityDay/3.png" id="7_l8je3"]
+[ext_resource type="Texture2D" uid="uid://g2lroy6n5dcd" path="res://Assets/Textures/Background/CityDay/4.png" id="8_3304w"]
+[ext_resource type="Texture2D" uid="uid://70ed4h7eq6uj" path="res://Assets/Textures/Background/CityDay/5.png" id="9_c7d8l"]
+[ext_resource type="PackedScene" uid="uid://qykltn38fadx" path="res://Scenes/modal-game-over.tscn" id="10_x078i"]
+[ext_resource type="Script" path="res://Scripts/FallZone.gd" id="11_rwtle"]
+[ext_resource type="PackedScene" uid="uid://bk6t51v2413ci" path="res://Scenes/maquina_agua.tscn" id="12_ufsc5"]
+[ext_resource type="PackedScene" uid="uid://bt5gqx1a1xh4e" path="res://Scenes/Itens/hidrogenios.tscn" id="13_07k27"]
+[ext_resource type="PackedScene" uid="uid://bglfag0avg81y" path="res://Scenes/Itens/hidrogenio2.tscn" id="14_cgojb"]
+[ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/Itens/oxigenio.tscn" id="15_o3egu"]
+[ext_resource type="PackedScene" uid="uid://k73i0e7vpwbf" path="res://Scenes/Ambiente/PlataformaMovel.tscn" id="16_b2qrh"]
+[ext_resource type="PackedScene" uid="uid://cd6nasnw2a8wn" path="res://dicas_caixa.tscn" id="17_kuioi"]
+[ext_resource type="Script" path="res://Scripts/word.gd" id="18_2d4pr"]
+[ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="19_daj23"]
+[ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="20_8dbqo"]
+[ext_resource type="PackedScene" uid="uid://bpopvs3826o1e" path="res://Scenes/Morte_Void.tscn" id="21_aw1ic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
-texture = ExtResource("1_521p8")
+texture = ExtResource("1_hsi4l")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -318,7 +318,7 @@ texture_region_size = Vector2i(32, 32)
 8:8/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2bo8"]
-texture = ExtResource("2_ls6pi")
+texture = ExtResource("2_5fch8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -645,25 +645,25 @@ size = Vector2(32, 96)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dvf8b"]
 line_spacing = 0.0
-font = ExtResource("19_u5f3r")
+font = ExtResource("19_daj23")
 font_size = 18
 shadow_color = Color(0, 0, 0, 0.6)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rplnc"]
 line_spacing = 0.0
-font = ExtResource("19_u5f3r")
+font = ExtResource("19_daj23")
 font_size = 18
 shadow_color = Color(0, 0, 0, 0.6)
 
 [sub_resource type="LabelSettings" id="LabelSettings_32bcc"]
 line_spacing = 0.0
-font = ExtResource("19_u5f3r")
+font = ExtResource("19_daj23")
 font_size = 18
 shadow_color = Color(0, 0, 0, 0.6)
 
 [sub_resource type="LabelSettings" id="LabelSettings_pt2se"]
 line_spacing = 0.0
-font = ExtResource("19_u5f3r")
+font = ExtResource("19_daj23")
 font_size = 18
 shadow_color = Color(0, 0, 0, 0.6)
 
@@ -686,7 +686,7 @@ layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
-[node name="Player" parent="." instance=ExtResource("3_45bo3")]
+[node name="Player" parent="." instance=ExtResource("3_3lnc8")]
 unique_name_in_owner = true
 position = Vector2(88, 88)
 collision_layer = 2
@@ -701,7 +701,7 @@ offset = Vector2(384, 224)
 scale = Vector2(1.5, 1.5)
 transform = Transform2D(1.5, 0, 0, 1.5, 384, 224)
 scroll_base_scale = Vector2(1, 0)
-script = ExtResource("5_o41q3")
+script = ExtResource("4_0jjo4")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
 texture_filter = 1
@@ -712,7 +712,7 @@ motion_mirroring = Vector2(576, 0)
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
 texture_filter = 2
 texture_repeat = 3
-texture = ExtResource("6_72cee")
+texture = ExtResource("5_hi3b3")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
 texture_filter = 1
@@ -723,7 +723,7 @@ motion_mirroring = Vector2(576, 0)
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer2"]
 texture_filter = 2
 texture_repeat = 3
-texture = ExtResource("7_km6va")
+texture = ExtResource("6_boq0m")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
 texture_filter = 1
@@ -734,7 +734,7 @@ motion_mirroring = Vector2(576, 0)
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer3"]
 texture_filter = 2
 texture_repeat = 3
-texture = ExtResource("8_bxmqk")
+texture = ExtResource("7_l8je3")
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
 texture_filter = 1
@@ -745,7 +745,7 @@ motion_mirroring = Vector2(576, 0)
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer4"]
 texture_filter = 2
 texture_repeat = 3
-texture = ExtResource("9_k43ay")
+texture = ExtResource("8_3304w")
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
 texture_filter = 1
@@ -756,9 +756,9 @@ motion_mirroring = Vector2(576, 0)
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer5"]
 texture_filter = 2
 texture_repeat = 3
-texture = ExtResource("10_ylrpr")
+texture = ExtResource("9_c7d8l")
 
-[node name="Control" parent="CanvasLayer" instance=ExtResource("11_xiekv")]
+[node name="Control" parent="CanvasLayer" instance=ExtResource("10_x078i")]
 offset_left = -128.0
 offset_right = -128.0
 
@@ -766,7 +766,7 @@ offset_right = -128.0
 position = Vector2(2064, 416)
 collision_layer = 8
 collision_mask = 2
-script = ExtResource("12_3hpm8")
+script = ExtResource("11_rwtle")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FireZone"]
 position = Vector2(-16, 0)
@@ -782,27 +782,27 @@ fract_delta = false
 
 [node name="LevelProps" type="Node" parent="."]
 
-[node name="Maquina_agua" parent="LevelProps" instance=ExtResource("15_pejlj")]
+[node name="Maquina_agua" parent="LevelProps" instance=ExtResource("12_ufsc5")]
 position = Vector2(1768, 352)
 
-[node name="Hidrogenio" parent="." instance=ExtResource("13_unura")]
+[node name="Hidrogenio" parent="." instance=ExtResource("13_07k27")]
 position = Vector2(1056, 104)
 script = SubResource("GDScript_tb7qc")
 
-[node name="Hidrogenio2" parent="." instance=ExtResource("20_sridr")]
+[node name="Hidrogenio2" parent="." instance=ExtResource("14_cgojb")]
 position = Vector2(1656, 208)
 
-[node name="Oxigenio" parent="." instance=ExtResource("14_snl5y")]
+[node name="Oxigenio" parent="." instance=ExtResource("15_o3egu")]
 position = Vector2(2232, 192)
 collision_layer = 4
 collision_mask = 2
 
-[node name="AnimatableBody2D" parent="." instance=ExtResource("16_4tjrt")]
+[node name="AnimatableBody2D" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(976, 256)
 Distancia = Vector2(0, 112)
 TempoTransicao = 7.0
 
-[node name="AnimatableBody2D2" parent="." instance=ExtResource("16_4tjrt")]
+[node name="AnimatableBody2D2" parent="." instance=ExtResource("16_b2qrh")]
 show_behind_parent = true
 position = Vector2(1664, 384)
 Distancia = Vector2(0, 50)
@@ -814,7 +814,7 @@ shape = SubResource("RectangleShape2D_mooex")
 [node name="Sprite2D" parent="AnimatableBody2D2" index="1"]
 region_rect = Rect2(128, 0, 32, 96)
 
-[node name="Dicas" parent="." instance=ExtResource("17_t6xsv")]
+[node name="Dicas" parent="." instance=ExtResource("17_kuioi")]
 offset_left = 1496.0
 offset_top = 24.0
 offset_right = 2072.0
@@ -827,7 +827,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("18_ygq04")
+script = ExtResource("18_2d4pr")
 
 [node name="clock_timer" type="Timer" parent="HUD/Control"]
 
@@ -862,7 +862,7 @@ layout_mode = 0
 offset_top = 8.0
 offset_right = 65.0
 offset_bottom = 40.0
-texture = ExtResource("20_0ef6r")
+texture = ExtResource("20_8dbqo")
 
 [node name="x" type="Label" parent="HUD/Control/coraçao vida"]
 custom_minimum_size = Vector2(40, 23)
@@ -883,7 +883,7 @@ offset_bottom = 34.0
 text = "03"
 label_settings = SubResource("LabelSettings_pt2se")
 
-[node name="Area2D" parent="." instance=ExtResource("21_w53vh")]
+[node name="Area2D" parent="." instance=ExtResource("21_aw1ic")]
 position = Vector2(918, 449)
 
 [connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
