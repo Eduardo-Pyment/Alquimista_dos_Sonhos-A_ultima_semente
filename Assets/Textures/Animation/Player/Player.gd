@@ -135,3 +135,7 @@ func _on_body_entered(_body):
 func _on_body_exited(_body):
 	inside = false
 	$AnimatedSprite2D.modulate.a = 0
+
+
+func _on_cay_timer_timeout():
+	pass # Replace with function body.
