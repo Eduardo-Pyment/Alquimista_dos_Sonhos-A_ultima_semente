@@ -5,38 +5,46 @@
 [sub_resource type="GDScript" id="GDScript_r48vn"]
 script/source = "extends CharacterBody2D
 
-@export var VelocidadeMovimeto: float = 200.0
-@onready var AlvoMovimento = get_node(\"/root/Level1/Player\")
+@export var VelocidadeMovimento: float = 200.0
+@onready var AlvoMovimento: Node = null  # Inicialize AlvoMovimento como nulo
 @onready var AgenteNavegacao = get_node(\"NavigationAgent2D\")
 
 func _ready():
-	print(AlvoMovimento)
-	AlvoMovimento = get_node(\"/root/Level1/Player\")
-	call_deferred(\"actor_setup\")
-	print(AlvoMovimento)
+	AlvoMovimento = get_node_or_null(\"/root/Level1/Player\")  # Usando get_node_or_null para evitar erros se o nó não existir
+	if AlvoMovimento != null:
+		call_deferred(\"actor_setup\")
 		
 func actor_setup():
-	await get_tree().physics_frame
-	set_alvo_movimento(AlvoMovimento.position)
+	if AlvoMovimento != null:
+		await get_tree().physics_frame
+		set_alvo_movimento(AlvoMovimento.global_position)  # Use global_position para obter a posição correta do nó
 		
 func set_alvo_movimento(PontoAlvo: Vector2):
-	AgenteNavegacao.target_position = PontoAlvo
+	if AlvoMovimento != null:
+		AgenteNavegacao.target_position = PontoAlvo
 
 func _physics_process(_delta):
+	if AlvoMovimento == null:
+		return  # Evite processar a lógica se o AlvoMovimento for nulo
+	
 	if AgenteNavegacao.is_navigation_finished():
-		return		
+		return
+	
 	var PosicaoAgenteAtual: Vector2 = global_position
 	var ProximaPosicaoCaminho: Vector2 = AgenteNavegacao.get_next_path_position()
 	var NovaVelocidade: Vector2 = ProximaPosicaoCaminho - PosicaoAgenteAtual
 	NovaVelocidade = NovaVelocidade.normalized()
-	velocity = lerp(velocity, NovaVelocidade * VelocidadeMovimeto, 0.05)
+	velocity = lerp(velocity, NovaVelocidade * VelocidadeMovimento, 0.05)
+	
 	if AgenteNavegacao.distance_to_target() < 50:
-		velocity = lerp(velocity, NovaVelocidade / VelocidadeMovimeto, 0.1)
+		velocity = lerp(velocity, NovaVelocidade / VelocidadeMovimento, 0.1)
+	
 	move_and_slide()
 
 func _on_timer_timeout():
-	set_alvo_movimento(AlvoMovimento.position)
-	actor_setup()
+	if AlvoMovimento != null:
+		set_alvo_movimento(AlvoMovimento.global_position)
+		actor_setup()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8a1jc"]
