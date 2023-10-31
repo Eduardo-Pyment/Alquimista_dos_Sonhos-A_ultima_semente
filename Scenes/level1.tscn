@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=37 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_521p8"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_ls6pi"]
@@ -20,6 +20,7 @@
 [ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="19_u5f3r"]
 [ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="20_0ef6r"]
 [ext_resource type="PackedScene" uid="uid://bglfag0avg81y" path="res://Scenes/Itens/hidrogenio2.tscn" id="20_sridr"]
+[ext_resource type="PackedScene" uid="uid://bpopvs3826o1e" path="res://Scenes/Morte_Void.tscn" id="21_w53vh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
 texture = ExtResource("1_521p8")
@@ -772,11 +773,6 @@ position = Vector2(-16, 0)
 shape = SubResource("RectangleShape2D_vsgnm")
 debug_color = Color(1, 0, 0, 0.392157)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="FireZone"]
-position = Vector2(-1088, 40)
-shape = SubResource("RectangleShape2D_vsgnm")
-debug_color = Color(1, 0, 0, 0.392157)
-
 [node name="GPUParticles2D" type="GPUParticles2D" parent="FireZone"]
 show_behind_parent = true
 position = Vector2(-16, 0)
@@ -832,8 +828,6 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("18_ygq04")
-padrao_minutos = 0
-padrao_segundos = 30
 
 [node name="clock_timer" type="Timer" parent="HUD/Control"]
 
@@ -855,7 +849,7 @@ size_flags_vertical = 0
 
 [node name="timer_container" type="Label" parent="HUD/Control/container/timer_hud"]
 layout_mode = 2
-text = "Timer: "
+text = "Tempo:"
 label_settings = SubResource("LabelSettings_dvf8b")
 
 [node name="timer_numero" type="Label" parent="HUD/Control/container/timer_hud"]
@@ -888,6 +882,9 @@ offset_right = 99.0
 offset_bottom = 34.0
 text = "03"
 label_settings = SubResource("LabelSettings_pt2se")
+
+[node name="Area2D" parent="." instance=ExtResource("21_w53vh")]
+position = Vector2(918, 449)
 
 [connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
 [connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
