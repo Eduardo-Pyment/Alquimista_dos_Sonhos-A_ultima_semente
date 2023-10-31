@@ -687,7 +687,7 @@ navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_45bo3")]
 unique_name_in_owner = true
-position = Vector2(88, 24)
+position = Vector2(88, 88)
 collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 170
@@ -790,14 +790,14 @@ fract_delta = false
 position = Vector2(1768, 352)
 
 [node name="Hidrogenio" parent="." instance=ExtResource("13_unura")]
-position = Vector2(1216, 80)
+position = Vector2(1056, 104)
 script = SubResource("GDScript_tb7qc")
 
 [node name="Hidrogenio2" parent="." instance=ExtResource("20_sridr")]
-position = Vector2(1664, 200)
+position = Vector2(1656, 208)
 
 [node name="Oxigenio" parent="." instance=ExtResource("14_snl5y")]
-position = Vector2(2224, 160)
+position = Vector2(2232, 192)
 collision_layer = 4
 collision_mask = 2
 
@@ -819,14 +819,12 @@ shape = SubResource("RectangleShape2D_mooex")
 region_rect = Rect2(128, 0, 32, 96)
 
 [node name="Dicas" parent="." instance=ExtResource("17_t6xsv")]
-visible = false
 offset_left = 1496.0
 offset_top = 24.0
 offset_right = 2072.0
 offset_bottom = 400.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
@@ -838,7 +836,6 @@ padrao_minutos = 0
 padrao_segundos = 30
 
 [node name="clock_timer" type="Timer" parent="HUD/Control"]
-autostart = true
 
 [node name="container" type="MarginContainer" parent="HUD/Control"]
 layout_mode = 0
