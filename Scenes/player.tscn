@@ -313,7 +313,5 @@ position = Vector2(-10, 0)
 target_position = Vector2(-4, 0)
 collision_mask = 8
 
-[node name="Timer" type="Timer" parent="."]
-
-[connection signal="timeout" from="CayTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="CayTimer" to="." method="_on_cay_timer_timeout"]
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
