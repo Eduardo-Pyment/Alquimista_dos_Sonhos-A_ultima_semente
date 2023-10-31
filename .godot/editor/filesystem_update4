@@ -1,0 +1,8 @@
+res://Scenes/level1.tscn
+res://Scripts/word.gd
+res://Menus/MenuPrincipal/intro_si.tscn
+res://Scenes/Itens/H_flutuante.tscn
+res://Scenes/Itens/O_flutuante.tscn
+res://Assets/Textures/Animation/Player/Player.gd
+res://Scripts/Void.gd
+res://Scenes/player.tscn
