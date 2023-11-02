@@ -671,7 +671,6 @@ shadow_color = Color(0, 0, 0, 0.6)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
-position = Vector2(24, 0)
 tile_set = SubResource("TileSet_elkec")
 format = 2
 layer_0/name = "BaseTiles"
@@ -685,7 +684,6 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786441, 917510, 21, 786442, 983046, 21, 786447, 917510, 21, 786448, 983046, 21, 786453, 917510, 21, 786454, 983046, 21, 24, 1048582, 14)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-visible = false
 navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_3lnc8")]
@@ -764,18 +762,18 @@ texture = ExtResource("9_c7d8l")
 offset_left = -128.0
 offset_right = -128.0
 
-[node name="FireZone" type="Area2D" parent="."]
-position = Vector2(2088, 416)
+[node name="Zona_fogo" type="Area2D" parent="."]
+position = Vector2(2064, 416)
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("11_rwtle")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FireZone"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zona_fogo"]
 position = Vector2(-16, 0)
 shape = SubResource("RectangleShape2D_vsgnm")
 debug_color = Color(1, 0, 0, 0.392157)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="FireZone"]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Zona_fogo"]
 show_behind_parent = true
 position = Vector2(-16, 0)
 amount = 2500
@@ -788,7 +786,7 @@ fract_delta = false
 position = Vector2(1768, 352)
 
 [node name="Hidrogenio" parent="." instance=ExtResource("13_07k27")]
-position = Vector2(1056, 104)
+position = Vector2(1056, 88)
 script = SubResource("GDScript_tb7qc")
 
 [node name="Hidrogenio2" parent="." instance=ExtResource("14_cgojb")]
@@ -799,25 +797,24 @@ position = Vector2(2184, 168)
 collision_layer = 4
 collision_mask = 2
 
-[node name="AnimatableBody2D" parent="." instance=ExtResource("16_b2qrh")]
+[node name="Plataforma_1" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(976, 256)
 Distancia = Vector2(0, 112)
 TempoTransicao = 7.0
 
-[node name="AnimatableBody2D2" parent="." instance=ExtResource("16_b2qrh")]
+[node name="Plataforma_2" parent="." instance=ExtResource("16_b2qrh")]
 show_behind_parent = true
 position = Vector2(1664, 384)
 Distancia = Vector2(0, 50)
 TempoTransicao = 5.0
 
-[node name="CollisionShape2D" parent="AnimatableBody2D2" index="0"]
+[node name="CollisionShape2D" parent="Plataforma_2" index="0"]
 shape = SubResource("RectangleShape2D_mooex")
 
-[node name="Sprite2D" parent="AnimatableBody2D2" index="1"]
+[node name="Sprite2D" parent="Plataforma_2" index="1"]
 region_rect = Rect2(128, 0, 32, 96)
 
 [node name="Dicas" parent="." instance=ExtResource("17_kuioi")]
-visible = false
 offset_left = 1496.0
 offset_top = 24.0
 offset_right = 2072.0
@@ -886,10 +883,10 @@ offset_bottom = 34.0
 text = "03"
 label_settings = SubResource("LabelSettings_pt2se")
 
-[node name="Area2D" parent="." instance=ExtResource("21_aw1ic")]
+[node name="Area_queda" parent="." instance=ExtResource("21_aw1ic")]
 position = Vector2(918, 449)
 
-[connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
+[connection signal="body_entered" from="Zona_fogo" to="Zona_fogo" method="_on_body_entered"]
 [connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
 
-[editable path="AnimatableBody2D2"]
+[editable path="Plataforma_2"]
