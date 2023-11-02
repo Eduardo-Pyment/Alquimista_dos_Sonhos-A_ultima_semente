@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=39 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
@@ -667,6 +667,15 @@ font = ExtResource("19_daj23")
 font_size = 18
 shadow_color = Color(0, 0, 0, 0.6)
 
+[sub_resource type="Curve" id="Curve_edaty"]
+min_value = 0.7
+max_value = 2.0
+_data = [Vector2(0, 2), 0.0, -0.0190243, 0, 0, Vector2(0.497116, 1.70053), 0.0, 0.0, 0, 0, Vector2(1, 1.4361), 1.24681, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_h2fbx"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
 [node name="Level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -885,6 +894,24 @@ label_settings = SubResource("LabelSettings_pt2se")
 
 [node name="Area_queda" parent="." instance=ExtResource("21_aw1ic")]
 position = Vector2(918, 449)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(2049, 416)
+emitting = false
+amount = 1300
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.43
+randomness = 0.37
+emission_shape = 3
+emission_rect_extents = Vector2(130, 1)
+gravity = Vector2(0, -110)
+radial_accel_min = -40.0
+radial_accel_max = 75.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_edaty")
+color_ramp = SubResource("Gradient_h2fbx")
 
 [connection signal="body_entered" from="Zona_fogo" to="Zona_fogo" method="_on_body_entered"]
 [connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
