@@ -590,13 +590,13 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(736, 64, 736, 256, 800,
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsgnm"]
 size = Vector2(256, 35.25)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_viaf5"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_y08ta"]
 
 [sub_resource type="Gradient" id="Gradient_4o6pw"]
 offsets = PackedFloat32Array(0, 0.674074, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.688889, 0.688889, 0.688889, 1, 0.340339, 0.340339, 0.340339, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_q80w3"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ybt1f"]
 gradient = SubResource("Gradient_4o6pw")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vvda1"]
@@ -613,8 +613,8 @@ orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 scale_max = 3.0
 color = Color(1, 0.498039, 0, 1)
-color_ramp = SubResource("GradientTexture1D_q80w3")
-color_initial_ramp = SubResource("GradientTexture1D_viaf5")
+color_ramp = SubResource("GradientTexture1D_ybt1f")
+color_initial_ramp = SubResource("GradientTexture1D_y08ta")
 
 [sub_resource type="GDScript" id="GDScript_tb7qc"]
 script/source = "extends \"res://Scripts/itens/hidrogenios.gd\"
@@ -700,7 +700,6 @@ unique_name_in_owner = true
 position = Vector2(88, 88)
 collision_layer = 2
 collision_mask = 6
-VelocidadeHorizontal = 170
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true

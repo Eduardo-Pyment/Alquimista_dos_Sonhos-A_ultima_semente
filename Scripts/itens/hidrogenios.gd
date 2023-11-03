@@ -18,6 +18,7 @@ func spawn_atomo():
 	var hidrogenio_flutuante = load("res://Scenes/Itens/H_flutuante.tscn")
 	var novo_atomo = hidrogenio_flutuante.instantiate()
 	get_node("/root/Level1/Hidrogenio2").add_child(novo_atomo)	
+	get_node("/root/Fase_2/Hidrogenio2").add_child(novo_atomo)	
 		
 func _on_animated_sprite_2d_animation_finished():
 	pass
