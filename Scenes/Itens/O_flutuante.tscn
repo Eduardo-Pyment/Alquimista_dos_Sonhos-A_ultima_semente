@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://0ss46jo8yn3v"]
+[gd_scene load_steps=20 format=3 uid="uid://0ss46jo8yn3v"]
 
 [ext_resource type="Texture2D" uid="uid://tmw2hv0xf8wb" path="res://Assets/Textures/Itens/Moleculas/oxigenio_animation_32x32.png" id="1_05ojy"]
+[ext_resource type="Texture2D" uid="uid://cakle07l6o546" path="res://Assets/Textures/Itens/Moleculas/coleta_animação_32x32.png" id="2_wc21a"]
 
 [sub_resource type="GDScript" id="GDScript_r48vn"]
 script/source = "extends CharacterBody2D
@@ -14,6 +15,10 @@ func _ready():
 	if AlvoMovimento != null:
 		call_deferred(\"actor_setup\")
 		
+func _process(delta):
+	if Globais.agua >= 1:
+		$AnimatedSprite2D.play(\"destroy\")
+
 func actor_setup():
 	if AlvoMovimento != null:
 		await get_tree().physics_frame
@@ -45,6 +50,13 @@ func _on_timer_timeout():
 	if AlvoMovimento != null:
 		set_alvo_movimento(AlvoMovimento.global_position)
 		actor_setup()
+
+
+func _on_animated_sprite_2d_animation_finished():
+	_destroy()
+	
+func _destroy():
+	queue_free()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8a1jc"]
@@ -70,6 +82,42 @@ region = Rect2(0, 96, 32, 32)
 atlas = ExtResource("1_05ojy")
 region = Rect2(0, 128, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_c64xd"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js8yk"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtesm"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qb1u"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s47c3"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugrtw"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3chqv"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kn21"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p2fc"]
+atlas = ExtResource("2_wc21a")
+region = Rect2(0, 256, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_hgcvl"]
 animations = [{
 "frames": [{
@@ -91,6 +139,38 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c64xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js8yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtesm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qb1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s47c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugrtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3chqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kn21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p2fc")
+}],
+"loop": false,
+"name": &"destroy",
+"speed": 17.0
 }]
 
 [node name="H_flutuante" type="CharacterBody2D"]
@@ -106,8 +186,8 @@ shape = SubResource("CircleShape2D_8a1jc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hgcvl")
+animation = &"destroy"
 autoplay = "default"
-frame_progress = 0.70426
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 target_desired_distance = 5.0
@@ -117,4 +197,5 @@ path_max_distance = 200.0
 wait_time = 0.2
 autostart = true
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
