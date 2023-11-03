@@ -275,7 +275,8 @@ libraries = {
 "": SubResource("AnimationLibrary_dxo08")
 }
 
-[node name="CameraPlayerSnappy2" type="Camera2D" parent="."]
+[node name="CameraPlayerSnappy3" type="Camera2D" parent="."]
+position = Vector2(-347, -220)
 ignore_rotation = false
 limit_left = 0
 limit_top = 0
