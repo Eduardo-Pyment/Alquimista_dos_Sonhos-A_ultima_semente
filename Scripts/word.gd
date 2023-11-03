@@ -17,7 +17,7 @@ func _ready():
 	vida.text = str(Globais.player_life).pad_zeros(3)
 	timer_numero.text = "00:00"  # Inicie o temporizador em 00:00
 	player.player_morreu.connect(reload_game)
-	Globais.player_life = 2
+	Globais.player_life = 3
 	reset_clock_timer()
 	start_clock_timer()
 

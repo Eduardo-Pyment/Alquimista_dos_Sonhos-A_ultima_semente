@@ -1,8 +1,9 @@
-[gd_scene load_steps=39 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=41 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
 [ext_resource type="PackedScene" uid="uid://dc2epskdddoys" path="res://Scenes/player.tscn" id="3_3lnc8"]
+[ext_resource type="Texture2D" uid="uid://cyvxw37jt6pcm" path="res://Assets/Textures/Assets-dica/Grassland_entities (16 x 16).png" id="3_y15ek"]
 [ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="4_0jjo4"]
 [ext_resource type="Texture2D" uid="uid://diawbnsbkshpp" path="res://Assets/Textures/Background/CityDay/1.png" id="5_hi3b3"]
 [ext_resource type="Texture2D" uid="uid://dtc8xburpks" path="res://Assets/Textures/Background/CityDay/2.png" id="6_boq0m"]
@@ -16,11 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://bglfag0avg81y" path="res://Scenes/Itens/hidrogenio2.tscn" id="14_cgojb"]
 [ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/Itens/oxigenio.tscn" id="15_o3egu"]
 [ext_resource type="PackedScene" uid="uid://k73i0e7vpwbf" path="res://Scenes/Ambiente/PlataformaMovel.tscn" id="16_b2qrh"]
-[ext_resource type="PackedScene" uid="uid://cd6nasnw2a8wn" path="res://dicas_caixa.tscn" id="17_kuioi"]
 [ext_resource type="Script" path="res://Scripts/word.gd" id="18_2d4pr"]
 [ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="19_daj23"]
 [ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="20_8dbqo"]
 [ext_resource type="PackedScene" uid="uid://bpopvs3826o1e" path="res://Scenes/Morte_Void.tscn" id="21_aw1ic"]
+[ext_resource type="PackedScene" uid="uid://c33buwts2rsqv" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_b3g00"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
 texture = ExtResource("1_hsi4l")
@@ -676,6 +677,9 @@ point_count = 3
 [sub_resource type="Gradient" id="Gradient_h2fbx"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0pur"]
+size = Vector2(32, 23)
+
 [node name="Level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -697,7 +701,7 @@ navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_3lnc8")]
 unique_name_in_owner = true
-position = Vector2(88, 88)
+position = Vector2(1455, 285)
 collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 170
@@ -792,7 +796,7 @@ fract_delta = false
 [node name="LevelProps" type="Node" parent="."]
 
 [node name="Maquina_agua" parent="LevelProps" instance=ExtResource("12_ufsc5")]
-position = Vector2(1768, 352)
+position = Vector2(1832, 352)
 
 [node name="Hidrogenio" parent="." instance=ExtResource("13_07k27")]
 position = Vector2(1056, 88)
@@ -823,24 +827,18 @@ shape = SubResource("RectangleShape2D_mooex")
 [node name="Sprite2D" parent="Plataforma_2" index="1"]
 region_rect = Rect2(128, 0, 32, 96)
 
-[node name="Dicas" parent="." instance=ExtResource("17_kuioi")]
-offset_left = 1496.0
-offset_top = 24.0
-offset_right = 2072.0
-offset_bottom = 400.0
-
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Control" type="Control" parent="HUD"]
+[node name="vida_tempo" type="Control" parent="HUD"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("18_2d4pr")
 
-[node name="clock_timer" type="Timer" parent="HUD/Control"]
+[node name="clock_timer" type="Timer" parent="HUD/vida_tempo"]
 
-[node name="container" type="MarginContainer" parent="HUD/Control"]
+[node name="container" type="MarginContainer" parent="HUD/vida_tempo"]
 layout_mode = 0
 offset_left = 1.0
 offset_right = 881.002
@@ -850,30 +848,30 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="timer_hud" type="HBoxContainer" parent="HUD/Control/container"]
+[node name="timer_hud" type="HBoxContainer" parent="HUD/vida_tempo/container"]
 custom_minimum_size = Vector2(100, 20)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="timer_container" type="Label" parent="HUD/Control/container/timer_hud"]
+[node name="timer_container" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
 layout_mode = 2
 text = "Tempo:"
 label_settings = SubResource("LabelSettings_dvf8b")
 
-[node name="timer_numero" type="Label" parent="HUD/Control/container/timer_hud"]
+[node name="timer_numero" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
 layout_mode = 2
 text = "00:00"
 label_settings = SubResource("LabelSettings_rplnc")
 
-[node name="coraçao vida" type="TextureRect" parent="HUD/Control"]
+[node name="coraçao vida" type="TextureRect" parent="HUD/vida_tempo"]
 layout_mode = 0
 offset_top = 8.0
 offset_right = 65.0
 offset_bottom = 40.0
 texture = ExtResource("20_8dbqo")
 
-[node name="x" type="Label" parent="HUD/Control/coraçao vida"]
+[node name="x" type="Label" parent="HUD/vida_tempo/coraçao vida"]
 custom_minimum_size = Vector2(40, 23)
 layout_mode = 0
 offset_left = 41.0
@@ -883,7 +881,7 @@ offset_bottom = 34.0
 text = "X	"
 label_settings = SubResource("LabelSettings_32bcc")
 
-[node name="vida" type="Label" parent="HUD/Control/coraçao vida"]
+[node name="vida" type="Label" parent="HUD/vida_tempo/coraçao vida"]
 layout_mode = 0
 offset_left = 57.0
 offset_top = 8.0
@@ -913,7 +911,41 @@ scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_edaty")
 color_ramp = SubResource("Gradient_h2fbx")
 
+[node name="Dicas" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1448.0
+offset_top = 24.0
+offset_right = 1488.0
+offset_bottom = 64.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Dicas"]
+z_index = -1
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(281, 349)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_y15ek")
+
+[node name="Area2D" type="Area2D" parent="Dicas"]
+position = Vector2(178, 340)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dicas/Area2D"]
+position = Vector2(103, 9)
+shape = SubResource("RectangleShape2D_w0pur")
+
+[node name="caixa2" parent="Dicas" instance=ExtResource("23_b3g00")]
+layout_mode = 1
+offset_left = 411.0
+offset_top = 58.0
+offset_right = 664.8
+offset_bottom = 100.2
+
 [connection signal="body_entered" from="Zona_fogo" to="Zona_fogo" method="_on_body_entered"]
-[connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
+[connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
+[connection signal="body_entered" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_exited"]
 
 [editable path="Plataforma_2"]

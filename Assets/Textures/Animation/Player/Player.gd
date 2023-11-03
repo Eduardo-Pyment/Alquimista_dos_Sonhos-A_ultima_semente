@@ -104,6 +104,11 @@ func take_damage(knockback_force := Vector2.ZERO):
 			player_sprite_2d.modulate = Color(1, 0, 0, 1)
 			recovery_duration = 0.1
 			recovering = true
+
+		if Globais.player_life <= 0:
+			queue_free()
+			emit_signal("player_morreu")
+			
 	elif Globais.agua != 1:
 		queue_free()
 		emit_signal("player_morreu")
