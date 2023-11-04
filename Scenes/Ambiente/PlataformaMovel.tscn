@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://k73i0e7vpwbf"]
 
-[ext_resource type="Script" path="res://Scripts/PlataformaMovel_0.gd" id="1_5rfhg"]
+[ext_resource type="Script" path="res://Scripts/PlataformaMovel.gd" id="1_5rfhg"]
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="2_spftt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jv6d"]
