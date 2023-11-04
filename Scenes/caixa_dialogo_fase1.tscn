@@ -16,16 +16,16 @@ layout_mode = 3
 anchor_right = 0.38
 anchor_bottom = 0.145
 offset_left = 4.0
-offset_right = 0.159973
-offset_bottom = 0.0399933
+offset_right = -19.84
+offset_bottom = -16.96
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lnjqu")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 269.0
-offset_bottom = 49.0
+offset_right = 310.0
+offset_bottom = 68.0
 rotation = -0.00390732
 texture = ExtResource("1_amxey")
 region_rect = Rect2(0, 0, 16, 16)
