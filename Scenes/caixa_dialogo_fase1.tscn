@@ -24,8 +24,8 @@ script = ExtResource("1_lnjqu")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 306.0
-offset_bottom = 66.0
+offset_right = 293.0
+offset_bottom = 44.0
 rotation = -0.00390732
 texture = ExtResource("1_amxey")
 region_rect = Rect2(0, 0, 16, 16)
