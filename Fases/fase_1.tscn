@@ -893,7 +893,7 @@ navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_3lnc8")]
 unique_name_in_owner = true
-position = Vector2(104, 56)
+position = Vector2(104, 48)
 collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 170
@@ -918,7 +918,7 @@ fract_delta = false
 
 [node name="Zona_fogo" type="Area2D" parent="."]
 position = Vector2(2704, 416)
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("15_r3eli")
 
@@ -934,7 +934,7 @@ process_material = SubResource("ParticleProcessMaterial_qhb7x")
 
 [node name="Zona_fogo2" type="Area2D" parent="."]
 position = Vector2(3216, 440)
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("15_r3eli")
 
@@ -950,7 +950,7 @@ process_material = SubResource("ParticleProcessMaterial_6a5ul")
 
 [node name="Zona_fogo3" type="Area2D" parent="."]
 position = Vector2(3376, 440)
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("15_r3eli")
 
@@ -966,7 +966,7 @@ process_material = SubResource("ParticleProcessMaterial_6a5ul")
 
 [node name="Zona_fogo4" type="Area2D" parent="."]
 position = Vector2(3536, 440)
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 script = ExtResource("15_r3eli")
 
@@ -1040,7 +1040,7 @@ TempoTransicao = 7.0
 [node name="Plataforma_4" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(2672, 160)
 Distancia = Vector2(-100, 0)
-TempoTransicao = 5.4
+TempoTransicao = 7.0
 
 [node name="Area_queda" parent="." instance=ExtResource("21_aw1ic")]
 position = Vector2(918, 449)
