@@ -3,6 +3,7 @@ extends Control
 @onready var music_slider: HSlider = %MusicaSlider
 @onready var full_screen: CheckButton = %FullScreen
 
+
 var config = ConfigFile.new()
 
 func _ready():
@@ -21,7 +22,7 @@ func save_opcoes():
 func load_opcoes():
 	var err = config.load(OptionsConstants.config_file_name)
 	
-	var music_volum = config.get_value(OptionsConstants.section_name, OptionsConstants.music_volume_key_name, 1)
+	var music_volum = config.get_value(OptionsConstants.section_name, OptionsConstants.music_volume_key_name, 1.0)
 	var fullscreen_button = config.get_value(OptionsConstants.section_name, OptionsConstants.fullscreen_key_name, false)
 	
 	music_slider.value = music_volum
@@ -37,3 +38,4 @@ func _on_full_screen_toggled(button_pressed):
 	else:
 		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+

@@ -1,25 +1,41 @@
 extends CanvasLayer
 
+@onready var control_pause = $ControlPause
+@onready var control_opcoes = $ControlOpcoes
+@onready var color_rect = $ColorRect
+
+@onready var music_slider: HSlider = %MusicaSlider
+@onready var full_screen: CheckButton = %FullScreen
+
+var config = ConfigFile.new()
+
 func _ready():
-	visible = false
+	control_pause.visible = false
+	control_opcoes.visible = false
+	color_rect.visible = false
+	load_opcoes()
+	
 
 func _process(delta):
 	pass
 	
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
-		visible = true
+		control_pause.visible = true
+		color_rect.visible = true
 		get_tree().paused = true
 	
 func reload_game():
 	get_tree().reload_current_scene()
 
 func _on_reiniciar_pressed():
+	save_opcoes()
 	reload_game()
 	get_tree().paused = false
 
 func _on_opcoes_pressed():
-	pass # Replace with function body.
+	control_pause.visible = false
+	control_opcoes.visible = true
 
 
 func _on_sair_pressed():
@@ -27,4 +43,36 @@ func _on_sair_pressed():
 
 func _on_resume_pressed():
 	get_tree().paused = false
-	visible = false
+	control_pause.visible = false
+	color_rect.visible = false
+
+func _on_voltar_pressed():
+	control_pause.visible = true
+	control_opcoes.visible = false
+	
+func save_opcoes():
+	config.set_value(OptionsConstants.section_name, OptionsConstants.music_volume_key_name, music_slider.value)
+	config.set_value(OptionsConstants.section_name, OptionsConstants.fullscreen_key_name, full_screen.button_pressed)
+	
+	config.save(OptionsConstants.config_file_name)
+
+func load_opcoes():
+	var err = config.load(OptionsConstants.config_file_name)
+	
+	var music_volum = config.get_value(OptionsConstants.section_name, OptionsConstants.music_volume_key_name, 1.0)
+	var fullscreen_button = config.get_value(OptionsConstants.section_name, OptionsConstants.fullscreen_key_name, false)
+	
+	music_slider.value = music_volum
+	full_screen.button_pressed = fullscreen_button
+
+func _on_musica_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(value / 10.0))
+
+
+func _on_full_screen_toggled(button_pressed):
+	if button_pressed:
+		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+	else:
+		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

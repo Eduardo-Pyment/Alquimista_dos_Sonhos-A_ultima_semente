@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Menus/MenuPrincipal/MenuPrincipal.gd" id="1_sqfgy"]
 [ext_resource type="Texture2D" uid="uid://c18x3bge5r4n" path="res://Assets/AssetsMenu/backgorundmenu.jpg" id="2_k04f6"]
-[ext_resource type="Texture2D" uid="uid://djfksgdymsc41" path="res://Assets/AssetsMenu/alquimista1.png" id="3_ei5pg"]
-[ext_resource type="Texture2D" uid="uid://df2rfmyk1wpyt" path="res://Assets/AssetsMenu/jogar1.png" id="4_77seh"]
-[ext_resource type="Texture2D" uid="uid://7tevdn18fg7m" path="res://Assets/AssetsMenu/opcoes1.png" id="5_gsunh"]
-[ext_resource type="Texture2D" uid="uid://qw26640142bh" path="res://Assets/AssetsMenu/sair1.png" id="6_b3sv4"]
+[ext_resource type="Texture2D" uid="uid://djfksgdymsc41" path="res://Assets/AssetsMenu/logo.png" id="3_ei5pg"]
+[ext_resource type="Texture2D" uid="uid://df2rfmyk1wpyt" path="res://Assets/AssetsMenu/jogar.png" id="4_77seh"]
+[ext_resource type="Texture2D" uid="uid://7tevdn18fg7m" path="res://Assets/AssetsMenu/opcoes.png" id="5_gsunh"]
+[ext_resource type="Texture2D" uid="uid://qw26640142bh" path="res://Assets/AssetsMenu/sair.png" id="6_b3sv4"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
