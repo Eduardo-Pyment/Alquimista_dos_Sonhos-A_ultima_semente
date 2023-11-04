@@ -1422,9 +1422,11 @@ offset_top = 293.0
 offset_right = 216.0
 offset_bottom = 293.04
 
+[node name="NinePatchRect" parent="Control/caixa" index="0"]
+region_rect = Rect2(0, 0, 20, 20)
+
 [node name="RichTextLabel" parent="Control/caixa/NinePatchRect" index="1"]
-text = "fase 2
-"
+text = "Junte os átomos de prata (Ag), zinco (Zn) e cobre (Cu) para formar uma amálgama que desencadeia reações intermetálicas, solidificando o mercúrio e avançando para a próxima fase."
 
 [node name="Area2D" type="Area2D" parent="Control"]
 collision_layer = 3
