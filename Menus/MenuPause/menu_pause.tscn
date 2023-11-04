@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=3 uid="uid://sm5d6pcner8w"]
+
+[ext_resource type="Script" path="res://Menus/MenuPause/MenuPause.gd" id="1_5y6k3"]
+[ext_resource type="Texture2D" uid="uid://dgsqfvurdofc6" path="res://Assets/AssetsMenuPause/RetanguloArredondado.png" id="1_6xrou"]
+[ext_resource type="Texture2D" uid="uid://dvx5gp3rgeaqr" path="res://Assets/AssetsMenuPause/BotaoReiniciar.png" id="2_adogc"]
+[ext_resource type="Texture2D" uid="uid://dvsum68b3fbf8" path="res://Assets/AssetsMenuPause/BotaoOpcoes.png" id="3_2ruur"]
+[ext_resource type="Texture2D" uid="uid://bfl7jewo42gsg" path="res://Assets/AssetsMenuPause/BotaoSair.png" id="4_bfnwy"]
+[ext_resource type="Texture2D" uid="uid://b57gl3r7jmnh5" path="res://Assets/AssetsMenuPause/BotaoX.png" id="5_61lrm"]
+[ext_resource type="Texture2D" uid="uid://3pqc076nvu8p" path="res://Assets/AssetsMenuPause/Pausado.png" id="6_g87xi"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_bxpse"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_nfi7e"]
+events = [SubResource("InputEventAction_bxpse")]
+
+[node name="MenuPause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_5y6k3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.466667)
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = -168.0
+offset_right = 448.0
+offset_bottom = 532.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_6xrou")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 304.0
+offset_top = 144.0
+offset_right = 523.0
+offset_bottom = 433.0
+scale = Vector2(0.424767, 0.424767)
+theme_override_constants/separation = 20
+
+[node name="Reiniciar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_adogc")
+
+[node name="Opcoes" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_2ruur")
+
+[node name="Sair" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_bfnwy")
+
+[node name="Resume" type="Button" parent="."]
+offset_left = 408.0
+offset_top = 280.0
+offset_right = 498.0
+offset_bottom = 370.0
+scale = Vector2(0.382935, 0.382935)
+shortcut = SubResource("Shortcut_nfi7e")
+icon = ExtResource("5_61lrm")
+flat = true
+
+[node name="LogoPausado" type="Sprite2D" parent="."]
+position = Vector2(352, 96)
+scale = Vector2(0.390075, 0.390075)
+texture = ExtResource("6_g87xi")
+
+[connection signal="pressed" from="VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]
+[connection signal="pressed" from="VBoxContainer/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]

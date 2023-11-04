@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=40 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
@@ -21,6 +21,7 @@
 [ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="19_daj23"]
 [ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="20_8dbqo"]
 [ext_resource type="PackedScene" uid="uid://bpopvs3826o1e" path="res://Scenes/Morte_Void.tscn" id="21_aw1ic"]
+[ext_resource type="PackedScene" uid="uid://sm5d6pcner8w" path="res://Menus/MenuPause/menu_pause.tscn" id="22_rlntw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lme7t"]
 texture = ExtResource("1_hsi4l")
@@ -911,6 +912,8 @@ scale_amount_min = 2.0
 scale_amount_max = 2.0
 scale_amount_curve = SubResource("Curve_edaty")
 color_ramp = SubResource("Gradient_h2fbx")
+
+[node name="MenuPause" parent="." instance=ExtResource("22_rlntw")]
 
 [connection signal="body_entered" from="Zona_fogo" to="Zona_fogo" method="_on_body_entered"]
 [connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
