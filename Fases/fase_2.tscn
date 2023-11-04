@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://rb10rosuh2no"]
+[gd_scene load_steps=36 format=3 uid="uid://rb10rosuh2no"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_jajnq"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_f7sbr"]
@@ -20,8 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="17_ah3nv"]
 [ext_resource type="PackedScene" uid="uid://bglfag0avg81y" path="res://Scenes/Itens/hidrogenio2.tscn" id="18_hi4qg"]
 [ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/Itens/oxigenio.tscn" id="19_jggi1"]
-[ext_resource type="Script" path="res://Scripts/FallZone.gd" id="20_un8fc"]
-[ext_resource type="PackedScene" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_2dcsi"]
+[ext_resource type="PackedScene" uid="uid://c33buwts2rsqv" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_2dcsi"]
 [ext_resource type="PackedScene" uid="uid://sm5d6pcner8w" path="res://Menus/MenuPause/menu_pause.tscn" id="24_6sn1v"]
 [ext_resource type="Texture2D" uid="uid://cyvxw37jt6pcm" path="res://Assets/Textures/Assets-dica/Grassland_entities (16 x 16).png" id="24_e6kxf"]
 
@@ -1054,7 +1053,10 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(1860, 157, 1861, 348, 1984, 350, 1985, 158, 2945, 160, 2943, 606, 1982, 605, 1985, 449, 1859, 448, 1858, 474, 1698, 609, 1345.63, 610.546, 1352, 1818, 1758, 1821, 1759, 1280, 2943, 1280, 2943.38, 1341.06, 3042, 1343, 3039, 1438, 2944, 1441, 2942, 1896, 1980, 1894, 1985, 1444, 1854, 1444, 1852, 1888, 1351.33, 1890.54, 1348, 2253, 1241, 2253, 1241.22, 1888.46, 190, 1891, 194, 1541, 32, 1535, 32, 1375, 325, 1375, 319, 1821, 1241, 1824, 1241.74, 931.006, 1121, 932, 1122, 1155, 189, 1159, 189.75, 930.132, 31, 930, 28, 800, 1241.84, 802.001, 1242, 611, 927, 608, 609, 447, -1, 448, -2, 155)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_shb7m"]
-size = Vector2(107, 19.8258)
+size = Vector2(929, 19.8258)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7w6p"]
+size = Vector2(951, 20)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8dxeq"]
 line_spacing = 0.0
@@ -1104,15 +1106,6 @@ func _on_animated_sprite_2d_animation_finished():
 	pass
 	
 "
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7ulk"]
-size = Vector2(935, 21.625)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3f4j5"]
-size = Vector2(965, 19.625)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ml0xh"]
-size = Vector2(107, 32.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hqan"]
 size = Vector2(21, 17)
@@ -1249,10 +1242,12 @@ rotation = -0.00573343
 [node name="Spikes_area" type="Area2D" parent="."]
 visibility_layer = 3
 position = Vector2(656, 1148)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("13_espt6")
 
 [node name="collision" type="CollisionShape2D" parent="Spikes_area"]
-position = Vector2(0, 2.08716)
+position = Vector2(-0.5, 2.08716)
 shape = SubResource("RectangleShape2D_shb7m")
 
 [node name="spikes" type="Sprite2D" parent="Spikes_area"]
@@ -1264,36 +1259,44 @@ region_rect = Rect2(0, 0, 930, 8)
 
 [node name="Spikes_area2" type="Area2D" parent="."]
 visibility_layer = 3
-position = Vector2(1327, 2236)
+position = Vector2(2447, 1874)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("13_espt6")
 
 [node name="collision" type="CollisionShape2D" parent="Spikes_area2"]
-position = Vector2(-32.5, -4.5)
-shape = SubResource("RectangleShape2D_shb7m")
+position = Vector2(15.5, 2.08716)
+shape = SubResource("RectangleShape2D_b7w6p")
 
 [node name="spikes" type="Sprite2D" parent="Spikes_area2"]
 visibility_layer = 3
 texture_repeat = 2
-position = Vector2(-32, 0)
+position = Vector2(13.5, 0)
+scale = Vector2(1.02903, 1)
 texture = ExtResource("14_hy2it")
 region_enabled = true
-region_rect = Rect2(0, 0, 100, 8)
+region_rect = Rect2(0, 0, 930, 8)
 
 [node name="Spikes_area3" type="Area2D" parent="."]
 visibility_layer = 3
-position = Vector2(2463, 1884)
+z_index = -1
+position = Vector2(1291, 2234)
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("13_espt6")
 
 [node name="collision" type="CollisionShape2D" parent="Spikes_area3"]
-position = Vector2(1, -0.325806)
-shape = SubResource("RectangleShape2D_shb7m")
+position = Vector2(15.5, 2.08716)
+shape = SubResource("RectangleShape2D_b7w6p")
 
 [node name="spikes" type="Sprite2D" parent="Spikes_area3"]
 visibility_layer = 3
 texture_repeat = 2
-position = Vector2(4.5, 0)
-scale = Vector2(0.990625, 1)
+position = Vector2(13.5, 0)
+scale = Vector2(1.02903, 1)
 texture = ExtResource("14_hy2it")
 region_enabled = true
-region_rect = Rect2(0, 0, 960, 8)
+region_rect = Rect2(0, 0, 930, 8)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -1371,39 +1374,6 @@ position = Vector2(2996, 1414)
 position = Vector2(100, 885)
 script = SubResource("GDScript_icptl")
 
-[node name="FireZone" type="Area2D" parent="."]
-position = Vector2(649, 1158)
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("20_un8fc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FireZone"]
-position = Vector2(4.5, -6.8125)
-shape = SubResource("RectangleShape2D_p7ulk")
-debug_color = Color(1, 0, 0, 0.392157)
-
-[node name="FireZone2" type="Area2D" parent="."]
-position = Vector2(2477, 1893)
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("20_un8fc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FireZone2"]
-position = Vector2(-15.5, -7.8125)
-shape = SubResource("RectangleShape2D_3f4j5")
-debug_color = Color(1, 0, 0, 0.392157)
-
-[node name="FireZone3" type="Area2D" parent="."]
-position = Vector2(1318, 2237)
-collision_layer = 8
-collision_mask = 2
-script = ExtResource("20_un8fc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FireZone3"]
-position = Vector2(-21.5, 1.3125)
-shape = SubResource("RectangleShape2D_ml0xh")
-debug_color = Color(1, 0, 0, 0.392157)
-
 [node name="LevelProps" type="Node" parent="."]
 
 [node name="Maquina_agua" parent="LevelProps" instance=ExtResource("13_js2x2")]
@@ -1450,10 +1420,10 @@ shape = SubResource("RectangleShape2D_0hqan")
 
 [node name="MenuPause" parent="." instance=ExtResource("24_6sn1v")]
 
+[connection signal="body_entered" from="Spikes_area" to="Spikes_area" method="_on_body_entered"]
+[connection signal="body_entered" from="Spikes_area2" to="Spikes_area2" method="_on_body_entered"]
+[connection signal="body_entered" from="Spikes_area3" to="Spikes_area3" method="_on_body_entered"]
 [connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
-[connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
-[connection signal="body_entered" from="FireZone2" to="FireZone2" method="_on_body_entered"]
-[connection signal="body_entered" from="FireZone3" to="FireZone3" method="_on_body_entered"]
 [connection signal="body_entered" from="Control/Area2D" to="Control/caixa" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Control/Area2D" to="Control/caixa" method="_on_area_2d_body_exited"]
 
