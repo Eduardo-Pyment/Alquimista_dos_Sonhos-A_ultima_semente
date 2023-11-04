@@ -1,4 +1,6 @@
 extends Area2D
+@onready var collision_shape_2d = $CollisionShape2D
+@onready var gpu_particles_2d = $GPUParticles2D
 
 func _on_body_entered(body):
 	if body.name == 'Player' && body.has_method('take_damage'):
