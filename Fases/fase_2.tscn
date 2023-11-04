@@ -15,11 +15,11 @@
 [ext_resource type="Script" path="res://Scripts/Spikes_area.gd" id="13_espt6"]
 [ext_resource type="PackedScene" uid="uid://bk6t51v2413ci" path="res://Scenes/maquina_agua.tscn" id="13_js2x2"]
 [ext_resource type="Texture2D" uid="uid://cwrw8xred4elg" path="res://Assets/Textures/spikes/Individual Spike.png" id="14_hy2it"]
-[ext_resource type="Script" path="res://Scripts/word.gd" id="15_yy2o6"]
 [ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="16_b8q4v"]
 [ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="17_ah3nv"]
 [ext_resource type="PackedScene" uid="uid://bglfag0avg81y" path="res://Scenes/Itens/hidrogenio2.tscn" id="18_hi4qg"]
 [ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/Itens/oxigenio.tscn" id="19_jggi1"]
+[ext_resource type="Script" path="res://Scripts/World.gd" id="21_mhc3p"]
 [ext_resource type="PackedScene" uid="uid://c33buwts2rsqv" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_2dcsi"]
 [ext_resource type="PackedScene" uid="uid://sm5d6pcner8w" path="res://Menus/MenuPause/menu_pause.tscn" id="24_6sn1v"]
 [ext_resource type="Texture2D" uid="uid://cyvxw37jt6pcm" path="res://Assets/Textures/Assets-dica/Grassland_entities (16 x 16).png" id="24_e6kxf"]
@@ -1056,31 +1056,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(1860, 157, 1861, 348, 1
 size = Vector2(929, 19.8258)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7w6p"]
-size = Vector2(951, 20)
-
-[sub_resource type="LabelSettings" id="LabelSettings_8dxeq"]
-line_spacing = 0.0
-font = ExtResource("16_b8q4v")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_wttcl"]
-line_spacing = 0.0
-font = ExtResource("16_b8q4v")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_hke1g"]
-line_spacing = 0.0
-font = ExtResource("16_b8q4v")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_e4l60"]
-line_spacing = 0.0
-font = ExtResource("16_b8q4v")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
+size = Vector2(953, 16)
 
 [sub_resource type="GDScript" id="GDScript_icptl"]
 script/source = "extends \"res://Scripts/itens/hidrogenios.gd\"
@@ -1109,6 +1085,30 @@ func _on_animated_sprite_2d_animation_finished():
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hqan"]
 size = Vector2(21, 17)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ywp1g"]
+line_spacing = 0.0
+font = ExtResource("16_b8q4v")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5idse"]
+line_spacing = 0.0
+font = ExtResource("16_b8q4v")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3pfgj"]
+line_spacing = 0.0
+font = ExtResource("16_b8q4v")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2mg05"]
+line_spacing = 0.0
+font = ExtResource("16_b8q4v")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
 
 [node name="Fase_2" type="Node2D"]
 position = Vector2(0, -85)
@@ -1242,7 +1242,7 @@ rotation = -0.00573343
 [node name="Spikes_area" type="Area2D" parent="."]
 visibility_layer = 3
 position = Vector2(656, 1148)
-collision_layer = 2
+collision_layer = 8
 collision_mask = 2
 script = ExtResource("13_espt6")
 
@@ -1265,13 +1265,13 @@ collision_mask = 2
 script = ExtResource("13_espt6")
 
 [node name="collision" type="CollisionShape2D" parent="Spikes_area2"]
-position = Vector2(15.5, 2.08716)
+position = Vector2(14.5, 11)
 shape = SubResource("RectangleShape2D_b7w6p")
 
 [node name="spikes" type="Sprite2D" parent="Spikes_area2"]
 visibility_layer = 3
 texture_repeat = 2
-position = Vector2(13.5, 0)
+position = Vector2(14, 8)
 scale = Vector2(1.02903, 1)
 texture = ExtResource("14_hy2it")
 region_enabled = true
@@ -1297,70 +1297,6 @@ scale = Vector2(1.02903, 1)
 texture = ExtResource("14_hy2it")
 region_enabled = true
 region_rect = Rect2(0, 0, 930, 8)
-
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="Control" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("15_yy2o6")
-
-[node name="clock_timer" type="Timer" parent="HUD/Control"]
-
-[node name="container" type="MarginContainer" parent="HUD/Control"]
-layout_mode = 0
-offset_left = -3.0
-offset_top = 71.0
-offset_right = 881.0
-offset_bottom = 365.0
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="timer_hud" type="HBoxContainer" parent="HUD/Control/container"]
-custom_minimum_size = Vector2(100, 20)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-
-[node name="timer_container" type="Label" parent="HUD/Control/container/timer_hud"]
-layout_mode = 2
-text = "Tempo:"
-label_settings = SubResource("LabelSettings_8dxeq")
-
-[node name="timer_numero" type="Label" parent="HUD/Control/container/timer_hud"]
-layout_mode = 2
-text = "00:00"
-label_settings = SubResource("LabelSettings_wttcl")
-
-[node name="coraçao vida" type="TextureRect" parent="HUD/Control"]
-layout_mode = 0
-offset_top = 79.0
-offset_right = 65.0
-offset_bottom = 111.0
-texture = ExtResource("17_ah3nv")
-
-[node name="x" type="Label" parent="HUD/Control/coraçao vida"]
-custom_minimum_size = Vector2(40, 23)
-layout_mode = 0
-offset_left = 41.0
-offset_top = 8.0
-offset_right = 81.0
-offset_bottom = 34.0
-text = "X	"
-label_settings = SubResource("LabelSettings_hke1g")
-
-[node name="vida" type="Label" parent="HUD/Control/coraçao vida"]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 8.0
-offset_right = 99.0
-offset_bottom = 34.0
-text = "03"
-label_settings = SubResource("LabelSettings_e4l60")
 
 [node name="Oxigenio" parent="." instance=ExtResource("19_jggi1")]
 position = Vector2(94, 1498)
@@ -1420,11 +1356,75 @@ shape = SubResource("RectangleShape2D_0hqan")
 
 [node name="MenuPause" parent="." instance=ExtResource("24_6sn1v")]
 
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="vida_tempo" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("21_mhc3p")
+
+[node name="clock_timer" type="Timer" parent="HUD/vida_tempo"]
+
+[node name="container" type="MarginContainer" parent="HUD/vida_tempo"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 68.0
+offset_right = 881.002
+offset_bottom = 516.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="timer_hud" type="HBoxContainer" parent="HUD/vida_tempo/container"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="timer_container" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
+layout_mode = 2
+text = "Tempo:"
+label_settings = SubResource("LabelSettings_ywp1g")
+
+[node name="timer_numero" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
+layout_mode = 2
+text = "00:00"
+label_settings = SubResource("LabelSettings_5idse")
+
+[node name="coraçao vida" type="TextureRect" parent="HUD/vida_tempo"]
+layout_mode = 0
+offset_top = 75.0
+offset_right = 65.0
+offset_bottom = 107.0
+texture = ExtResource("17_ah3nv")
+
+[node name="x" type="Label" parent="HUD/vida_tempo/coraçao vida"]
+custom_minimum_size = Vector2(40, 23)
+layout_mode = 0
+offset_left = 41.0
+offset_top = 8.0
+offset_right = 81.0
+offset_bottom = 34.0
+text = "X	"
+label_settings = SubResource("LabelSettings_3pfgj")
+
+[node name="vida" type="Label" parent="HUD/vida_tempo/coraçao vida"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 8.0
+offset_right = 99.0
+offset_bottom = 34.0
+text = "03"
+label_settings = SubResource("LabelSettings_2mg05")
+
 [connection signal="body_entered" from="Spikes_area" to="Spikes_area" method="_on_body_entered"]
 [connection signal="body_entered" from="Spikes_area2" to="Spikes_area2" method="_on_body_entered"]
 [connection signal="body_entered" from="Spikes_area3" to="Spikes_area3" method="_on_body_entered"]
-[connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="Control/Area2D" to="Control/caixa" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Control/Area2D" to="Control/caixa" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 
 [editable path="Control/caixa"]

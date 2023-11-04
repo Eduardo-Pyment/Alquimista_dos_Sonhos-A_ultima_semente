@@ -610,20 +610,20 @@ sources/7 = SubResource("TileSetAtlasSource_h2bo8")
 sources/2 = SubResource("TileSetAtlasSource_lme7t")
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_2chs2"]
-vertices = PackedVector2Array(704, 64, 736, 64, 736, 256, 1568, 256, 1568, 32, 2272, 32, 1728, 224, 2272, 224, 1728, 288, 1600, 384, 1536, 352, 2304, 288, 2304, 384, 2176, 384, 2176, 416, 1920, 416, 1856, 384, 1184, 256, 1152, 352, 1088, 288, 1088, 160, 1185, 224, 1409, 160, 1440, 224, 1504, 32, 1504, 160, 1409, 128, 800, 32, 1024, 128, 800, 256, 928, 352, 1024, 432, 928, 432, 32, 352, 32, 64, 64, 64, 64, 0, 704, 0)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(5, 7, 6), PackedInt32Array(3, 6, 8, 9, 10), PackedInt32Array(8, 11, 12, 13), PackedInt32Array(8, 13, 14, 15, 16), PackedInt32Array(8, 16, 9), PackedInt32Array(17, 3, 10, 18, 19), PackedInt32Array(17, 19, 20, 21), PackedInt32Array(21, 20, 22, 23), PackedInt32Array(24, 25, 23, 22, 26), PackedInt32Array(27, 24, 26, 28), PackedInt32Array(29, 27, 28, 30), PackedInt32Array(28, 31, 32, 30), PackedInt32Array(29, 30, 33, 2), PackedInt32Array(2, 33, 34, 35), PackedInt32Array(0, 2, 35, 36), PackedInt32Array(0, 36, 37)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(736, 64, 736, 256, 800, 256, 800, 32, 1504, 32, 1504, 160, 1440, 224, 1185, 224, 1184, 256, 1568, 256, 1568, 32, 2272, 32, 2272, 224, 1728, 224, 1728, 288, 2304, 288, 2304, 384, 2176, 384, 2176, 416, 1920, 416, 1856, 384, 1600, 384, 1536, 352, 1152, 352, 1088, 288, 1088, 160, 1409, 160, 1409, 128, 1024, 128, 1024, 432, 928, 432, 928, 352, 32, 352, 32, 64, 64, 64, 64, 0, 704, 0, 704, 64)])
+vertices = PackedVector2Array(704, 64, 736, 64, 736, 256, 1568, 256, 1568, 32, 2272, 32, 1728, 224, 2272, 224, 1728, 288, 1600, 384, 1536, 352, 2304, 288, 2304, 384, 2176, 384, 2176, 416, 2003.57, 416, 1920, 416, 1856, 384, 1184, 256, 1152, 352, 1088, 288, 1088, 160, 1185, 224, 1409, 160, 1440, 224, 1504, 32, 1504, 160, 1409, 128, 800, 32, 1024, 128, 800, 256, 928, 352, 1024, 432, 928, 432, 32, 352, 32, 64, 64, 64, 64, 0, 704, 0)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(5, 7, 6), PackedInt32Array(3, 6, 8, 9, 10), PackedInt32Array(8, 11, 12, 13), PackedInt32Array(13, 14, 15, 8), PackedInt32Array(8, 15, 16, 17), PackedInt32Array(8, 17, 9), PackedInt32Array(18, 3, 10, 19, 20), PackedInt32Array(18, 20, 21, 22), PackedInt32Array(22, 21, 23, 24), PackedInt32Array(25, 26, 24, 23, 27), PackedInt32Array(28, 25, 27, 29), PackedInt32Array(30, 28, 29, 31), PackedInt32Array(29, 32, 33, 31), PackedInt32Array(30, 31, 34, 2), PackedInt32Array(2, 34, 35, 36), PackedInt32Array(0, 2, 36, 37), PackedInt32Array(0, 37, 38)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(736, 64, 736, 256, 800, 256, 800, 32, 1504, 32, 1504, 160, 1440, 224, 1185, 224, 1184, 256, 1568, 256, 1568, 32, 2272, 32, 2272, 224, 1728, 224, 1728, 288, 2304, 288, 2304, 384, 2176, 384, 2176, 416, 2003.57, 416, 1920, 416, 1856, 384, 1600, 384, 1536, 352, 1152, 352, 1088, 288, 1088, 160, 1409, 160, 1409, 128, 1024, 128, 1024, 432, 928, 432, 928, 352, 32, 352, 32, 64, 64, 64, 64, 0, 704, 0, 704, 64)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsgnm"]
 size = Vector2(256, 35.25)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_y08ta"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vwwd6"]
 
 [sub_resource type="Gradient" id="Gradient_4o6pw"]
 offsets = PackedFloat32Array(0, 0.674074, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0.688889, 0.688889, 0.688889, 1, 0.340339, 0.340339, 0.340339, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_ybt1f"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_v6tki"]
 gradient = SubResource("Gradient_4o6pw")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vvda1"]
@@ -640,8 +640,8 @@ orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 scale_max = 3.0
 color = Color(1, 0.498039, 0, 1)
-color_ramp = SubResource("GradientTexture1D_ybt1f")
-color_initial_ramp = SubResource("GradientTexture1D_y08ta")
+color_ramp = SubResource("GradientTexture1D_v6tki")
+color_initial_ramp = SubResource("GradientTexture1D_vwwd6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6mrb"]
 size = Vector2(608, 20)
