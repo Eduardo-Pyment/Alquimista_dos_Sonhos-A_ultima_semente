@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://rb10rosuh2no"]
+[gd_scene load_steps=38 format=3 uid="uid://rb10rosuh2no"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_jajnq"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_f7sbr"]
@@ -21,7 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://bglfag0avg81y" path="res://Scenes/Itens/hidrogenio2.tscn" id="18_hi4qg"]
 [ext_resource type="PackedScene" uid="uid://cx73sewvijfmk" path="res://Scenes/Itens/oxigenio.tscn" id="19_jggi1"]
 [ext_resource type="Script" path="res://Scripts/FallZone.gd" id="20_un8fc"]
-[ext_resource type="PackedScene" uid="uid://bpopvs3826o1e" path="res://Scenes/Morte_Void.tscn" id="22_keemk"]
+[ext_resource type="PackedScene" uid="uid://c33buwts2rsqv" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_2dcsi"]
+[ext_resource type="Texture2D" uid="uid://cyvxw37jt6pcm" path="res://Assets/Textures/Assets-dica/Grassland_entities (16 x 16).png" id="24_e6kxf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6y1sh"]
 texture = ExtResource("1_jajnq")
@@ -1112,6 +1113,9 @@ size = Vector2(965, 19.625)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ml0xh"]
 size = Vector2(107, 32.625)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hqan"]
+size = Vector2(21, 17)
+
 [node name="Fase_2" type="Node2D"]
 position = Vector2(0, -85)
 
@@ -1405,10 +1409,40 @@ debug_color = Color(1, 0, 0, 0.392157)
 position = Vector2(2281, 458)
 scale = Vector2(2, 2)
 
-[node name="Area2D" parent="." instance=ExtResource("22_keemk")]
-position = Vector2(918, 449)
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="caixa" parent="Control" instance=ExtResource("23_2dcsi")]
+layout_mode = 1
+offset_left = 216.0
+offset_top = 293.0
+offset_right = 216.0
+offset_bottom = 293.04
+
+[node name="RichTextLabel" parent="Control/caixa/NinePatchRect" index="1"]
+text = "fase 2
+"
+
+[node name="Area2D" type="Area2D" parent="Control"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Area2D"]
+position = Vector2(146, 439)
+texture = ExtResource("24_e6kxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D"]
+position = Vector2(145, 436)
+shape = SubResource("RectangleShape2D_0hqan")
 
 [connection signal="timeout" from="HUD/Control/clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="FireZone" to="FireZone" method="_on_body_entered"]
 [connection signal="body_entered" from="FireZone2" to="FireZone2" method="_on_body_entered"]
 [connection signal="body_entered" from="FireZone3" to="FireZone3" method="_on_body_entered"]
+[connection signal="body_entered" from="Control/Area2D" to="Control/caixa" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Control/Area2D" to="Control/caixa" method="_on_area_2d_body_exited"]
+
+[editable path="Control/caixa"]

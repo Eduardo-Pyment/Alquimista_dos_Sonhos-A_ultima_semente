@@ -701,7 +701,7 @@ navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_3lnc8")]
 unique_name_in_owner = true
-position = Vector2(104, 96)
+position = Vector2(1771, 345)
 collision_layer = 2
 collision_mask = 6
 
