@@ -4,9 +4,10 @@ func _ready():
 	pass
 
 func _on_jogar_pressed():
-	get_tree().change_scene_to_file("res://Fases/fase_1.tscn")
-	
-	
+	TransicaoDeCena.cena_transicao("res://Fases/fase_1.tscn")
+	MusicController.stop_music()
+
+
 func _on_opcoes_pressed():
 	get_tree().change_scene_to_file("res://Menus/MenuPrincipal/menu_opcoes.tscn")
 

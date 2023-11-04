@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globais="*res://Scripts/Globais.gd"
 MusicController="*res://Prefabs/MusicController.tscn"
+TransicaoDeCena="*res://Scenes/transicao_de_cena.tscn"
 
 [display]
 
