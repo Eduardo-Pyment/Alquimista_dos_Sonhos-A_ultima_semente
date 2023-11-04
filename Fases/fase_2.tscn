@@ -1420,13 +1420,20 @@ offset_bottom = 40.0
 layout_mode = 1
 offset_left = 216.0
 offset_top = 293.0
-offset_right = 216.0
-offset_bottom = 293.04
+offset_right = 493.8
+offset_bottom = 347.2
 
-[node name="NinePatchRect" parent="Control/caixa" index="0"]
-region_rect = Rect2(0, 0, 20, 20)
+[node name="Label" parent="Control/caixa/NinePatchRect" index="0"]
+offset_left = 101.972
+offset_top = 7.39848
+offset_right = 193.972
+offset_bottom = 18.3985
 
 [node name="RichTextLabel" parent="Control/caixa/NinePatchRect" index="1"]
+offset_left = 7.9257
+offset_top = 19.0311
+offset_right = 305.926
+offset_bottom = 44.0311
 text = "Junte os átomos de prata (Ag), zinco (Zn) e cobre (Cu) para formar uma amálgama que desencadeia reações intermetálicas, solidificando o mercúrio e avançando para a próxima fase."
 
 [node name="Area2D" type="Area2D" parent="Control"]
