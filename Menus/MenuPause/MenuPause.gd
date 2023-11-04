@@ -9,22 +9,39 @@ extends CanvasLayer
 
 var config = ConfigFile.new()
 
+
 func _ready():
 	control_pause.visible = false
 	control_opcoes.visible = false
 	color_rect.visible = false
 	load_opcoes()
-	
+
 
 func _process(delta):
 	pass
 	
 func _unhandled_input(event):
+	if control_opcoes.visible:
+		if event.is_action_pressed("ui_cancel"):
+	# Se o menu de opções estiver visível, feche-o
+			control_opcoes.visible = false
+			get_tree().paused = false
+			color_rect.visible = false
+		return
+
 	if event.is_action_pressed("ui_cancel"):
-		control_pause.visible = true
-		color_rect.visible = true
-		get_tree().paused = true
-	
+		if control_pause.visible:	
+# Se o menu de pausa estiver visível, feche-o
+			get_tree().paused = false
+			control_pause.visible = false
+			color_rect.visible = false
+		else:
+# Caso contrário, abra o menu de pausa
+			control_pause.visible = true
+			color_rect.visible = true
+			get_tree().paused = true
+
+
 func reload_game():
 	get_tree().reload_current_scene()
 
