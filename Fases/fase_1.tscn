@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=53 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
@@ -22,7 +22,8 @@
 [ext_resource type="FontFile" uid="uid://dl6hdvk5712j6" path="res://Assets/Textures/Animation/Dicas/hf-free-complete/equipment-pro-v1.1/EquipmentPro.ttf" id="19_daj23"]
 [ext_resource type="Texture2D" uid="uid://dbh2kpys1adoa" path="res://Assets/Textures/Animation/Hud/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png" id="20_8dbqo"]
 [ext_resource type="PackedScene" uid="uid://bpopvs3826o1e" path="res://Scenes/Morte_Void.tscn" id="21_aw1ic"]
-[ext_resource type="PackedScene" uid="uid://c33buwts2rsqv" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_b3g00"]
+[ext_resource type="PackedScene" uid="uid://sm5d6pcner8w" path="res://Menus/MenuPause/menu_pause.tscn" id="22_rlntw"]
+[ext_resource type="PackedScene" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_b3g00"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dvf8b"]
 line_spacing = 0.0
@@ -1076,6 +1077,8 @@ offset_left = 411.0
 offset_top = 58.0
 offset_right = 686.8
 offset_bottom = 87.2
+
+[node name="MenuPause" parent="." instance=ExtResource("22_rlntw")]
 
 [connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="Zona_fogo_maquina" to="Zona_fogo_maquina" method="_on_body_entered"]

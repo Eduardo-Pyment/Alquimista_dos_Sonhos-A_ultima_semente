@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bfhkiwk3ofdmr" path="res://Assets/AssetsMenu/logoMenuOpcoes.png" id="5_0qm5p"]
 [ext_resource type="Texture2D" uid="uid://5q5i1hm4krf0" path="res://Assets/AssetsMenu/voltar.png" id="6_4r5rl"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iel70"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osl7i"]
 bg_color = Color(0.00784314, 0.345098, 0.345098, 0)
 border_width_left = 8
 border_color = Color(0.137255, 0.352941, 0.356863, 1)
@@ -16,21 +16,21 @@ corner_radius_top_right = 45
 corner_radius_bottom_right = 45
 corner_radius_bottom_left = 45
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0gsi"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pynod"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hn0ra"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ydh83"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_occfa"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pleaq"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 8
 border_width_bottom = 65
 border_color = Color(0.8, 0.8, 0.8, 0)
 
 [sub_resource type="Theme" id="Theme_0bfgg"]
-VScrollBar/styles/grabber = SubResource("StyleBoxFlat_iel70")
-VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_e0gsi")
-VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_hn0ra")
-VScrollBar/styles/scroll = SubResource("StyleBoxFlat_occfa")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_osl7i")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_pynod")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_ydh83")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_pleaq")
 
 [node name="MenuOpcoes" type="Control"]
 layout_mode = 3
@@ -112,6 +112,7 @@ offset_right = 451.092
 offset_bottom = 129.463
 scale = Vector2(1, 1.25077)
 max_value = 10.0
+value = 3.0
 
 [node name="SFXVolume" type="Label" parent="ScrollContainer/ColorRect/Control"]
 layout_mode = 0
