@@ -1327,8 +1327,8 @@ offset_bottom = 40.0
 layout_mode = 1
 offset_left = 216.0
 offset_top = 293.0
-offset_right = 493.8
-offset_bottom = 347.2
+offset_right = 512.8
+offset_bottom = 337.2
 
 [node name="Label" parent="Control/caixa/NinePatchRect" index="0"]
 offset_left = 101.972
