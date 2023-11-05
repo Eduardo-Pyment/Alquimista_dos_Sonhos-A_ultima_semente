@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bsrgxwmhkoqur"]
+[gd_scene load_steps=18 format=3 uid="uid://bsrgxwmhkoqur"]
 
 [ext_resource type="Texture2D" uid="uid://diawbnsbkshpp" path="res://Assets/Textures/Background/CityDay/1.png" id="1_c77ym"]
 [ext_resource type="Texture2D" uid="uid://dtc8xburpks" path="res://Assets/Textures/Background/CityDay/2.png" id="2_3gb37"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://rvbxsichxlbx" path="res://Scenes/Itens/sodio.tscn" id="10_lyd75"]
 [ext_resource type="PackedScene" uid="uid://bxxpp537rsj22" path="res://Scenes/Itens/cloro.tscn" id="11_6tnn1"]
 [ext_resource type="PackedScene" uid="uid://k73i0e7vpwbf" path="res://Scenes/Ambiente/PlataformaMovel.tscn" id="11_7xvgi"]
+[ext_resource type="PackedScene" uid="uid://bdtgbdxvxjpn6" path="res://Scenes/Ambiente/portal.tscn" id="12_120u4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yb87g"]
 texture = ExtResource("5_45cis")
@@ -1818,3 +1819,6 @@ position = Vector2(107, 225)
 
 [node name="cloro" parent="." instance=ExtResource("11_6tnn1")]
 position = Vector2(256, 224)
+
+[node name="Portal" parent="." instance=ExtResource("12_120u4")]
+position = Vector2(1471, 200)
