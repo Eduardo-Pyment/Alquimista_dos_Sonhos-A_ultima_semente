@@ -3,6 +3,7 @@ extends CharacterBody2D
 @onready var CayTimer = $CayTimer
 @onready var PlayerRaycast = $CheckChaoRaycasts
 @onready var player_sprite_2d = $PlayerSprite2D
+@onready var animacao = $AnimationPlayer
 
 var Gravidade: float
 var VelocidadePulo: float
@@ -10,6 +11,7 @@ var PuloDisponivel: bool
 var knockback_vector: Vector2 = Vector2.ZERO
 var recovering: bool = false
 var recovery_duration: float = 0.1
+var direcao = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 
 @export var VelocidadeHorizontal = 250
 @export var TempoPuloAlturaMax: float = 0.3
@@ -64,8 +66,9 @@ func _physics_process(delta):
 	if knockback_vector != Vector2.ZERO:
 		velocity = knockback_vector
 
+	_set_state()
 	move_and_slide()
-	animacao_player()
+	
 
 	if recovering:
 		recovery_duration -= delta
@@ -77,15 +80,6 @@ func _physics_process(delta):
 
 
 
-func animacao_player():
-	var animacao = "PlayerOcioso"
-	if velocity.y < 0:
-		animacao = "PlayerPulo"
-	elif abs(velocity.x) > 100:
-		animacao = "PlayerCorrer"
-
-	if $AnimationPlayer.assigned_animation != animacao:
-		$AnimationPlayer.play(animacao)
 
 func _on_hurtbox_body_entered(_body):
 	var knockback_force = Vector2.ZERO
@@ -144,3 +138,14 @@ func _on_body_exited(_body):
 
 func _on_cay_timer_timeout():
 	pass # Replace with function body.
+
+func _set_state():#state machines
+	var state = "PlayerOcioso"
+	
+	if not is_on_floor():
+		state = "PlayerPulo"
+	elif abs(velocity.x) > 100:
+		state = "PlayerCorrer"
+		
+	if animacao.name != state:
+		animacao.play(state)
