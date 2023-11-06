@@ -7,6 +7,7 @@ extends Control
 var config = ConfigFile.new()
 
 func _ready():
+	get_tree().paused = false
 	load_opcoes()
 
 func _on_voltar_pressed():

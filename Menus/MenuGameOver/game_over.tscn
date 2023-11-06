@@ -1,16 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://1mehd4faumqk"]
+[gd_scene load_steps=5 format=3 uid="uid://1mehd4faumqk"]
 
 [ext_resource type="Script" path="res://Menus/MenuGameOver/GameOver.gd" id="1_poh1k"]
-[ext_resource type="Texture2D" uid="uid://dgsqfvurdofc6" path="res://Assets/AssetsMenuPause/RetanguloArredondado.png" id="2_k27te"]
-[ext_resource type="Texture2D" uid="uid://dvx5gp3rgeaqr" path="res://Assets/AssetsMenuPause/BotaoReiniciar.png" id="3_3ekde"]
-[ext_resource type="Texture2D" uid="uid://bfl7jewo42gsg" path="res://Assets/AssetsMenuPause/BotaoSair.png" id="5_pevx5"]
-[ext_resource type="Texture2D" uid="uid://b57gl3r7jmnh5" path="res://Assets/AssetsMenuPause/BotaoX.png" id="6_tyxfr"]
-
-[sub_resource type="InputEventAction" id="InputEventAction_bxpse"]
-action = &"ui_cancel"
-
-[sub_resource type="Shortcut" id="Shortcut_88n1m"]
-events = [SubResource("InputEventAction_bxpse")]
+[ext_resource type="Texture2D" uid="uid://c5g54kqm1870g" path="res://Assets/AssetsGameOver/RetanguloArredondadoGameOver.png" id="2_rthn4"]
+[ext_resource type="Texture2D" uid="uid://dwnvmf5n4ylg2" path="res://Assets/AssetsGameOver/BotaoRecomecar.png" id="3_6j1dt"]
+[ext_resource type="Texture2D" uid="uid://00md4ydr4f1u" path="res://Assets/AssetsGameOver/BotaoMenu.png" id="4_4bxxh"]
 
 [node name="GameOver" type="CanvasLayer"]
 process_mode = 3
@@ -29,51 +22,35 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 212.0
-offset_top = 36.0
-offset_right = 812.0
-offset_bottom = 736.0
+offset_left = 235.0
+offset_top = 19.0
+offset_right = 887.0
+offset_bottom = 719.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_k27te")
+texture = ExtResource("2_rthn4")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ControlGameOver"]
+[node name="VBoxContainer" type="BoxContainer" parent="ControlGameOver"]
+clip_contents = true
+layout_direction = 2
 layout_mode = 0
-offset_left = 305.0
-offset_top = 177.0
-offset_right = 524.0
-offset_bottom = 466.0
+offset_left = 330.0
+offset_top = 215.0
+offset_right = 596.0
+offset_bottom = 338.0
 scale = Vector2(0.424767, 0.424767)
 theme_override_constants/separation = 20
 
 [node name="Reiniciar" type="Button" parent="ControlGameOver/VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("3_3ekde")
+icon = ExtResource("3_6j1dt")
+flat = true
 
 [node name="Sair" type="Button" parent="ControlGameOver/VBoxContainer"]
 layout_mode = 2
-icon = ExtResource("5_pevx5")
-
-[node name="Resume" type="Button" parent="ControlGameOver"]
-layout_mode = 0
-offset_left = 400.0
-offset_top = 280.0
-offset_right = 490.0
-offset_bottom = 370.0
-scale = Vector2(0.418727, 0.418727)
-shortcut = SubResource("Shortcut_88n1m")
-icon = ExtResource("6_tyxfr")
+icon = ExtResource("4_4bxxh")
 flat = true
-
-[node name="Label" type="Label" parent="ControlGameOver"]
-layout_mode = 0
-offset_left = 291.0
-offset_top = 146.0
-offset_right = 409.0
-offset_bottom = 172.0
-text = "MORREU POHA
-"
 
 [connection signal="pressed" from="ControlGameOver/VBoxContainer/Reiniciar" to="." method="_on_reiniciar_pressed"]
 [connection signal="pressed" from="ControlGameOver/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
