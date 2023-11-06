@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://qw26640142bh" path="res://Assets/AssetsMenu/sair.png" id="6_b3sv4"]
 
 [node name="MenuPrincipal" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,6 +37,7 @@ scale = Vector2(0.365, 0.365)
 texture = ExtResource("3_ei5pg")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+process_mode = 3
 layout_mode = 0
 offset_left = 320.0
 offset_top = 200.0
@@ -44,20 +46,24 @@ offset_bottom = 975.0
 scale = Vector2(0.230705, 0.230705)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+process_mode = 3
 layout_mode = 2
 theme_override_constants/separation = 50
 
 [node name="Jogar" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 icon = ExtResource("4_77seh")
 flat = true
 
 [node name="Opcoes" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 icon = ExtResource("5_gsunh")
 flat = true
 
 [node name="Sair" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 icon = ExtResource("6_b3sv4")
 flat = true
