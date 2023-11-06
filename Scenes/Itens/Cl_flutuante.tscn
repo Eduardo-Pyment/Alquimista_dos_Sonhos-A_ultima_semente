@@ -25,7 +25,7 @@ func set_alvo_movimento(PontoAlvo: Vector2):
 		AgenteNavegacao.target_position = PontoAlvo
 
 func _process(delta):
-	if Globais.agua >= 1:
+	if Globais.base >= 1:
 		$AnimatedSprite2D.play(\"destroy\")
 func _destroy():
 	queue_free()
