@@ -1,0 +1,139 @@
+[gd_scene load_steps=20 format=3 uid="uid://bpiiu73axvwfo"]
+
+[ext_resource type="Script" path="res://Scripts/itens/zinco.gd" id="1_gnsw7"]
+[ext_resource type="Texture2D" uid="uid://cakle07l6o546" path="res://Assets/Textures/Itens/Moleculas/coleta_animação_32x32.png" id="2_xmd01"]
+[ext_resource type="Texture2D" uid="uid://cdxvk46d7dbbg" path="res://Assets/Textures/Itens/Moleculas/estanho_animation_32x32.png" id="3_0qmfc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckukd"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mr8r"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxapa"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qabk"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtmgb"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irxi8"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymhfc"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7rwi"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uipyl"]
+atlas = ExtResource("2_xmd01")
+region = Rect2(0, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hudtt"]
+atlas = ExtResource("3_0qmfc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thke8"]
+atlas = ExtResource("3_0qmfc")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fwlls"]
+atlas = ExtResource("3_0qmfc")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekgt8"]
+atlas = ExtResource("3_0qmfc")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws85n"]
+atlas = ExtResource("3_0qmfc")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r07me"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckukd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mr8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxapa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qabk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtmgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irxi8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymhfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7rwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uipyl")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"collected",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hudtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thke8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fwlls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekgt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws85n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d02gj"]
+radius = 14.0
+
+[node name="zinco" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_gnsw7")
+
+[node name="animation" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_r07me")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_d02gj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="animation" to="." method="_on_animation_animation_finished"]
