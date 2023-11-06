@@ -1,0 +1,200 @@
+[gd_scene load_steps=20 format=3 uid="uid://dlxdswq40oxnd"]
+
+[ext_resource type="Texture2D" uid="uid://df1q6bkpmrxbu" path="res://Assets/Textures/Itens/Moleculas/bronze_animation.png" id="1_ktxq4"]
+[ext_resource type="Texture2D" uid="uid://cakle07l6o546" path="res://Assets/Textures/Itens/Moleculas/coleta_animação_32x32.png" id="2_aipb8"]
+
+[sub_resource type="GDScript" id="GDScript_r48vn"]
+script/source = "extends CharacterBody2D
+
+@export var VelocidadeMovimento: float = 200.0
+@onready var AlvoMovimento: Node = null  # Inicialize AlvoMovimento como nulo
+@onready var AgenteNavegacao = get_node(\"NavigationAgent2D\")
+
+func _ready():
+	AlvoMovimento = get_node_or_null(\"/root/Fase_2/Player\")  # Usando get_node_or_null para evitar erros se o nó não existir
+	if AlvoMovimento != null:
+		call_deferred(\"actor_setup\")
+		
+func _process(_delta):
+	if Globais.agua >= 1:
+		$AnimatedSprite2D.play(\"destroy\")
+
+func actor_setup():
+	if AlvoMovimento != null:
+		await get_tree().physics_frame
+		set_alvo_movimento(AlvoMovimento.global_position)  # Use global_position para obter a posição correta do nó
+		
+func set_alvo_movimento(PontoAlvo: Vector2):
+	if AlvoMovimento != null:
+		AgenteNavegacao.target_position = PontoAlvo
+
+func _physics_process(_delta):
+	if AlvoMovimento == null:
+		return  # Evite processar a lógica se o AlvoMovimento for nulo
+	
+	if AgenteNavegacao.is_navigation_finished():
+		return
+	
+	var PosicaoAgenteAtual: Vector2 = global_position
+	var ProximaPosicaoCaminho: Vector2 = AgenteNavegacao.get_next_path_position()
+	var NovaVelocidade: Vector2 = ProximaPosicaoCaminho - PosicaoAgenteAtual
+	NovaVelocidade = NovaVelocidade.normalized()
+	velocity = lerp(velocity, NovaVelocidade * VelocidadeMovimento, 0.05)
+	
+	if AgenteNavegacao.distance_to_target() < 50:
+		velocity = lerp(velocity, NovaVelocidade / VelocidadeMovimento, 0.1)
+	
+	move_and_slide()
+
+func _on_timer_timeout():
+	if AlvoMovimento != null:
+		set_alvo_movimento(AlvoMovimento.global_position)
+		actor_setup()
+
+
+func _on_animated_sprite_2d_animation_finished():
+	_destroy()
+	
+func _destroy():
+	queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8a1jc"]
+radius = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u42lt"]
+atlas = ExtResource("1_ktxq4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgomx"]
+atlas = ExtResource("1_ktxq4")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_248em"]
+atlas = ExtResource("1_ktxq4")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6who"]
+atlas = ExtResource("1_ktxq4")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eddd5"]
+atlas = ExtResource("1_ktxq4")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c64xd"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js8yk"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtesm"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qb1u"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s47c3"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugrtw"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3chqv"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kn21"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p2fc"]
+atlas = ExtResource("2_aipb8")
+region = Rect2(0, 256, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hgcvl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u42lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgomx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_248em")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6who")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eddd5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c64xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js8yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtesm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qb1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s47c3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugrtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3chqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kn21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p2fc")
+}],
+"loop": false,
+"name": &"destroy",
+"speed": 17.0
+}]
+
+[node name="Cu_flutuante" type="CharacterBody2D"]
+light_mask = 2
+visibility_layer = 2
+z_index = -1
+scale = Vector2(0.7, 0.7)
+motion_mode = 1
+script = SubResource("GDScript_r48vn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8a1jc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hgcvl")
+autoplay = "default"
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+target_desired_distance = 5.0
+path_max_distance = 200.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
