@@ -5,6 +5,7 @@ extends Control
 @onready var clock_timer = $clock_timer
 @onready var timer_numero = $container/timer_hud/timer_numero as Label
 @onready var control = "."
+@onready var game_over = $"../../GameOver"
 
 var minutos = 0
 var segundos = 0
@@ -16,7 +17,7 @@ signal time_is_up
 func _ready():
 	vida.text = str(Globais.player_life).pad_zeros(3)
 	timer_numero.text = "00:00"  # Inicie o temporizador em 00:00
-	player.player_morreu.connect(reload_game)
+	player.GameOver.connect(PlayerMorreuGameOver)
 	Globais.player_life = 3
 	reset_clock_timer()
 	start_clock_timer()
@@ -25,10 +26,9 @@ func _ready():
 func _process(_delta):
 	vida.text = str(Globais.player_life).pad_zeros(1)
 	
-
-func reload_game():
-	await get_tree().create_timer(1.0).timeout
-	get_tree().reload_current_scene()
+func PlayerMorreuGameOver():
+	game_over.visible = true
+	get_tree().paused = true
 
 func _on_clock_timer_timeout():
 	if is_timer_running:
