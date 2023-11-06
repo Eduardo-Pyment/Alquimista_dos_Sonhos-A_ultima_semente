@@ -1347,8 +1347,6 @@ texture = ExtResource("24_e6kxf")
 position = Vector2(145, 436)
 shape = SubResource("RectangleShape2D_0hqan")
 
-[node name="MenuPause" parent="." instance=ExtResource("24_6sn1v")]
-
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="vida_tempo" type="Control" parent="HUD"]
@@ -1428,6 +1426,8 @@ collision_mask = 2
 
 [node name="zinco" parent="." instance=ExtResource("24_t0shj")]
 position = Vector2(3005, 1404)
+
+[node name="MenuPause" parent="." instance=ExtResource("24_6sn1v")]
 
 [connection signal="body_entered" from="Spikes_area" to="Spikes_area" method="_on_body_entered"]
 [connection signal="body_entered" from="Spikes_area2" to="Spikes_area2" method="_on_body_entered"]
