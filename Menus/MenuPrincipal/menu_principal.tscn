@@ -84,12 +84,6 @@ layout_mode = 2
 icon = ExtResource("5_gsunh")
 flat = true
 
-[node name="Sair" type="Button" parent="MarginContainer/VBoxContainer"]
-process_mode = 3
-layout_mode = 2
-icon = ExtResource("6_b3sv4")
-flat = true
-
 [node name="Tutorial" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "
@@ -98,7 +92,13 @@ icon = ExtResource("7_vpn3r")
 flat = true
 script = SubResource("GDScript_734wi")
 
+[node name="Sair" type="Button" parent="MarginContainer/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+icon = ExtResource("6_b3sv4")
+flat = true
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="MarginContainer/VBoxContainer/Tutorial" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
