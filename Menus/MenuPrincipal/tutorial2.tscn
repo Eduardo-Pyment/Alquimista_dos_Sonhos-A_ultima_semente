@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpmramuvpgsko"]
+
+[ext_resource type="Texture2D" uid="uid://c18x3bge5r4n" path="res://Assets/AssetsMenu/backgorundmenu.jpg" id="1_ehe6p"]
+[ext_resource type="Script" path="res://Menus/MenuPrincipal/tutorial2.gd" id="1_qyio5"]
+[ext_resource type="Texture2D" uid="uid://dydf7ed5soqlq" path="res://Assets/AssetsMenu/backgroundtutorial2.png" id="2_imgnp"]
+[ext_resource type="Texture2D" uid="uid://b5wdbynlnya2d" path="res://Assets/AssetsMenu/BotaoVoltar.png" id="3_7s5qx"]
+[ext_resource type="Texture2D" uid="uid://cnopie4j6yic6" path="res://Assets/AssetsMenu/BotaoAvancar.png" id="4_xid3n"]
+
+[node name="tutorial2" type="CanvasLayer"]
+script = ExtResource("1_qyio5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -16.0
+offset_right = 1904.0
+offset_bottom = 1080.0
+scale = Vector2(0.420978, 0.420978)
+texture = ExtResource("1_ehe6p")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 224.0
+offset_top = 53.0
+offset_right = 876.0
+offset_bottom = 753.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_imgnp")
+
+[node name="voltar" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 261.0
+offset_right = 416.0
+offset_bottom = 299.0
+icon = ExtResource("3_7s5qx")
+flat = true
+
+[node name="avancar" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 261.0
+offset_right = 474.0
+offset_bottom = 299.0
+icon = ExtResource("4_xid3n")
+flat = true
+
+[connection signal="pressed" from="Control/voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Control/avancar" to="." method="_on_avancar_pressed"]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgphl6epb2orn"]
+
+[ext_resource type="Script" path="res://Menus/MenuPrincipal/tutorial3.gd" id="1_e1wok"]
+[ext_resource type="Texture2D" uid="uid://c18x3bge5r4n" path="res://Assets/AssetsMenu/backgorundmenu.jpg" id="1_smuos"]
+[ext_resource type="Texture2D" uid="uid://pimlclipm4od" path="res://Assets/AssetsMenu/backgroudtutorial3.png" id="3_jn011"]
+[ext_resource type="Texture2D" uid="uid://cnopie4j6yic6" path="res://Assets/AssetsMenu/BotaoAvancar.png" id="4_lpwvp"]
+
+[node name="tutorial3" type="CanvasLayer"]
+script = ExtResource("1_e1wok")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -16.0
+offset_right = 1904.0
+offset_bottom = 1080.0
+scale = Vector2(0.420978, 0.420978)
+texture = ExtResource("1_smuos")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 224.0
+offset_top = 53.0
+offset_right = 876.0
+offset_bottom = 753.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_jn011")
+
+[node name="avancar" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 261.0
+offset_right = 474.0
+offset_bottom = 299.0
+icon = ExtResource("4_lpwvp")
+flat = true
+
+[connection signal="pressed" from="Control/avancar" to="." method="_on_avancar_pressed"]
