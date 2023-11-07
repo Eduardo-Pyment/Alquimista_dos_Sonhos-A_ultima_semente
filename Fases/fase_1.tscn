@@ -985,6 +985,12 @@ process_material = SubResource("ParticleProcessMaterial_6a5ul")
 [node name="Maquina_agua" parent="LevelProps" instance=ExtResource("12_ufsc5")]
 position = Vector2(1832, 352)
 
+[node name="collision" parent="LevelProps/Maquina_agua" index="0"]
+position = Vector2(-8, 0)
+
+[node name="AnimatedSprite2D" parent="LevelProps/Maquina_agua" index="2"]
+position = Vector2(-8, -48)
+
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(2049, 416)
 emitting = false
@@ -1017,14 +1023,14 @@ collision_mask = 2
 
 [node name="Plataforma_1" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(976, 256)
-Distancia = Vector2(0, 112)
+Distancia = Vector2(0, -112)
 TempoTransicao = 7.0
 
 [node name="Plataforma_2" parent="." instance=ExtResource("16_b2qrh")]
 show_behind_parent = true
 position = Vector2(1664, 384)
 Distancia = Vector2(0, 50)
-TempoTransicao = 5.0
+TempoTransicao = 3.5
 
 [node name="CollisionShape2D" parent="Plataforma_2" index="0"]
 shape = SubResource("RectangleShape2D_mooex")
@@ -1086,6 +1092,7 @@ offset_bottom = 100.2
 [connection signal="body_entered" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_exited"]
 
+[editable path="LevelProps/Maquina_agua"]
 [editable path="Plataforma_2"]
 [editable path="Plataforma_3"]
 [editable path="Plataforma_4"]
