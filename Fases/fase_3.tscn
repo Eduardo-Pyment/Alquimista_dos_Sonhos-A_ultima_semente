@@ -1158,7 +1158,6 @@ text = "03"
 label_settings = SubResource("LabelSettings_rknyg")
 
 [node name="MenuPause" parent="." instance=ExtResource("16_ac4cf")]
-visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
