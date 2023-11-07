@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ds80alnixdk1d"]
+[gd_scene load_steps=10 format=3 uid="uid://ds80alnixdk1d"]
 
 [ext_resource type="Script" path="res://Menus/MenuPrincipal/MenuPrincipal.gd" id="1_sqfgy"]
 [ext_resource type="Texture2D" uid="uid://c18x3bge5r4n" path="res://Assets/AssetsMenu/backgorundmenu.jpg" id="2_k04f6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://7tevdn18fg7m" path="res://Assets/AssetsMenu/opcoes.png" id="5_gsunh"]
 [ext_resource type="Texture2D" uid="uid://qw26640142bh" path="res://Assets/AssetsMenu/sair.png" id="6_b3sv4"]
 [ext_resource type="Texture2D" uid="uid://dni7xp73idv0y" path="res://Assets/AssetsMenu/BotaoTutorial.png" id="7_vpn3r"]
+[ext_resource type="Texture2D" uid="uid://cc32vrbof4q42" path="res://Assets/AssetsMenu/creditos.png" id="8_ojmc1"]
 
 [sub_resource type="GDScript" id="GDScript_734wi"]
 script/source = "extends Node
@@ -98,7 +99,18 @@ layout_mode = 2
 icon = ExtResource("6_b3sv4")
 flat = true
 
+[node name="Creditos" type="Button" parent="."]
+layout_mode = 0
+offset_left = 622.0
+offset_top = 396.0
+offset_right = 1183.0
+offset_bottom = 525.0
+scale = Vector2(0.176932, 0.176932)
+icon = ExtResource("8_ojmc1")
+flat = true
+
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Tutorial" to="MarginContainer/VBoxContainer/Tutorial" method="_on_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
