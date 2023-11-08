@@ -2,6 +2,8 @@ extends Area2D
 
 var inside = false
 
+signal gerar_agua
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite2D.modulate.a = 0
@@ -12,7 +14,8 @@ func _process(_delta):
 		if Globais.hidrogenio >= 2 and Globais.oxigenio >= 1:
 			Globais.hidrogenio -= 2
 			Globais.oxigenio -= 1
-			Globais.agua += 1
+			Globais.agua = 1
+			emit_signal("gerar_agua")
 			print("Água =", Globais.agua)
 
 func _on_body_entered(_body):
