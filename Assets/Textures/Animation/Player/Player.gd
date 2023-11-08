@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var PlayerRaycast = $CheckChaoRaycasts
 @onready var player_sprite_2d = $PlayerSprite2D
 @onready var animacao = $AnimationPlayer
+@onready var particulas = $CPUParticles2D
 
 var Gravidade: float
 var VelocidadePulo: float
@@ -27,24 +28,24 @@ func _ready():
 	Globais.agua = 0
 	Gravidade = (2 * PuloAltura / pow(TempoPuloAlturaMax, 2))
 	VelocidadePulo = Gravidade * TempoPuloAlturaMax
-	$CPUParticles2D.emitting = false  # Desliga as partículas iniciais
+	particulas.emitting = false  # Desliga as partículas iniciais
 
 func _physics_process(delta):
 	# Handle Jump.
 	if is_on_floor():
 		PuloDisponivel = true
 		if Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left"):
-			$CPUParticles2D.emitting = true
-			$CPUParticles2D.position.y = player_sprite_2d.position.y + 10
+			particulas.emitting = true
+			particulas.position.y = player_sprite_2d.position.y + 10
 	elif PuloDisponivel && CayTimer.is_stopped():
 		CayTimer.start()
 
 	if PuloDisponivel && Input.is_action_just_pressed("ui_accept"):
 		velocity.y = -VelocidadePulo
 		PuloDisponivel = false
-		$CPUParticles2D.emitting = true
-		$CPUParticles2D.position.y = player_sprite_2d.position.y + 20
-		$CPUParticles2D.position.x = player_sprite_2d.position.x / 2
+		particulas.emitting = true
+		particulas.position.y = player_sprite_2d.position.y + 20
+		particulas.position.x = player_sprite_2d.position.x / 2
 
 	# Add gravity.
 	if not is_on_floor():
@@ -56,8 +57,8 @@ func _physics_process(delta):
 		velocity.x = lerp(velocity.x, direcao * VelocidadeHorizontal, 0.2)
 
 		if is_on_floor():
-			$CPUParticles2D.emitting = true
-			$CPUParticles2D.position.y = player_sprite_2d.position.y + 10
+			particulas.emitting = true
+			particulas.position.y = player_sprite_2d.position.y + 10
 	else:
 		velocity.x = lerp(velocity.x, 0.0, 0.2)
 
