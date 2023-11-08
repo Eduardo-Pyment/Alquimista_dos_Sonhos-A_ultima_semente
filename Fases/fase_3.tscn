@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bsrgxwmhkoqur"]
+[gd_scene load_steps=38 format=3 uid="uid://bsrgxwmhkoqur"]
 
 [ext_resource type="Texture2D" uid="uid://diawbnsbkshpp" path="res://Assets/Textures/Background/CityDay/1.png" id="1_c77ym"]
 [ext_resource type="Texture2D" uid="uid://dtc8xburpks" path="res://Assets/Textures/Background/CityDay/2.png" id="2_3gb37"]
@@ -20,6 +20,10 @@
 [ext_resource type="Script" path="res://Scripts/Spikes_area.gd" id="17_7c2jx"]
 [ext_resource type="Texture2D" uid="uid://cwrw8xred4elg" path="res://Assets/Textures/spikes/Individual Spike.png" id="17_eydld"]
 [ext_resource type="PackedScene" uid="uid://7mbiapud7u25" path="res://Scenes/maquina_base.tscn" id="20_tbcbs"]
+[ext_resource type="PackedScene" uid="uid://c33buwts2rsqv" path="res://Scenes/caixa_dialogo_fase1.tscn" id="21_ftop6"]
+[ext_resource type="Texture2D" uid="uid://cyvxw37jt6pcm" path="res://Assets/Textures/Assets-dica/Grassland_entities (16 x 16).png" id="21_vwune"]
+[ext_resource type="Texture2D" uid="uid://cil1iu5lavyv5" path="res://Assets/Textures/Assets-dica/Dialogo_caixa.png" id="23_tuk7y"]
+[ext_resource type="FontFile" uid="uid://dcg4y543ctde3" path="res://Assets/Textures/Assets-dica/RevMiniPixel.ttf" id="24_n2nwo"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_webkc"]
 line_spacing = 0.0
@@ -1092,6 +1096,18 @@ size = Vector2(865, 40)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c15fm"]
 size = Vector2(502, 20)
 
+[sub_resource type="LabelSettings" id="LabelSettings_skdm6"]
+line_spacing = 0.0
+font = ExtResource("24_n2nwo")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.121569)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13tj5"]
+size = Vector2(17.5, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q2ak"]
+
 [node name="fase-3" type="Node2D"]
 
 [node name="HUD" type="CanvasLayer" parent="."]
@@ -1293,6 +1309,94 @@ position = Vector2(928, 224)
 [node name="GameOver" parent="." instance=ExtResource("7_38mwo")]
 visible = false
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="caixa2" parent="Control" instance=ExtResource("21_ftop6")]
+layout_mode = 1
+offset_left = -215.0
+offset_top = 117.0
+offset_right = 82.8
+offset_bottom = 163.2
+
+[node name="RichTextLabel" parent="Control/caixa2/NinePatchRect" index="1"]
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 292.0
+offset_bottom = 41.0
+text = "Parabéns, aventureiro! Nessa terceira fase, você deve encontrar um meio de neutralizar o acido, que está a tomar de conta de tudo, para conseguir sair daqui."
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control/caixa2"]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = -21.0
+offset_right = 1357.0
+offset_bottom = 32.0
+rotation = -0.00390732
+texture = ExtResource("23_tuk7y")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Control/caixa2/NinePatchRect2"]
+layout_mode = 0
+offset_left = 105.996
+offset_top = 3.99999
+offset_right = 197.996
+offset_bottom = 15.0
+text = "Guia rapido"
+label_settings = SubResource("LabelSettings_skdm6")
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/caixa2/NinePatchRect2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 292.0
+offset_bottom = 41.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.687215, 0.687215, 0.687215, 0.6)
+theme_override_fonts/normal_font = ExtResource("24_n2nwo")
+theme_override_font_sizes/normal_font_size = 8
+text = "Aqui está a maquina para combinar elementos. Procure o cloro e o sódio pelo mapa para combina-los, fazendo assim o cloreto de sódio, o elemento que neutraliza o acido, boa sorte."
+
+[node name="Area2D" type="Area2D" parent="Control"]
+position = Vector2(1, 0)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D"]
+position = Vector2(-264.75, 244)
+shape = SubResource("RectangleShape2D_13tj5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Area2D"]
+position = Vector2(-264, 245)
+texture = ExtResource("21_vwune")
+
+[node name="Area2D3" type="Area2D" parent="Control"]
+position = Vector2(852, 135)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D3"]
+position = Vector2(-11, 112)
+shape = SubResource("RectangleShape2D_2q2ak")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Area2D3"]
+position = Vector2(-11, 113)
+texture = ExtResource("21_vwune")
+
 [connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="Spikes_area" to="Spikes_area" method="_on_body_entered"]
 [connection signal="body_entered" from="Spikes_area2" to="Spikes_area2" method="_on_body_entered"]
+[connection signal="body_entered" from="Control/Area2D" to="Control/caixa2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Control/Area2D" to="Control/caixa2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Control/Area2D3" to="Control/caixa2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Control/Area2D3" to="Control/caixa2" method="_on_area_2d_body_exited"]
+
+[editable path="Control/caixa2"]
