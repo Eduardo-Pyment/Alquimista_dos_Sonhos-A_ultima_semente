@@ -15,6 +15,7 @@ signal time_is_up
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	show()
 	vida.text = str(Globais.player_life).pad_zeros(3)
 	timer_numero.text = "00:00"  # Inicie o temporizador em 00:00
 	player.GameOver.connect(PlayerMorreuGameOver)
@@ -29,6 +30,7 @@ func _process(_delta):
 func PlayerMorreuGameOver():
 	game_over.visible = true
 	get_tree().paused = true
+	hide()
 
 func _on_clock_timer_timeout():
 	if is_timer_running:
