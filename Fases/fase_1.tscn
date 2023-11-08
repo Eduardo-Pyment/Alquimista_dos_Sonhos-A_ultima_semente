@@ -906,6 +906,7 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(786435, 917510, 21, 786436, 983046, 21, 786441, 917510, 21, 786442, 983046, 21, 786447, 917510, 21, 786448, 983046, 21, 786453, 917510, 21, 786454, 983046, 21, 24, 1048582, 14)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="TileMap"]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_3lnc8")]
@@ -1094,7 +1095,8 @@ offset_right = 708.8
 offset_bottom = 104.2
 
 [node name="Portal" parent="." instance=ExtResource("25_yskm7")]
-position = Vector2(3777, 218)
+position = Vector2(3766, 220)
+scale = Vector2(1.2, 1.2)
 
 [connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="Zona_fogo_maquina" to="Zona_fogo_maquina" method="_on_body_entered"]
