@@ -889,6 +889,7 @@ offset_left = -30.0
 offset_right = -30.0
 
 [node name="GameOver" parent="." instance=ExtResource("26_2mpt5")]
+layer = 0
 visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
