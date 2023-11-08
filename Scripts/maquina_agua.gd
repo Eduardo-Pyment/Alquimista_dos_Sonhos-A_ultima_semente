@@ -16,6 +16,7 @@ func _process(_delta):
 			Globais.oxigenio -= 1
 			Globais.agua = 1
 			emit_signal("gerar_agua")
+			get_node("animation").play("gerando")
 			print("Água =", Globais.agua)
 
 func _on_body_entered(_body):
