@@ -617,7 +617,7 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(
 outlines = Array[PackedVector2Array]([PackedVector2Array(736, 64, 736, 256, 800, 256, 800, 32, 1504, 32, 1504, 160, 1440, 224, 1185, 224, 1184, 256, 1568, 256, 1568, 32, 2272, 32, 2272, 224, 1728, 224, 1728, 288, 2304, 288, 2304, 384, 2176, 384, 2176, 416, 2003.57, 416, 1920, 416, 1856, 384, 1600, 384, 1536, 352, 1152, 352, 1088, 288, 1088, 160, 1409, 160, 1409, 128, 1024, 128, 1024, 432, 928, 432, 928, 352, 32, 352, 32, 64, 64, 64, 64, 0, 704, 0, 704, 64)])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsgnm"]
-size = Vector2(256, 35.25)
+size = Vector2(256, 32)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0bbvq"]
 
@@ -644,6 +644,15 @@ scale_max = 3.0
 color = Color(1, 0.498039, 0, 1)
 color_ramp = SubResource("GradientTexture1D_cgnrj")
 color_initial_ramp = SubResource("GradientTexture1D_0bbvq")
+
+[sub_resource type="Curve" id="Curve_edaty"]
+min_value = 0.7
+max_value = 2.0
+_data = [Vector2(0, 2), 0.0, -0.0190243, 0, 0, Vector2(0.497116, 1.70053), 0.0, 0.0, 0, 0, Vector2(1, 1.4361), 1.24681, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_h2fbx"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b6mrb"]
 size = Vector2(608, 20)
@@ -703,15 +712,6 @@ orbit_velocity_max = 0.0
 scale_max = 2.0
 color = Color(1, 0.498039, 0, 1)
 color_ramp = SubResource("GradientTexture1D_5phfi")
-
-[sub_resource type="Curve" id="Curve_edaty"]
-min_value = 0.7
-max_value = 2.0
-_data = [Vector2(0, 2), 0.0, -0.0190243, 0, 0, Vector2(0.497116, 1.70053), 0.0, 0.0, 0, 0, Vector2(1, 1.4361), 1.24681, 0.0, 0, 0]
-point_count = 3
-
-[sub_resource type="Gradient" id="Gradient_h2fbx"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GDScript" id="GDScript_tb7qc"]
 script/source = "extends \"res://Scripts/itens/hidrogenios.gd\"
@@ -904,7 +904,6 @@ unique_name_in_owner = true
 position = Vector2(105, 79)
 collision_layer = 2
 collision_mask = 6
-VelocidadeHorizontal = 170
 
 [node name="Zona_fogo_maquina" type="Area2D" parent="."]
 position = Vector2(2064, 416)
@@ -913,7 +912,7 @@ collision_mask = 2
 script = ExtResource("14_0si5r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zona_fogo_maquina"]
-position = Vector2(-16, 0)
+position = Vector2(-16, -8)
 shape = SubResource("RectangleShape2D_vsgnm")
 debug_color = Color(1, 0, 0, 0.392157)
 
@@ -923,6 +922,24 @@ position = Vector2(-16, 0)
 amount = 2500
 process_material = SubResource("ParticleProcessMaterial_vvda1")
 fract_delta = false
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(2049, 416)
+emitting = false
+amount = 1300
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.43
+randomness = 0.37
+emission_shape = 3
+emission_rect_extents = Vector2(130, 1)
+gravity = Vector2(0, -110)
+radial_accel_min = -40.0
+radial_accel_max = 75.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_edaty")
+color_ramp = SubResource("Gradient_h2fbx")
 
 [node name="Zona_fogo" type="Area2D" parent="."]
 position = Vector2(2704, 416)
@@ -991,31 +1008,7 @@ process_material = SubResource("ParticleProcessMaterial_6a5ul")
 [node name="LevelProps" type="Node" parent="."]
 
 [node name="Maquina_agua" parent="LevelProps" instance=ExtResource("12_ufsc5")]
-position = Vector2(1832, 352)
-
-[node name="collision" parent="LevelProps/Maquina_agua" index="0"]
-position = Vector2(-8, 0)
-
-[node name="AnimatedSprite2D" parent="LevelProps/Maquina_agua" index="2"]
-position = Vector2(-8, -48)
-
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(2049, 416)
-emitting = false
-amount = 1300
-lifetime = 1.5
-one_shot = true
-explosiveness = 0.43
-randomness = 0.37
-emission_shape = 3
-emission_rect_extents = Vector2(130, 1)
-gravity = Vector2(0, -110)
-radial_accel_min = -40.0
-radial_accel_max = 75.0
-scale_amount_min = 2.0
-scale_amount_max = 2.0
-scale_amount_curve = SubResource("Curve_edaty")
-color_ramp = SubResource("Gradient_h2fbx")
+position = Vector2(1808, 352)
 
 [node name="Hidrogenio" parent="." instance=ExtResource("13_07k27")]
 position = Vector2(1056, 88)
@@ -1103,7 +1096,6 @@ position = Vector2(3777, 218)
 [connection signal="body_entered" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_exited"]
 
-[editable path="LevelProps/Maquina_agua"]
 [editable path="Plataforma_2"]
 [editable path="Plataforma_3"]
 [editable path="Plataforma_4"]
