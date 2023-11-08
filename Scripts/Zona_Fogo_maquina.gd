@@ -13,4 +13,3 @@ func apagar_fogo():
 		print(Globais.agua)
 		cpu_particles_2d.emitting = true
 		queue_free()
-		Globais.agua = 0
