@@ -1391,6 +1391,7 @@ text = "Junte os átomos de prata (Ag), zinco (Zn) e cobre (Cu) para formar uma 
 "
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="Control/caixa"]
+layout_mode = 0
 offset_left = -104.0
 offset_top = 30.0
 offset_right = 151.0

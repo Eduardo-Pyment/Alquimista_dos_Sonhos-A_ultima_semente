@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1hlgjfmsu6c1"]
+
+[ext_resource type="Texture2D" uid="uid://nda5u2q7a5x8" path="res://Assets/AssetsMenu/creditos.jpg" id="1_c28ie"]
+[ext_resource type="Script" path="res://Menus/MenuPrincipal/Creditos.gd" id="1_mxna3"]
+[ext_resource type="Texture2D" uid="uid://dgrxpnmo2rvmd" path="res://Assets/AssetsMenu/Creditostxt.png" id="2_2j643"]
+
+[sub_resource type="Animation" id="Animation_tccye"]
+resource_name = "Creditos"
+length = 40.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenaCreditos:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 40),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(184, 1933), Vector2(184, -1900)]
+}
+
+[sub_resource type="Animation" id="Animation_h08jx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenaCreditos:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(158, 2042)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y1jrn"]
+_data = {
+"Creditos": SubResource("Animation_tccye"),
+"RESET": SubResource("Animation_h08jx")
+}
+
+[node name="Creditos" type="Node2D"]
+script = ExtResource("1_mxna3")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(384, 225)
+scale = Vector2(0.413667, 0.413667)
+texture = ExtResource("1_c28ie")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("Controle")
+libraries = {
+"": SubResource("AnimationLibrary_y1jrn")
+}
+
+[node name="Controle" type="ColorRect" parent="AnimationPlayer"]
+clip_contents = true
+custom_minimum_size = Vector2(398.905, 450)
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 405.905
+offset_bottom = 451.0
+color = Color(1, 1, 1, 0)
+
+[node name="CenaCreditos" type="Sprite2D" parent="AnimationPlayer/Controle"]
+position = Vector2(158, 2042)
+scale = Vector2(0.519287, 0.519287)
+texture = ExtResource("2_2j643")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 548.0
+offset_top = 414.0
+offset_right = 746.0
+offset_bottom = 440.0
+text = "Pressione \"ESC\" para sair."
