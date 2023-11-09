@@ -68,7 +68,7 @@ func _physics_process(delta):
 	if knockback_vector != Vector2.ZERO:
 		velocity = knockback_vector
 
-	_set_state()
+#	_set_state()
 	move_and_slide()
 	
 
@@ -143,13 +143,13 @@ func _on_body_exited(_body):
 func _on_cay_timer_timeout():
 	pass # Replace with function body.
 
-func _set_state():#state machines
-	var state = "PlayerOcioso"
-	
-	if not is_on_floor():
-		state = "PlayerPulo"
-	elif abs(velocity.x) > 100:
-		state = "PlayerCorrer"
-		
-	if animacao.name != state:
-		animacao.play(state)
+#func _set_state():#state machines
+#	var state = "PlayerOcioso"
+#
+#	if not is_on_floor():
+#		state = "PlayerPulo"
+#	elif abs(velocity.x) > 100:
+#		state = "PlayerCorrer"
+#
+#	if animacao.name != state:
+#		animacao.play(state)
