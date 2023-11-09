@@ -1388,40 +1388,20 @@ TempoTransicao = 3.5
 [node name="CollisionShape2D" parent="Plataforma_2" index="0"]
 shape = SubResource("RectangleShape2D_mooex")
 
-[node name="Sprite2D" parent="Plataforma_2" index="1"]
-modulate = Color(4, 5, 4, 1)
-texture = ExtResource("13_mqhsb")
-region_rect = Rect2(224, 96, 32, 96)
-
 [node name="Plataforma_3" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(2448, 280)
 Distancia = Vector2(0, 120)
 TempoTransicao = 7.0
-
-[node name="Sprite2D" parent="Plataforma_3" index="1"]
-modulate = Color(4, 5, 4, 1)
-texture = ExtResource("13_mqhsb")
-region_rect = Rect2(224, 224, 96, 32)
 
 [node name="Plataforma_1" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(976, 256)
 Distancia = Vector2(0, -112)
 TempoTransicao = 7.0
 
-[node name="Sprite2D" parent="Plataforma_1" index="1"]
-modulate = Color(4, 4, 5, 1)
-texture = ExtResource("13_mqhsb")
-region_rect = Rect2(224, 224, 96, 32)
-
 [node name="Plataforma_4" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(2672, 160)
 Distancia = Vector2(-100, 0)
 TempoTransicao = 7.0
-
-[node name="Sprite2D" parent="Plataforma_4" index="1"]
-modulate = Color(4, 5, 4, 1)
-texture = ExtResource("13_mqhsb")
-region_rect = Rect2(224, 224, 96, 32)
 
 [node name="Area_queda" parent="." instance=ExtResource("21_aw1ic")]
 position = Vector2(918, 449)
