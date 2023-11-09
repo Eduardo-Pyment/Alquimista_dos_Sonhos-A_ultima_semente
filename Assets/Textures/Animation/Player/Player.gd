@@ -26,6 +26,13 @@ func _ready():
 	Globais.oxigenio = 0
 	Globais.hidrogenio = 0 
 	Globais.agua = 0
+	Globais.cobre = 0
+	Globais.zinco = 0
+	Globais.prata = 0
+	Globais.solido = 0
+	Globais.sodio = 0
+	Globais.cloro = 0
+	Globais.base = 0
 	Gravidade = (2 * PuloAltura / pow(TempoPuloAlturaMax, 2))
 #	particulas.emitting = false  # Desliga as partículas iniciais
 	animation_tree.active = true
