@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://k73i0e7vpwbf"]
 
 [ext_resource type="Script" path="res://Scripts/PlataformaMovel.gd" id="1_5rfhg"]
-[ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="2_spftt"]
+[ext_resource type="Texture2D" uid="uid://13yv4rt3guwi" path="res://Assets/Textures/Tiles/tiles(600x600).png" id="2_wfqge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jv6d"]
 size = Vector2(96, 32)
@@ -16,9 +16,10 @@ shape = SubResource("RectangleShape2D_3jv6d")
 debug_color = Color(0.792157, 0.811765, 0, 0.419608)
 metadata/_edit_lock_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("2_spftt")
+[node name="sprite_plataform" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-0.298465, -1.14366e-06)
+rotation = -0.00339072
+scale = Vector2(1.01461, 1.01803)
+texture = ExtResource("2_wfqge")
 region_enabled = true
-region_rect = Rect2(160, 0, 96, 32)
-metadata/_edit_lock_ = true
+region_rect = Rect2(224, 224, 96, 32)
