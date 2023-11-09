@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var player_sprite_2d = $PlayerSprite2D
 @onready var animacao = $AnimationPlayer
 @onready var particulas = $CPUParticles2D
+@onready var animation_tree : AnimationTree = $AnimationTree
 
 var Gravidade: float
 var VelocidadePulo: float
@@ -29,6 +30,7 @@ func _ready():
 	Gravidade = (2 * PuloAltura / pow(TempoPuloAlturaMax, 2))
 	VelocidadePulo = Gravidade * TempoPuloAlturaMax
 	particulas.emitting = false  # Desliga as partículas iniciais
+	animation_tree.active = true
 
 func _physics_process(delta):
 	# Handle Jump.
@@ -67,7 +69,8 @@ func _physics_process(delta):
 
 	if knockback_vector != Vector2.ZERO:
 		velocity = knockback_vector
-
+	
+	animation_tree.set("parameters/correr/blend_position",direcao)
 #	_set_state()
 	move_and_slide()
 	
