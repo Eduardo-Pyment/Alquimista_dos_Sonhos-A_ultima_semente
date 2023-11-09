@@ -1146,7 +1146,6 @@ offset_left = -128.0
 offset_right = -128.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="vida_tempo" type="Control" parent="HUD"]
 layout_mode = 3
@@ -1213,7 +1212,6 @@ text = "03"
 label_settings = SubResource("LabelSettings_pt2se")
 
 [node name="MenuPause" parent="." instance=ExtResource("22_rlntw")]
-visible = false
 offset = Vector2(30, 0)
 transform = Transform2D(1, 0, 0, 1, 30, 0)
 
