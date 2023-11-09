@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var animacao = $AnimationPlayer
 @onready var particulas = $CPUParticles2D
 @onready var animation_tree : AnimationTree = $AnimationTree
+@onready var state_machine : PlayerstateMachine = $PlayerStateMachine
 
 var Gravidade: float
 var VelocidadePulo: float
