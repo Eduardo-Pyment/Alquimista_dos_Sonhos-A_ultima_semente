@@ -363,6 +363,7 @@ script = ExtResource("8_obwfg")
 chao_state = NodePath("../chao")
 
 [node name="Label" type="Label" parent="." node_paths=PackedStringArray("state_machine")]
+visible = false
 offset_left = -39.0
 offset_top = -40.0
 offset_right = 79.0

@@ -11,5 +11,6 @@ func _on_body_entered(body):
 func apagar_fogo():
 	if Globais.agua >= 1:
 		print(Globais.agua)
+		await get_tree().create_timer(5.0).timeout
 		cpu_particles_2d.emitting = true
 		queue_free()
