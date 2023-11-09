@@ -326,6 +326,7 @@ autoplay = "ocioso"
 frame_progress = 0.907955
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 2, 2, 1)
 z_index = 2
 position = Vector2(0, -48)
 scale = Vector2(0.780952, 0.747619)
