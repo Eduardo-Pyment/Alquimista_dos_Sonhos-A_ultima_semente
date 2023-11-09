@@ -5,7 +5,8 @@ class_name chao_state
 @export var VelocidadePulo: float = 466.666666666667
 @export var ar_state : state
 @export var animacao_pulo : String = "Pulo"
-@onready var CayTimer = $CayTimer
+@onready var CayTimer = $"../../CayTimer"
+@onready var particulas = $"../../CPUParticles2D"
 var PuloDisponivel: bool
 	# Handle Jump.
 #if is_on_floor():
@@ -33,4 +34,7 @@ func pular():
 	Proximo_state = ar_state
 	playback.travel("Pulo")
 	PuloDisponivel = false
+	particulas.emitting = true
+	particulas.position.y = Player.position.y + 10	
+	print("debug particulas",particulas.emitting)
 	
