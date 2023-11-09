@@ -4,11 +4,11 @@ extends CharacterBody2D
 @onready var PlayerRaycast = $CheckChaoRaycasts
 @onready var player_sprite_2d = $PlayerSprite2D
 @onready var animacao = $AnimationPlayer
-@onready var particulas = $CPUParticles2D
+#@onready var particulas = $CPUParticles2D
+@onready var animation_tree : AnimationTree = $AnimationTree
+@onready var state_machine : PlayerstateMachine = $PlayerStateMachine
 
 var Gravidade: float
-var VelocidadePulo: float
-var PuloDisponivel: bool
 var knockback_vector: Vector2 = Vector2.ZERO
 var recovering: bool = false
 var recovery_duration: float = 0.1
@@ -27,25 +27,10 @@ func _ready():
 	Globais.hidrogenio = 0 
 	Globais.agua = 0
 	Gravidade = (2 * PuloAltura / pow(TempoPuloAlturaMax, 2))
-	VelocidadePulo = Gravidade * TempoPuloAlturaMax
-	particulas.emitting = false  # Desliga as partículas iniciais
+#	particulas.emitting = false  # Desliga as partículas iniciais
+	animation_tree.active = true
 
 func _physics_process(delta):
-	# Handle Jump.
-	if is_on_floor():
-		PuloDisponivel = true
-		if Input.is_action_pressed("ui_right") or Input.is_action_pressed("ui_left"):
-			particulas.emitting = true
-			particulas.position.y = player_sprite_2d.position.y + 10
-	elif PuloDisponivel && CayTimer.is_stopped():
-		CayTimer.start()
-
-	if PuloDisponivel && Input.is_action_just_pressed("ui_accept"):
-		velocity.y = -VelocidadePulo
-		PuloDisponivel = false
-		particulas.emitting = true
-		particulas.position.y = player_sprite_2d.position.y + 20
-		particulas.position.x = player_sprite_2d.position.x / 2
 
 	# Add gravity.
 	if not is_on_floor():
@@ -57,8 +42,9 @@ func _physics_process(delta):
 		velocity.x = lerp(velocity.x, direcao * VelocidadeHorizontal, 0.2)
 
 		if is_on_floor():
-			particulas.emitting = true
-			particulas.position.y = player_sprite_2d.position.y + 10
+#			particulas.emitting = true
+#			particulas.position.y = player_sprite_2d.position.y + 10
+			pass
 	else:
 		velocity.x = lerp(velocity.x, 0.0, 0.2)
 
@@ -67,8 +53,8 @@ func _physics_process(delta):
 
 	if knockback_vector != Vector2.ZERO:
 		velocity = knockback_vector
-
-	_set_state()
+	
+	animation_tree.set("parameters/correr/blend_position",direcao)
 	move_and_slide()
 	
 
@@ -139,17 +125,5 @@ func _on_body_exited(_body):
 	inside = false
 	$AnimatedSprite2D.modulate.a = 0
 
-
 func _on_cay_timer_timeout():
 	pass # Replace with function body.
-
-func _set_state():#state machines
-	var state = "PlayerOcioso"
-	
-	if not is_on_floor():
-		state = "PlayerPulo"
-	elif abs(velocity.x) > 100:
-		state = "PlayerCorrer"
-		
-	if animacao.name != state:
-		animacao.play(state)
