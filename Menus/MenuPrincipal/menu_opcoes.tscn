@@ -156,4 +156,5 @@ bus = &"SFX"
 
 [connection signal="pressed" from="ScrollContainer/ColorRect/Control/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="value_changed" from="ScrollContainer/ColorRect/Control/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
+[connection signal="value_changed" from="ScrollContainer/ColorRect/Control/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="toggled" from="ScrollContainer/ColorRect/Control/TelaCheia/FullScreen" to="." method="_on_full_screen_toggled"]

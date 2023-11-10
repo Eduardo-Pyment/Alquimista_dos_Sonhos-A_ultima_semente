@@ -207,4 +207,5 @@ offset_bottom = 48.1252
 [connection signal="pressed" from="ControlPause/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="ControlOpcoes/ScrollContainer/ColorRect/Control/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="value_changed" from="ControlOpcoes/ScrollContainer/ColorRect/Control/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
+[connection signal="value_changed" from="ControlOpcoes/ScrollContainer/ColorRect/Control/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="toggled" from="ControlOpcoes/ScrollContainer/ColorRect/Control/TelaCheia/FullScreen" to="." method="_on_full_screen_toggled"]
