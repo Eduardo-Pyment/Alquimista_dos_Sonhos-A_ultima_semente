@@ -35,6 +35,5 @@ func pular():
 	playback.travel("Pulo")
 	PuloDisponivel = false
 	particulas.emitting = true
-	#particulas.position.y = Player.position.y + 10	
-	print("debug particulas",particulas.emitting)
+	#particulas.position.y = Player.position.y + 10
 	
