@@ -44,6 +44,7 @@ func _physics_process(delta):
 		CayTimer.start()
 
 	if PuloDisponivel && Input.is_action_just_pressed("ui_accept"):
+		$JumpFx.play()
 		velocity.y = -VelocidadePulo
 		PuloDisponivel = false
 		particulas.emitting = true
@@ -100,6 +101,7 @@ func take_damage(knockback_force := Vector2.ZERO):
 	if Globais.player_life > 0 and Globais.agua != 1:
 		Globais.player_life -= 1
 		if knockback_force != Vector2.ZERO:
+			$DanoFx.play()
 			knockback_vector = knockback_force
 			player_sprite_2d.modulate = Color(1, 0, 0, 1)
 			recovery_duration = 0.1

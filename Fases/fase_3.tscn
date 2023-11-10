@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bsrgxwmhkoqur"]
+[gd_scene load_steps=49 format=3 uid="uid://bsrgxwmhkoqur"]
 
 [ext_resource type="Texture2D" uid="uid://diawbnsbkshpp" path="res://Assets/Textures/Background/CityDay/1.png" id="1_c77ym"]
 [ext_resource type="Texture2D" uid="uid://dtc8xburpks" path="res://Assets/Textures/Background/CityDay/2.png" id="2_3gb37"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://cyvxw37jt6pcm" path="res://Assets/Textures/Assets-dica/Grassland_entities (16 x 16).png" id="21_vwune"]
 [ext_resource type="Texture2D" uid="uid://cil1iu5lavyv5" path="res://Assets/Textures/Assets-dica/Dialogo_caixa.png" id="23_tuk7y"]
 [ext_resource type="FontFile" uid="uid://dcg4y543ctde3" path="res://Assets/Textures/Assets-dica/RevMiniPixel.ttf" id="24_n2nwo"]
+[ext_resource type="PackedScene" uid="uid://xlyutthq61fc" path="res://Prefabs/MusicController.tscn" id="26_t0fej"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_webkc"]
 line_spacing = 0.0
@@ -2034,6 +2035,8 @@ sprite_frames = SubResource("SpriteFrames_637um")
 animation = &"acido"
 autoplay = "acido"
 frame_progress = 0.101594
+
+[node name="MusicController" parent="." instance=ExtResource("26_t0fej")]
 
 [connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="Spikes_area" to="Spikes_area" method="_on_body_entered"]
