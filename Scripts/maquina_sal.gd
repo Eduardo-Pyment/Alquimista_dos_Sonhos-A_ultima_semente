@@ -14,11 +14,10 @@ func _process(_delta):
 		if Globais.sodio >= 1 and Globais.cloro >= 1:
 			Globais.sodio -= 1
 			Globais.cloro -= 1
-			Globais.base += 1
+			Globais.base = 1
 			emit_signal("gerar_base")
 			get_node("animation").play("gerando")
-			get_node("collision").queue_free()
-			print("NaCl =", Globais.base)
+			print("base =", Globais.base)
 
 func _on_body_entered(_body):
 	inside = true
