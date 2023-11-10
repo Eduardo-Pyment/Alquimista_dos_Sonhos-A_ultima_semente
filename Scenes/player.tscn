@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dc2epskdddoys"]
+[gd_scene load_steps=35 format=3 uid="uid://dc2epskdddoys"]
 
 [ext_resource type="Script" path="res://Assets/Textures/Animation/Player/Player.gd" id="1_rgexs"]
 [ext_resource type="Texture2D" uid="uid://dwa3l6x5iu3m8" path="res://Assets/Textures/Animation/Player/Player/run cycle 48x48-Sheet.png" id="2_678ga"]
@@ -12,6 +12,8 @@
 [ext_resource type="Script" path="res://Scripts/ar_state.gd" id="7_gdgfs"]
 [ext_resource type="Script" path="res://Scripts/pousando_state.gd" id="8_obwfg"]
 [ext_resource type="Script" path="res://Scripts/TEMP.gd" id="11_rn3fs"]
+[ext_resource type="AudioStream" uid="uid://d0d0t7ipxpmlg" path="res://Sounds/Efeitos/pular.ogg" id="13_3ipp8"]
+[ext_resource type="AudioStream" uid="uid://dvflranky8edf" path="res://Sounds/Efeitos/explsão_ou_hit.ogg" id="14_6uob3"]
 
 [sub_resource type="Gradient" id="Gradient_jycna"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -371,6 +373,16 @@ offset_bottom = -14.0
 text = "state:"
 script = ExtResource("11_rn3fs")
 state_machine = NodePath("../PlayerStateMachine")
+
+[node name="JumpFx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_3ipp8")
+pitch_scale = 0.71
+bus = &"SFX"
+
+[node name="DanoFx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_6uob3")
+pitch_scale = 0.86
+bus = &"SFX"
 
 [connection signal="timeout" from="CayTimer" to="." method="_on_cay_timer_timeout"]
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]

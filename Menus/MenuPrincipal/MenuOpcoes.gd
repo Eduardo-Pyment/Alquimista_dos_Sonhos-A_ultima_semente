@@ -11,6 +11,7 @@ func _ready():
 	load_opcoes()
 
 func _on_voltar_pressed():
+	$SelecionarBtn.play()
 	save_opcoes()
 	get_tree().change_scene_to_file("res://Menus/MenuPrincipal/menu_principal.tscn")
 
@@ -34,9 +35,11 @@ func _on_musica_slider_value_changed(value):
 
 func _on_full_screen_toggled(button_pressed):
 	if button_pressed:
+		$SelecionarBtn.play()
 		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	else:
+		$SelecionarBtn.play()
 		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
