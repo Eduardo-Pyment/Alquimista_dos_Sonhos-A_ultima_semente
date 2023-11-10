@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=61 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://c33buwts2rsqv" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_b3g00"]
 [ext_resource type="PackedScene" uid="uid://bdtgbdxvxjpn6" path="res://Scenes/Ambiente/portal.tscn" id="25_yskm7"]
 [ext_resource type="PackedScene" uid="uid://1mehd4faumqk" path="res://Menus/MenuGameOver/game_over.tscn" id="26_2mpt5"]
+[ext_resource type="PackedScene" uid="uid://xlyutthq61fc" path="res://Prefabs/MusicController.tscn" id="27_uj527"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dvf8b"]
 line_spacing = 0.0
@@ -1441,6 +1442,8 @@ offset_bottom = 104.2
 [node name="Portal" parent="." instance=ExtResource("25_yskm7")]
 position = Vector2(3766, 220)
 scale = Vector2(1.2, 1.2)
+
+[node name="MusicController" parent="." instance=ExtResource("27_uj527")]
 
 [connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 [connection signal="body_entered" from="Zona_fogo_maquina" to="Zona_fogo_maquina" method="_on_body_entered"]

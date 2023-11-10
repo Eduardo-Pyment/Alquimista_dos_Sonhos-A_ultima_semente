@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://rb10rosuh2no"]
+[gd_scene load_steps=48 format=3 uid="uid://rb10rosuh2no"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_jajnq"]
 [ext_resource type="Texture2D" uid="uid://13yv4rt3guwi" path="res://Assets/Textures/Tiles/tiles(600x600).png" id="2_hq0jk"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://sg1gcaowoubm" path="res://Assets/Textures/Background/fase3/pixil-frame-0 (4).png" id="27_4m8fe"]
 [ext_resource type="Script" path="res://Scripts/itens/Zona_mercurio_maquina.gd" id="27_qvb28"]
 [ext_resource type="PackedScene" uid="uid://1mehd4faumqk" path="res://Menus/MenuGameOver/game_over.tscn" id="27_xhdby"]
+[ext_resource type="PackedScene" uid="uid://xlyutthq61fc" path="res://Prefabs/MusicController.tscn" id="29_avdwf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6y1sh"]
 texture = ExtResource("1_jajnq")
@@ -791,28 +792,13 @@ position = Vector2(1296, 1275)
 Distancia = Vector2(0, 650)
 TempoTransicao = 20.0
 
-[node name="Sprite2D" parent="AnimatableBody2D" index="1"]
-modulate = Color(0.796078, 0.952941, 0.941176, 1)
-texture = ExtResource("2_hq0jk")
-region_rect = Rect2(224, 224, 96, 32)
-
 [node name="AnimatableBody2D2" parent="." instance=ExtResource("12_y2n6u")]
 position = Vector2(2192, 1461)
 Distancia = Vector2(110, 0)
 
-[node name="Sprite2D" parent="AnimatableBody2D2" index="1"]
-modulate = Color(0.796078, 0.952941, 0.941176, 1)
-texture = ExtResource("2_hq0jk")
-region_rect = Rect2(224, 224, 96, 32)
-
 [node name="AnimatableBody2D3" parent="." instance=ExtResource("12_y2n6u")]
 position = Vector2(2664, 1461)
 Distancia = Vector2(-200, 0)
-
-[node name="Sprite2D" parent="AnimatableBody2D3" index="1"]
-modulate = Color(0.796078, 0.952941, 0.941176, 1)
-texture = ExtResource("2_hq0jk")
-region_rect = Rect2(224, 224, 96, 32)
 
 [node name="Spikes_area" type="Area2D" parent="."]
 visibility_layer = 3
@@ -1129,6 +1115,8 @@ texture = ExtResource("27_4m8fe")
 [node name="Control" parent="BackgroundLayer" instance=ExtResource("11_k0o3u")]
 offset_left = -128.0
 offset_right = -128.0
+
+[node name="MusicController" parent="." instance=ExtResource("29_avdwf")]
 
 [connection signal="body_entered" from="Spikes_area" to="Spikes_area" method="_on_body_entered"]
 [connection signal="body_entered" from="Spikes_area2" to="Spikes_area2" method="_on_body_entered"]

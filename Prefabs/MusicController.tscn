@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://xlyutthq61fc"]
+[gd_scene load_steps=5 format=3 uid="uid://xlyutthq61fc"]
 
 [ext_resource type="Script" path="res://Scripts/MusicController.gd" id="1_p3i3c"]
-[ext_resource type="AudioStream" uid="uid://bfxd1kttyelg5" path="res://Sounds/On the Delta - John Patitucci (online-audio-converter.com).ogg" id="2_y2s3g"]
+[ext_resource type="AudioStream" uid="uid://cmb70y5ftpllj" path="res://Sounds/Musicas/Fase_1OST.ogg" id="2_l148a"]
+[ext_resource type="AudioStream" uid="uid://e5gicauyemr0" path="res://Sounds/Musicas/Fase_2OST.ogg" id="3_w402o"]
+[ext_resource type="AudioStream" uid="uid://b8utovcl0ccgi" path="res://Sounds/Musicas/Fase_3OST(nova).ogg" id="4_5lsph"]
 
 [node name="MusicController" type="Node2D"]
 script = ExtResource("1_p3i3c")
 
-[node name="BgMusicMenu" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_y2s3g")
-autoplay = true
+[node name="BgMusicFase1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_l148a")
+bus = &"Music"
+
+[node name="BgMusicFase2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_w402o")
+bus = &"Music"
+
+[node name="BgMusicFase3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5lsph")
 bus = &"Music"

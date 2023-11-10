@@ -5,7 +5,6 @@ func _ready():
 
 func _on_jogar_pressed():
 	TransicaoDeCena.cena_transicao("res://Fases/fase_1.tscn")
-	MusicController.stop_music()
 
 
 func _on_opcoes_pressed():
