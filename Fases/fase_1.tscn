@@ -1154,6 +1154,7 @@ offset_bottom = 37.0
 script = ExtResource("8_a36j6")
 
 [node name="clock_timer" type="Timer" parent="HUD/vida_tempo"]
+wait_time = 0.3
 
 [node name="container" type="MarginContainer" parent="HUD/vida_tempo"]
 layout_mode = 0
