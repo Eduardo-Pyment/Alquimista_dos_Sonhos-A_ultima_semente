@@ -762,7 +762,6 @@ script = ExtResource("1_wx3uk")
 
 [node name="TileMap" type="TileMap" parent="."]
 visibility_layer = 2
-position = Vector2(1, 0)
 tile_set = SubResource("TileSet_43vsn")
 cell_quadrant_size = 32
 format = 2
@@ -805,7 +804,7 @@ Distancia = Vector2(-200, 0)
 [node name="Spikes_area" type="Area2D" parent="."]
 visibility_layer = 3
 position = Vector2(656, 1051)
-collision_layer = 8
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("13_espt6")
 
@@ -825,7 +824,7 @@ region_rect = Rect2(0, 0, 930, 8)
 [node name="Spikes_area2" type="Area2D" parent="."]
 visibility_layer = 3
 position = Vector2(2448, 1652)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("13_espt6")
 
@@ -846,7 +845,7 @@ region_rect = Rect2(0, 0, 930, 8)
 visibility_layer = 3
 z_index = -1
 position = Vector2(1289, 2012)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("13_espt6")
 
@@ -1051,13 +1050,13 @@ position = Vector2(2989, 1416)
 [node name="MenuPause" parent="." instance=ExtResource("24_6sn1v")]
 
 [node name="Zona_mercurio_maquina" type="Area2D" parent="."]
-position = Vector2(2537, 635)
-collision_layer = 8
+position = Vector2(2536, 637)
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("27_qvb28")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zona_mercurio_maquina"]
-position = Vector2(-8, 5.65625)
+position = Vector2(-8, -8)
 shape = SubResource("RectangleShape2D_u1x6n")
 debug_color = Color(1, 0, 0, 0.392157)
 
