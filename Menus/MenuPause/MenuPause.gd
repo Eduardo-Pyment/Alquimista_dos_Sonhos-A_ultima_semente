@@ -75,7 +75,7 @@ func _on_voltar_pressed():
 	control_opcoes.visible = false
 	
 func _on_menu_btn_pressed():
-	get_tree().change_scene_to_file("res://Menus/MenuPrincipal/menu_principal.tscn")
+	TransicaoDeCena.cena_transicao("res://Menus/MenuPrincipal/menu_principal.tscn")
 
 func save_opcoes():
 	config.set_value(OptionsConstants.section_name, OptionsConstants.music_volume_key_name, music_slider.value)
