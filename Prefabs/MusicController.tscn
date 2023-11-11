@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/MusicController.gd" id="1_p3i3c"]
 [ext_resource type="AudioStream" uid="uid://cmb70y5ftpllj" path="res://Sounds/Musicas/Fase_1OST.ogg" id="2_l148a"]
 [ext_resource type="AudioStream" uid="uid://e5gicauyemr0" path="res://Sounds/Musicas/Fase_2OST.ogg" id="3_w402o"]
-[ext_resource type="AudioStream" uid="uid://b8utovcl0ccgi" path="res://Sounds/Musicas/Fase_3OST(nova).ogg" id="4_5lsph"]
+[ext_resource type="AudioStream" uid="uid://bknmyxrxnjvaf" path="res://Sounds/Musicas/Fase_3OST.ogg" id="4_rpan1"]
 
 [node name="MusicController" type="Node2D"]
 script = ExtResource("1_p3i3c")
@@ -17,5 +17,5 @@ stream = ExtResource("3_w402o")
 bus = &"Music"
 
 [node name="BgMusicFase3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_5lsph")
+stream = ExtResource("4_rpan1")
 bus = &"Music"

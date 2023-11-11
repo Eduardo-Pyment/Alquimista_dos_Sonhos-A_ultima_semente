@@ -74,6 +74,9 @@ func _on_voltar_pressed():
 	control_pause.visible = true
 	control_opcoes.visible = false
 	
+func _on_menu_btn_pressed():
+	TransicaoDeCena.cena_transicao("res://Menus/MenuPrincipal/menu_principal.tscn")
+
 func save_opcoes():
 	config.set_value(OptionsConstants.section_name, OptionsConstants.music_volume_key_name, music_slider.value)
 	config.set_value(OptionsConstants.section_name, OptionsConstants.sound_effects_key_name, sfx_slider.value)
@@ -105,3 +108,5 @@ func _on_full_screen_toggled(button_pressed):
 	else:
 		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+

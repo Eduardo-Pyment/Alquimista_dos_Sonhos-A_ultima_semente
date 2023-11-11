@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://sm5d6pcner8w"]
+[gd_scene load_steps=17 format=3 uid="uid://sm5d6pcner8w"]
 
 [ext_resource type="Script" path="res://Menus/MenuPause/MenuPause.gd" id="1_5y6k3"]
 [ext_resource type="Texture2D" uid="uid://dgsqfvurdofc6" path="res://Assets/AssetsMenuPause/RetanguloArredondado.png" id="1_6xrou"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bfl7jewo42gsg" path="res://Assets/AssetsMenuPause/BotaoSair.png" id="4_bfnwy"]
 [ext_resource type="Texture2D" uid="uid://b57gl3r7jmnh5" path="res://Assets/AssetsMenuPause/BotaoX.png" id="5_61lrm"]
 [ext_resource type="Texture2D" uid="uid://3pqc076nvu8p" path="res://Assets/AssetsMenuPause/Pausado.png" id="6_g87xi"]
+[ext_resource type="Texture2D" uid="uid://jev8byhsvbtp" path="res://Assets/AssetsMenuPause/BotaoMenu.png" id="7_lchh5"]
 [ext_resource type="Texture2D" uid="uid://5q5i1hm4krf0" path="res://Assets/AssetsMenu/voltar.png" id="8_pqr5d"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_bxpse"]
@@ -53,6 +54,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.466667)
 
 [node name="ControlPause" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -106,6 +108,16 @@ shortcut = SubResource("Shortcut_nfi7e")
 icon = ExtResource("5_61lrm")
 flat = true
 
+[node name="MenuBtn" type="Button" parent="ControlPause"]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 280.0
+offset_right = 393.0
+offset_bottom = 403.0
+scale = Vector2(0.329735, 0.329735)
+icon = ExtResource("7_lchh5")
+flat = true
+
 [node name="LogoPausado" type="Sprite2D" parent="ControlPause"]
 position = Vector2(352, 96)
 scale = Vector2(0.390075, 0.390075)
@@ -140,11 +152,10 @@ offset_bottom = 40.0
 
 [node name="Voltar" type="Button" parent="ControlOpcoes/ScrollContainer/ColorRect/Control"]
 layout_mode = 2
-offset_left = 185.947
-offset_top = 567.313
-offset_right = 735.947
-offset_bottom = 792.313
-scale = Vector2(0.232085, 0.232085)
+offset_left = 6.10352e-05
+offset_right = 550.0
+offset_bottom = 225.0
+scale = Vector2(0.161147, 0.161147)
 icon = ExtResource("8_pqr5d")
 
 [node name="VolumeMusica" type="Label" parent="ControlOpcoes/ScrollContainer/ColorRect/Control"]
@@ -205,6 +216,7 @@ offset_bottom = 48.1252
 [connection signal="pressed" from="ControlPause/VBoxContainer/Opcoes" to="." method="_on_opcoes_pressed"]
 [connection signal="pressed" from="ControlPause/VBoxContainer/Sair" to="." method="_on_sair_pressed"]
 [connection signal="pressed" from="ControlPause/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="ControlPause/MenuBtn" to="." method="_on_menu_btn_pressed"]
 [connection signal="pressed" from="ControlOpcoes/ScrollContainer/ColorRect/Control/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="value_changed" from="ControlOpcoes/ScrollContainer/ColorRect/Control/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
 [connection signal="value_changed" from="ControlOpcoes/ScrollContainer/ColorRect/Control/SFXSlider" to="." method="_on_sfx_slider_value_changed"]

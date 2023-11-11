@@ -27,7 +27,7 @@
 [ext_resource type="Script" path="res://Scripts/acido_maquina.gd" id="25_r7ehs"]
 [ext_resource type="Texture2D" uid="uid://484we34fb8pj" path="res://Assets/Textures/Itens/fumaca/fumaca_6x6.png" id="26_kvkwm"]
 [ext_resource type="PackedScene" uid="uid://xlyutthq61fc" path="res://Prefabs/MusicController.tscn" id="26_t0fej"]
-[ext_resource type="PackedScene" uid="uid://dt6d031vfe674" path="res://Scenes/maquina_sal.tscn" id="27_comcd"]
+[ext_resource type="PackedScene" path="res://Scenes/maquina_sal.tscn" id="27_comcd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_webkc"]
 line_spacing = 0.0
@@ -1616,9 +1616,6 @@ offset_bottom = 34.0
 text = "03"
 label_settings = SubResource("LabelSettings_rknyg")
 
-[node name="MenuPause" parent="." instance=ExtResource("16_ac4cf")]
-visible = false
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
@@ -1750,6 +1747,8 @@ region_rect = Rect2(0, 0, 930, 8)
 
 [node name="GameOver" parent="." instance=ExtResource("7_38mwo")]
 visible = false
+
+[node name="MenuPause" parent="." instance=ExtResource("16_ac4cf")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
