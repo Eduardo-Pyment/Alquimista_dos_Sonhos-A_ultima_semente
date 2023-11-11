@@ -65,6 +65,15 @@ position = Vector2(384, 168)
 scale = Vector2(0.209255, 0.209255)
 texture = ExtResource("5_0qm5p")
 
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 2
+offset_left = 652.0
+offset_top = 406.0
+offset_right = 1202.0
+offset_bottom = 631.0
+scale = Vector2(0.118742, 0.118742)
+icon = ExtResource("6_4r5rl")
+
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 custom_minimum_size = Vector2(500, 380)
 layout_mode = 0
@@ -85,15 +94,6 @@ color = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Voltar" type="Button" parent="ScrollContainer/ColorRect/Control"]
-layout_mode = 2
-offset_left = 185.947
-offset_top = 567.313
-offset_right = 735.947
-offset_bottom = 792.313
-scale = Vector2(0.232085, 0.232085)
-icon = ExtResource("6_4r5rl")
 
 [node name="VolumeMusica" type="Label" parent="ScrollContainer/ColorRect/Control"]
 layout_mode = 0
@@ -154,7 +154,7 @@ offset_bottom = 48.1252
 stream = ExtResource("7_l2rhx")
 bus = &"SFX"
 
-[connection signal="pressed" from="ScrollContainer/ColorRect/Control/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="value_changed" from="ScrollContainer/ColorRect/Control/MusicaSlider" to="." method="_on_musica_slider_value_changed"]
 [connection signal="value_changed" from="ScrollContainer/ColorRect/Control/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
 [connection signal="toggled" from="ScrollContainer/ColorRect/Control/TelaCheia/FullScreen" to="." method="_on_full_screen_toggled"]
