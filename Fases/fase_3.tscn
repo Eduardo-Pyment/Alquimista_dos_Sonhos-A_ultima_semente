@@ -31,30 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://xlyutthq61fc" path="res://Prefabs/MusicController.tscn" id="26_t0fej"]
 [ext_resource type="PackedScene" uid="uid://dt6d031vfe674" path="res://Scenes/maquina_sal.tscn" id="27_comcd"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_webkc"]
-line_spacing = 0.0
-font = ExtResource("14_g2cub")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_57o2g"]
-line_spacing = 0.0
-font = ExtResource("14_g2cub")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_5swbd"]
-line_spacing = 0.0
-font = ExtResource("14_g2cub")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_rknyg"]
-line_spacing = 0.0
-font = ExtResource("14_g2cub")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yb87g"]
 texture = ExtResource("5_45cis")
 0:0/0 = 0
@@ -1447,18 +1423,6 @@ size = Vector2(502, 22)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ltamd"]
 size = Vector2(99, 23)
 
-[sub_resource type="LabelSettings" id="LabelSettings_skdm6"]
-line_spacing = 0.0
-font = ExtResource("24_n2nwo")
-font_size = 8
-font_color = Color(0, 0, 0, 1)
-shadow_color = Color(0, 0, 0, 0.121569)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_13tj5"]
-size = Vector2(17.5, 18)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q2ak"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xf6pm"]
 size = Vector2(384, 12)
 
@@ -1588,127 +1552,45 @@ radial_accel_max = 2.0
 scale_min = 0.4
 color = Color(0.643137, 1, 0.607843, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_skdm6"]
+line_spacing = 0.0
+font = ExtResource("24_n2nwo")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.121569)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13tj5"]
+size = Vector2(17.5, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2q2ak"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_webkc"]
+line_spacing = 0.0
+font = ExtResource("14_g2cub")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_57o2g"]
+line_spacing = 0.0
+font = ExtResource("14_g2cub")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5swbd"]
+line_spacing = 0.0
+font = ExtResource("14_g2cub")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rknyg"]
+line_spacing = 0.0
+font = ExtResource("14_g2cub")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
 [node name="fase-3" type="Node2D"]
 position = Vector2(-3, -13)
 script = ExtResource("1_08p1a")
-
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="vida_tempo" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("13_qiaws")
-
-[node name="clock_timer" type="Timer" parent="HUD/vida_tempo"]
-
-[node name="container" type="MarginContainer" parent="HUD/vida_tempo"]
-layout_mode = 0
-offset_left = 1.0
-offset_right = 881.002
-offset_bottom = 448.0
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="timer_hud" type="HBoxContainer" parent="HUD/vida_tempo/container"]
-custom_minimum_size = Vector2(100, 20)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-
-[node name="timer_container" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
-layout_mode = 2
-text = "Tempo:"
-label_settings = SubResource("LabelSettings_webkc")
-
-[node name="timer_numero" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
-layout_mode = 2
-text = "00:00"
-label_settings = SubResource("LabelSettings_57o2g")
-
-[node name="coraçao vida" type="TextureRect" parent="HUD/vida_tempo"]
-layout_mode = 0
-offset_top = 8.0
-offset_right = 65.0
-offset_bottom = 40.0
-texture = ExtResource("15_dn15w")
-
-[node name="x" type="Label" parent="HUD/vida_tempo/coraçao vida"]
-custom_minimum_size = Vector2(40, 23)
-layout_mode = 0
-offset_left = 41.0
-offset_top = 8.0
-offset_right = 81.0
-offset_bottom = 34.0
-text = "X	"
-label_settings = SubResource("LabelSettings_5swbd")
-
-[node name="vida" type="Label" parent="HUD/vida_tempo/coraçao vida"]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 8.0
-offset_right = 99.0
-offset_bottom = 34.0
-text = "03"
-label_settings = SubResource("LabelSettings_rknyg")
-
-[node name="BackgroundLayer" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="BackgroundLayer"]
-offset = Vector2(384, 224)
-transform = Transform2D(1, 0, 0, 1, 384, 224)
-scroll_base_scale = Vector2(1, 0)
-script = ExtResource("5_3mbw6")
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
-texture_filter = 1
-position = Vector2(0.666687, 0)
-motion_scale = Vector2(0, 0)
-motion_mirroring = Vector2(576, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer"]
-modulate = Color(0.3, 0.3, 0.8, 1)
-texture_filter = 2
-texture_repeat = 3
-texture = ExtResource("5_7dr25")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
-texture_filter = 1
-texture_repeat = 1
-position = Vector2(6, 0)
-motion_scale = Vector2(0.1, 0.1)
-motion_mirroring = Vector2(576, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer2"]
-texture_filter = 2
-texture_repeat = 3
-texture = ExtResource("6_sabun")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
-texture_filter = 1
-texture_repeat = 1
-motion_scale = Vector2(0.4, 0)
-motion_mirroring = Vector2(576, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer3"]
-texture_filter = 2
-texture_repeat = 3
-texture = ExtResource("7_fm3rr")
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
-texture_filter = 1
-texture_repeat = 1
-motion_scale = Vector2(0.4, 0)
-motion_mirroring = Vector2(576, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer4"]
-texture_filter = 2
-texture_repeat = 3
-texture = ExtResource("8_xvr8f")
 
 [node name="level" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_cxf45")
@@ -1733,6 +1615,9 @@ limit_left = -900
 limit_right = 2000
 editor_draw_limits = true
 script = ExtResource("9_xcrn3")
+
+[node name="maquina_base" parent="." instance=ExtResource("27_comcd")]
+position = Vector2(920, 224)
 
 [node name="plataformas" type="Node2D" parent="."]
 
@@ -1776,7 +1661,7 @@ position = Vector2(1471, 200)
 [node name="Spikes_area" type="Area2D" parent="."]
 visibility_layer = 3
 position = Vector2(-452, 2173)
-collision_layer = 8
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("17_7c2jx")
 
@@ -1796,7 +1681,7 @@ region_rect = Rect2(0, 0, 930, 8)
 [node name="Spikes_area2" type="Area2D" parent="."]
 visibility_layer = 3
 position = Vector2(1019, 1198)
-collision_layer = 8
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("17_7c2jx")
 
@@ -1816,7 +1701,7 @@ region_rect = Rect2(0, 0, 930, 8)
 [node name="Spikes_area3" type="Area2D" parent="."]
 visibility_layer = 3
 position = Vector2(1809, 1932)
-collision_layer = 8
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("17_7c2jx")
 
@@ -1834,96 +1719,9 @@ texture = ExtResource("17_eydld")
 region_enabled = true
 region_rect = Rect2(0, 0, 930, 8)
 
-[node name="GameOver" parent="." instance=ExtResource("7_38mwo")]
-visible = false
-
-[node name="MenuPause" parent="." instance=ExtResource("16_ac4cf")]
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="caixa2" parent="Control" instance=ExtResource("21_ftop6")]
-layout_mode = 1
-offset_left = -215.0
-offset_top = 117.0
-offset_right = 82.8
-offset_bottom = 163.2
-
-[node name="RichTextLabel" parent="Control/caixa2/NinePatchRect" index="1"]
-offset_left = 13.0
-offset_top = 11.0
-offset_right = 292.0
-offset_bottom = 41.0
-text = "Parabéns, aventureiro! Nessa terceira fase, você deve encontrar um meio de neutralizar o acido, que está a tomar de conta de tudo, para conseguir sair daqui."
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="Control/caixa2"]
-layout_mode = 0
-offset_left = 1044.0
-offset_top = -21.0
-offset_right = 1357.0
-offset_bottom = 32.0
-rotation = -0.00390732
-texture = ExtResource("23_tuk7y")
-region_rect = Rect2(0, 0, 16, 16)
-patch_margin_left = 4
-patch_margin_top = 4
-patch_margin_right = 4
-patch_margin_bottom = 4
-
-[node name="Label" type="Label" parent="Control/caixa2/NinePatchRect2"]
-layout_mode = 0
-offset_left = 105.996
-offset_top = 3.99999
-offset_right = 197.996
-offset_bottom = 15.0
-text = "Guia rapido"
-label_settings = SubResource("LabelSettings_skdm6")
-horizontal_alignment = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/caixa2/NinePatchRect2"]
-layout_mode = 0
-offset_left = 13.0
-offset_top = 11.0
-offset_right = 292.0
-offset_bottom = 41.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.687215, 0.687215, 0.687215, 0.6)
-theme_override_fonts/normal_font = ExtResource("24_n2nwo")
-theme_override_font_sizes/normal_font_size = 8
-text = "Aqui está a maquina para combinar elementos. Procure o cloro e o sódio pelo mapa para combiná-los, fazendo assim o cloreto de sódio, o elemento que neutraliza o ácido, boa sorte."
-
-[node name="Area2D" type="Area2D" parent="Control"]
-position = Vector2(1, 0)
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D"]
-position = Vector2(-264.75, 244)
-shape = SubResource("RectangleShape2D_13tj5")
-
-[node name="Sprite2D" type="Sprite2D" parent="Control/Area2D"]
-position = Vector2(-264, 245)
-texture = ExtResource("21_vwune")
-
-[node name="Area2D3" type="Area2D" parent="Control"]
-position = Vector2(852, 135)
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D3"]
-position = Vector2(-11, 112)
-shape = SubResource("RectangleShape2D_2q2ak")
-
-[node name="Sprite2D" type="Sprite2D" parent="Control/Area2D3"]
-position = Vector2(-11, 113)
-texture = ExtResource("21_vwune")
-
 [node name="acido_maquina" type="Area2D" parent="."]
 position = Vector2(976, 272)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("25_r7ehs")
 
@@ -2021,7 +1819,7 @@ texture = ExtResource("26_kvkwm")
 
 [node name="acido1" type="Area2D" parent="."]
 position = Vector2(-368, 1264)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("17_7c2jx")
 
@@ -2126,7 +1924,7 @@ texture = ExtResource("26_kvkwm")
 
 [node name="acido2" type="Area2D" parent="."]
 position = Vector2(-144, 272)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("17_7c2jx")
 
@@ -2183,7 +1981,7 @@ texture = ExtResource("26_kvkwm")
 
 [node name="acido3" type="Area2D" parent="."]
 position = Vector2(1008, 1968)
-collision_layer = 8
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("17_7c2jx")
 
@@ -2310,20 +2108,222 @@ texture = ExtResource("26_kvkwm")
 
 [node name="MusicController" parent="." instance=ExtResource("26_t0fej")]
 
-[node name="maquina_base" parent="." instance=ExtResource("27_comcd")]
-position = Vector2(920, 224)
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
+[node name="caixa2" parent="Control" instance=ExtResource("21_ftop6")]
+layout_mode = 1
+offset_left = -215.0
+offset_top = 117.0
+offset_right = 82.8
+offset_bottom = 163.2
+
+[node name="RichTextLabel" parent="Control/caixa2/NinePatchRect" index="1"]
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 292.0
+offset_bottom = 41.0
+text = "Parabéns, aventureiro! Nessa terceira fase, você deve encontrar um meio de neutralizar o acido, que está a tomar de conta de tudo, para conseguir sair daqui."
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control/caixa2"]
+layout_mode = 0
+offset_left = 1044.0
+offset_top = -21.0
+offset_right = 1357.0
+offset_bottom = 32.0
+rotation = -0.00390732
+texture = ExtResource("23_tuk7y")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="Control/caixa2/NinePatchRect2"]
+layout_mode = 0
+offset_left = 105.996
+offset_top = 3.99999
+offset_right = 197.996
+offset_bottom = 15.0
+text = "Guia rapido"
+label_settings = SubResource("LabelSettings_skdm6")
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/caixa2/NinePatchRect2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 292.0
+offset_bottom = 41.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.687215, 0.687215, 0.687215, 0.6)
+theme_override_fonts/normal_font = ExtResource("24_n2nwo")
+theme_override_font_sizes/normal_font_size = 8
+text = "Aqui está a maquina para combinar elementos. Procure o cloro e o sódio pelo mapa para combiná-los, fazendo assim o cloreto de sódio, o elemento que neutraliza o ácido, boa sorte."
+
+[node name="Area2D" type="Area2D" parent="Control"]
+position = Vector2(1, 0)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D"]
+position = Vector2(-264.75, 244)
+shape = SubResource("RectangleShape2D_13tj5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Area2D"]
+position = Vector2(-264, 245)
+texture = ExtResource("21_vwune")
+
+[node name="Area2D3" type="Area2D" parent="Control"]
+position = Vector2(852, 135)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D3"]
+position = Vector2(-11, 112)
+shape = SubResource("RectangleShape2D_2q2ak")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Area2D3"]
+position = Vector2(-11, 113)
+texture = ExtResource("21_vwune")
+
+[node name="GameOver" parent="." instance=ExtResource("7_38mwo")]
+visible = false
+
+[node name="MenuPause" parent="." instance=ExtResource("16_ac4cf")]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="vida_tempo" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_qiaws")
+
+[node name="clock_timer" type="Timer" parent="HUD/vida_tempo"]
+
+[node name="container" type="MarginContainer" parent="HUD/vida_tempo"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 881.002
+offset_bottom = 448.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="timer_hud" type="HBoxContainer" parent="HUD/vida_tempo/container"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="timer_container" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
+layout_mode = 2
+text = "Tempo:"
+label_settings = SubResource("LabelSettings_webkc")
+
+[node name="timer_numero" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
+layout_mode = 2
+text = "00:00"
+label_settings = SubResource("LabelSettings_57o2g")
+
+[node name="coraçao vida" type="TextureRect" parent="HUD/vida_tempo"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 65.0
+offset_bottom = 40.0
+texture = ExtResource("15_dn15w")
+
+[node name="x" type="Label" parent="HUD/vida_tempo/coraçao vida"]
+custom_minimum_size = Vector2(40, 23)
+layout_mode = 0
+offset_left = 41.0
+offset_top = 8.0
+offset_right = 81.0
+offset_bottom = 34.0
+text = "X	"
+label_settings = SubResource("LabelSettings_5swbd")
+
+[node name="vida" type="Label" parent="HUD/vida_tempo/coraçao vida"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 8.0
+offset_right = 99.0
+offset_bottom = 34.0
+text = "03"
+label_settings = SubResource("LabelSettings_rknyg")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="BackgroundLayer"]
+offset = Vector2(384, 224)
+transform = Transform2D(1, 0, 0, 1, 384, 224)
+scroll_base_scale = Vector2(1, 0)
+script = ExtResource("5_3mbw6")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(0.666687, 0)
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.3, 0.3, 0.8, 1)
+texture_filter = 2
+texture_repeat = 3
+texture = ExtResource("5_7dr25")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(6, 0)
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer2"]
+texture_filter = 2
+texture_repeat = 3
+texture = ExtResource("6_sabun")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.4, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer3"]
+texture_filter = 2
+texture_repeat = 3
+texture = ExtResource("7_fm3rr")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 1
+motion_scale = Vector2(0.4, 0)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer4"]
+texture_filter = 2
+texture_repeat = 3
+texture = ExtResource("8_xvr8f")
+
 [connection signal="body_entered" from="Spikes_area" to="Spikes_area" method="_on_body_entered"]
 [connection signal="body_entered" from="Spikes_area2" to="Spikes_area2" method="_on_body_entered"]
 [connection signal="body_entered" from="Spikes_area3" to="Spikes_area3" method="_on_body_entered"]
-[connection signal="body_entered" from="Control/Area2D" to="Control/caixa2" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Control/Area2D" to="Control/caixa2" method="_on_area_2d_body_exited"]
-[connection signal="body_entered" from="Control/Area2D3" to="Control/caixa2" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Control/Area2D3" to="Control/caixa2" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="acido_maquina" to="acido_maquina" method="_on_body_entered"]
 [connection signal="body_entered" from="acido1" to="acido1" method="_on_body_entered"]
 [connection signal="body_entered" from="acido2" to="acido2" method="_on_body_entered"]
 [connection signal="body_entered" from="acido3" to="acido3" method="_on_body_entered"]
+[connection signal="body_entered" from="Control/Area2D" to="Control/caixa2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Control/Area2D" to="Control/caixa2" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Control/Area2D3" to="Control/caixa2" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Control/Area2D3" to="Control/caixa2" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 
 [editable path="Control/caixa2"]
