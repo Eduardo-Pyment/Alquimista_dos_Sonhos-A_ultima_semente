@@ -147,7 +147,7 @@ func _on_body_exited(_body):
 
 
 func _on_cay_timer_timeout():
-	pass # Replace with function body.
+	PuloDisponivel = false
 
 #func _set_state():#state machines
 #	var state = "PlayerOcioso"
