@@ -54,6 +54,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.466667)
 
 [node name="ControlPause" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -151,11 +152,10 @@ offset_bottom = 40.0
 
 [node name="Voltar" type="Button" parent="ControlOpcoes/ScrollContainer/ColorRect/Control"]
 layout_mode = 2
-offset_left = 185.947
-offset_top = 567.313
-offset_right = 735.947
-offset_bottom = 792.313
-scale = Vector2(0.232085, 0.232085)
+offset_left = 6.10352e-05
+offset_right = 550.0
+offset_bottom = 225.0
+scale = Vector2(0.161147, 0.161147)
 icon = ExtResource("8_pqr5d")
 
 [node name="VolumeMusica" type="Label" parent="ControlOpcoes/ScrollContainer/ColorRect/Control"]
