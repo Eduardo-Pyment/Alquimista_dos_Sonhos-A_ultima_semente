@@ -1,6 +1,7 @@
-[gd_scene load_steps=48 format=3 uid="uid://rb10rosuh2no"]
+[gd_scene load_steps=49 format=3 uid="uid://rb10rosuh2no"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_jajnq"]
+[ext_resource type="Script" path="res://Scripts/fase_2.gd" id="1_wx3uk"]
 [ext_resource type="Texture2D" uid="uid://13yv4rt3guwi" path="res://Assets/Textures/Tiles/tiles(600x600).png" id="2_hq0jk"]
 [ext_resource type="PackedScene" uid="uid://dc2epskdddoys" path="res://Scenes/player.tscn" id="3_4e5wn"]
 [ext_resource type="Script" path="res://Scripts/CameraFase2.gd" id="4_avdjn"]
@@ -757,6 +758,7 @@ color_initial_ramp = SubResource("GradientTexture1D_vwwd6")
 
 [node name="Fase_2" type="Node2D"]
 position = Vector2(0, -85)
+script = ExtResource("1_wx3uk")
 
 [node name="TileMap" type="TileMap" parent="."]
 visibility_layer = 2

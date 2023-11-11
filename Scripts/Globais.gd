@@ -11,3 +11,10 @@ var cobre := 0
 var zinco := 0
 var prata := 0
 var solido := 0
+var player = null
+var current_checkpoint = null
+
+func respawn_player():
+	if current_checkpoint != null:
+		player.position = current_checkpoint.global_position
+	player.position = player.position

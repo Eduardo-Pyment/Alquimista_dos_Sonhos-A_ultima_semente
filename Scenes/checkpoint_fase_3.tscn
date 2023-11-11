@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://c8tki4i5sui4s"]
+
+[ext_resource type="Script" path="res://Scripts/CheckpointFase3.gd" id="1_lejmc"]
+[ext_resource type="Texture2D" uid="uid://cahdenygny4ef" path="res://Assets/Textures/Itens/Moleculas/hidrogenio.png" id="2_5ngjp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pip5b"]
+atlas = ExtResource("2_5ngjp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33u2e"]
+atlas = ExtResource("2_5ngjp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrksw"]
+atlas = ExtResource("2_5ngjp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48rg3"]
+atlas = ExtResource("2_5ngjp")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x71ih"]
+atlas = ExtResource("2_5ngjp")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_010au"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pip5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33u2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrksw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48rg3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x71ih")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CheckpointFase3" type="Area2D"]
+script = ExtResource("1_lejmc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_010au")
+autoplay = "default"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
