@@ -12,6 +12,7 @@ script/source = "extends CharacterBody2D
 
 func _ready():
 	AlvoMovimento = get_node_or_null(\"/root/fase-3/Player\")
+	$\"/root/fase-3\".destroy_na_flutuante.connect(_destroy)
 	if AlvoMovimento != null:
 		call_deferred(\"actor_setup\")
 
@@ -186,6 +187,8 @@ light_mask = 2
 visibility_layer = 2
 z_index = -1
 scale = Vector2(0.7, 0.7)
+collision_layer = 32
+collision_mask = 0
 motion_mode = 1
 script = SubResource("GDScript_r48vn")
 
