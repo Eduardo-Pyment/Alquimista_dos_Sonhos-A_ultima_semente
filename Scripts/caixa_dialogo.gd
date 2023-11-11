@@ -21,28 +21,3 @@ func _on_area_2d_body_exited(body):
 		playerHasCollided = false
 		
 
-
-func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	pass # Replace with function body.
-
-
-func _on_area_2d_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
-	pass # Replace with function body.
-
-
-func _on_area_2d_2_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_area_2d_2_body_exited(body):
-	pass # Replace with function body.
-
-
-func _on_area_2d_3_body_entered(body):
-	pass # Replace with function body.
-
-
-func _on_area_2d_3_body_exited(body):
-	pass # Replace with function body.
-
-

@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=60 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="4_0jjo4"]
 [ext_resource type="Texture2D" uid="uid://drmb2c4jqsyhn" path="res://Assets/Textures/Background/fase1/pixil-frame-0 (6).png" id="4_wboe2"]
 [ext_resource type="Script" path="res://Scripts/World.gd" id="8_a36j6"]
-[ext_resource type="PackedScene" uid="uid://qykltn38fadx" path="res://Scenes/modal-game-over.tscn" id="10_x078i"]
 [ext_resource type="PackedScene" uid="uid://bk6t51v2413ci" path="res://Scenes/maquina_agua.tscn" id="12_ufsc5"]
 [ext_resource type="PackedScene" uid="uid://bt5gqx1a1xh4e" path="res://Scenes/Itens/hidrogenios.tscn" id="13_07k27"]
 [ext_resource type="Texture2D" uid="uid://13yv4rt3guwi" path="res://Assets/Textures/Tiles/tiles(600x600).png" id="13_mqhsb"]
@@ -1033,6 +1032,7 @@ scale_max = 3.0
 scale_curve = SubResource("CurveTexture_nqv78")
 color = Color(1, 0.137255, 0, 1)
 color_ramp = SubResource("GradientTexture1D_aikxe")
+hue_variation_max = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11ulj"]
 size = Vector2(96, 16)
@@ -1142,10 +1142,6 @@ texture_filter = 2
 texture_repeat = 3
 texture = ExtResource("4_wboe2")
 
-[node name="Control" parent="BackgroundLayer" instance=ExtResource("10_x078i")]
-offset_left = -128.0
-offset_right = -128.0
-
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="vida_tempo" type="Control" parent="HUD"]
@@ -1158,6 +1154,7 @@ offset_bottom = 37.0
 script = ExtResource("8_a36j6")
 
 [node name="clock_timer" type="Timer" parent="HUD/vida_tempo"]
+wait_time = 0.3
 
 [node name="container" type="MarginContainer" parent="HUD/vida_tempo"]
 layout_mode = 0
@@ -1380,6 +1377,12 @@ position = Vector2(2208, 128)
 collision_layer = 4
 collision_mask = 2
 
+[node name="Plataforma_1" parent="." instance=ExtResource("16_b2qrh")]
+modulate = Color(3.5, 3.5, 3.5, 1)
+position = Vector2(976, 256)
+Distancia = Vector2(0, -112)
+TempoTransicao = 7.0
+
 [node name="Plataforma_2" parent="." instance=ExtResource("16_b2qrh")]
 show_behind_parent = true
 position = Vector2(1664, 384)
@@ -1389,20 +1392,25 @@ TempoTransicao = 3.5
 [node name="CollisionShape2D" parent="Plataforma_2" index="0"]
 shape = SubResource("RectangleShape2D_mooex")
 
+[node name="sprite_plataform" parent="Plataforma_2/CollisionShape2D" index="0"]
+modulate = Color(3.5, 3.5, 3.5, 1)
+region_rect = Rect2(224, 96, 32, 96)
+
 [node name="Plataforma_3" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(2448, 280)
 Distancia = Vector2(0, 120)
 TempoTransicao = 7.0
 
-[node name="Plataforma_1" parent="." instance=ExtResource("16_b2qrh")]
-position = Vector2(976, 256)
-Distancia = Vector2(0, -112)
-TempoTransicao = 7.0
+[node name="sprite_plataform" parent="Plataforma_3/CollisionShape2D" index="0"]
+modulate = Color(3.5, 3.5, 3.5, 1)
 
 [node name="Plataforma_4" parent="." instance=ExtResource("16_b2qrh")]
 position = Vector2(2672, 160)
 Distancia = Vector2(-100, 0)
 TempoTransicao = 7.0
+
+[node name="sprite_plataform" parent="Plataforma_4/CollisionShape2D" index="0"]
+modulate = Color(3.5, 3.5, 3.5, 1)
 
 [node name="Area_queda" parent="." instance=ExtResource("21_aw1ic")]
 position = Vector2(918, 449)
@@ -1440,6 +1448,7 @@ offset_right = 708.8
 offset_bottom = 104.2
 
 [node name="Portal" parent="." instance=ExtResource("25_yskm7")]
+modulate = Color(2, 2, 2, 1)
 position = Vector2(3766, 220)
 scale = Vector2(1.2, 1.2)
 
@@ -1455,7 +1464,7 @@ scale = Vector2(1.2, 1.2)
 [connection signal="body_exited" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_exited"]
 
 [editable path="MenuPause"]
+[editable path="Plataforma_1"]
 [editable path="Plataforma_2"]
 [editable path="Plataforma_3"]
-[editable path="Plataforma_1"]
 [editable path="Plataforma_4"]
