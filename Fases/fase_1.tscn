@@ -27,30 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://1mehd4faumqk" path="res://Menus/MenuGameOver/game_over.tscn" id="26_2mpt5"]
 [ext_resource type="PackedScene" uid="uid://xlyutthq61fc" path="res://Prefabs/MusicController.tscn" id="27_uj527"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_dvf8b"]
-line_spacing = 0.0
-font = ExtResource("19_daj23")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_rplnc"]
-line_spacing = 0.0
-font = ExtResource("19_daj23")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_32bcc"]
-line_spacing = 0.0
-font = ExtResource("19_daj23")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
-[sub_resource type="LabelSettings" id="LabelSettings_pt2se"]
-line_spacing = 0.0
-font = ExtResource("19_daj23")
-font_size = 18
-shadow_color = Color(0, 0, 0, 0.6)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vvecw"]
 texture = ExtResource("13_mqhsb")
 texture_region_size = Vector2i(32, 32)
@@ -1097,6 +1073,30 @@ size = Vector2(32, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0pur"]
 size = Vector2(32, 23)
 
+[sub_resource type="LabelSettings" id="LabelSettings_dvf8b"]
+line_spacing = 0.0
+font = ExtResource("19_daj23")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rplnc"]
+line_spacing = 0.0
+font = ExtResource("19_daj23")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_32bcc"]
+line_spacing = 0.0
+font = ExtResource("19_daj23")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="LabelSettings" id="LabelSettings_pt2se"]
+line_spacing = 0.0
+font = ExtResource("19_daj23")
+font_size = 18
+shadow_color = Color(0, 0, 0, 0.6)
+
 [node name="Level1" type="Node2D"]
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
@@ -1142,85 +1142,6 @@ texture_filter = 2
 texture_repeat = 3
 texture = ExtResource("4_wboe2")
 
-[node name="HUD" type="CanvasLayer" parent="."]
-
-[node name="vida_tempo" type="Control" parent="HUD"]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -3.0
-offset_top = -3.0
-offset_right = 37.0
-offset_bottom = 37.0
-script = ExtResource("8_a36j6")
-
-[node name="clock_timer" type="Timer" parent="HUD/vida_tempo"]
-wait_time = 0.3
-
-[node name="container" type="MarginContainer" parent="HUD/vida_tempo"]
-layout_mode = 0
-offset_left = -56.0
-offset_right = 824.002
-offset_bottom = 448.0
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="timer_hud" type="HBoxContainer" parent="HUD/vida_tempo/container"]
-custom_minimum_size = Vector2(100, 20)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-
-[node name="timer_container" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
-layout_mode = 2
-text = "Tempo:"
-label_settings = SubResource("LabelSettings_dvf8b")
-
-[node name="timer_numero" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
-layout_mode = 2
-text = "00:00"
-label_settings = SubResource("LabelSettings_rplnc")
-
-[node name="coraçao vida" type="TextureRect" parent="HUD/vida_tempo"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 71.0
-offset_bottom = 39.0
-texture = ExtResource("20_8dbqo")
-
-[node name="x" type="Label" parent="HUD/vida_tempo/coraçao vida"]
-custom_minimum_size = Vector2(40, 23)
-layout_mode = 0
-offset_left = 41.0
-offset_top = 8.0
-offset_right = 81.0
-offset_bottom = 34.0
-text = "X	"
-label_settings = SubResource("LabelSettings_32bcc")
-
-[node name="vida" type="Label" parent="HUD/vida_tempo/coraçao vida"]
-layout_mode = 0
-offset_left = 57.0
-offset_top = 8.0
-offset_right = 99.0
-offset_bottom = 34.0
-text = "03"
-label_settings = SubResource("LabelSettings_pt2se")
-
-[node name="MenuPause" parent="." instance=ExtResource("22_rlntw")]
-offset = Vector2(30, 0)
-transform = Transform2D(1, 0, 0, 1, 30, 0)
-
-[node name="ColorRect" parent="MenuPause" index="0"]
-offset_left = -30.0
-offset_right = -30.0
-
-[node name="GameOver" parent="." instance=ExtResource("26_2mpt5")]
-layer = 0
-visible = false
-
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 tile_set = SubResource("TileSet_elkec")
@@ -1247,7 +1168,7 @@ collision_mask = 6
 
 [node name="Zona_fogo_maquina" type="Area2D" parent="."]
 position = Vector2(2064, 416)
-collision_layer = 8
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("14_0si5r")
 
@@ -1288,7 +1209,7 @@ color_ramp = SubResource("Gradient_h2fbx")
 
 [node name="Zona_fogo" type="Area2D" parent="."]
 position = Vector2(2704, 416)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("15_r3eli")
 
@@ -1307,7 +1228,7 @@ randomness = 1.0
 
 [node name="Zona_fogo2" type="Area2D" parent="."]
 position = Vector2(3216, 440)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("15_r3eli")
 
@@ -1326,7 +1247,7 @@ randomness = 0.5
 
 [node name="Zona_fogo3" type="Area2D" parent="."]
 position = Vector2(3376, 440)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("15_r3eli")
 
@@ -1344,7 +1265,7 @@ texture = ExtResource("16_mvmjj")
 
 [node name="Zona_fogo4" type="Area2D" parent="."]
 position = Vector2(3536, 440)
-collision_layer = 2
+collision_layer = 0
 collision_mask = 2
 script = ExtResource("15_r3eli")
 
@@ -1454,7 +1375,85 @@ scale = Vector2(1.2, 1.2)
 
 [node name="MusicController" parent="." instance=ExtResource("27_uj527")]
 
-[connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="vida_tempo" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 37.0
+offset_bottom = 37.0
+script = ExtResource("8_a36j6")
+
+[node name="clock_timer" type="Timer" parent="HUD/vida_tempo"]
+
+[node name="container" type="MarginContainer" parent="HUD/vida_tempo"]
+layout_mode = 0
+offset_left = -53.0
+offset_top = 3.0
+offset_right = 827.002
+offset_bottom = 451.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="timer_hud" type="HBoxContainer" parent="HUD/vida_tempo/container"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="timer_container" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
+layout_mode = 2
+text = "Tempo:"
+label_settings = SubResource("LabelSettings_dvf8b")
+
+[node name="timer_numero" type="Label" parent="HUD/vida_tempo/container/timer_hud"]
+layout_mode = 2
+text = "00:00"
+label_settings = SubResource("LabelSettings_rplnc")
+
+[node name="coraçao vida" type="TextureRect" parent="HUD/vida_tempo"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 71.0
+offset_bottom = 39.0
+texture = ExtResource("20_8dbqo")
+
+[node name="x" type="Label" parent="HUD/vida_tempo/coraçao vida"]
+custom_minimum_size = Vector2(40, 23)
+layout_mode = 0
+offset_left = 41.0
+offset_top = 8.0
+offset_right = 81.0
+offset_bottom = 34.0
+text = "X	"
+label_settings = SubResource("LabelSettings_32bcc")
+
+[node name="vida" type="Label" parent="HUD/vida_tempo/coraçao vida"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 8.0
+offset_right = 99.0
+offset_bottom = 34.0
+text = "03"
+label_settings = SubResource("LabelSettings_pt2se")
+
+[node name="MenuPause" parent="." instance=ExtResource("22_rlntw")]
+offset = Vector2(30, 0)
+transform = Transform2D(1, 0, 0, 1, 30, 0)
+
+[node name="ColorRect" parent="MenuPause" index="0"]
+offset_left = -30.0
+offset_right = -30.0
+
+[node name="GameOver" parent="." instance=ExtResource("26_2mpt5")]
+layer = 0
+visible = false
+
 [connection signal="body_entered" from="Zona_fogo_maquina" to="Zona_fogo_maquina" method="_on_body_entered"]
 [connection signal="body_entered" from="Zona_fogo" to="Zona_fogo" method="_on_body_entered"]
 [connection signal="body_entered" from="Zona_fogo2" to="Zona_fogo2" method="_on_body_entered"]
@@ -1462,9 +1461,10 @@ scale = Vector2(1.2, 1.2)
 [connection signal="body_entered" from="Zona_fogo4" to="Zona_fogo4" method="_on_body_entered"]
 [connection signal="body_entered" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Dicas/Area2D" to="Dicas/caixa2" method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 
-[editable path="MenuPause"]
 [editable path="Plataforma_1"]
 [editable path="Plataforma_2"]
 [editable path="Plataforma_3"]
 [editable path="Plataforma_4"]
+[editable path="MenuPause"]
