@@ -1,10 +1,10 @@
 res://Fases/fase_1.tscn::2a70f1f4e5688850e0291e8fdb2d14ea::1699816346::res://.godot/exported/133200997/export-a5d2268c92cea7388242982af48310c6-fase_1.scn
-res://Fases/fase_2.tscn::dd58b96f8047254d0f6851f9bbe664eb::1699817022::res://.godot/exported/133200997/export-5e1172858ef7ab589f0792258d5a6fe8-fase_2.scn
+res://Fases/fase_2.tscn::dd58b96f8047254d0f6851f9bbe664eb::1699824270::res://.godot/exported/133200997/export-5e1172858ef7ab589f0792258d5a6fe8-fase_2.scn
 res://Fases/fase_3.tscn::54ea965e12a9416ec04fb78ce84bf58e::1699816346::res://.godot/exported/133200997/export-64a4656295bf996f5f9b9d9c387e6926-fase_3.scn
 res://Menus/MenuGameOver/game_over.tscn::9422a81df4638f006428801b872956d5::1699813933::res://.godot/exported/133200997/export-f13bb2f1de0ae2b484fa061b1a927ad6-game_over.scn
 res://Menus/MenuPause/menu_pause.tscn::96887c64ac2e408b5276683eb7e27980::1699813933::res://.godot/exported/133200997/export-5a609cf467ea45f4fcb4224098e077b3-menu_pause.scn
 res://Menus/MenuPrincipal/Creditos.tscn::377cc7d2c4bd3044eaa30e94440bba92::1699813933::res://.godot/exported/133200997/export-366f2801488a8845105a3a7354dc1a66-Creditos.scn
-res://Menus/MenuPrincipal/intro_si.tscn::50d4479133e3a17a5e7aaf1a1d870292::1699818911::res://.godot/exported/133200997/export-9adbf61133d57fe142890a0d2893222a-intro_si.scn
+res://Menus/MenuPrincipal/intro_si.tscn::50d4479133e3a17a5e7aaf1a1d870292::1699824616::res://.godot/exported/133200997/export-9adbf61133d57fe142890a0d2893222a-intro_si.scn
 res://Menus/MenuPrincipal/intro_unirios.tscn::e2378f2bdc1d88427e65e93b7b711433::1699813933::res://.godot/exported/133200997/export-6276e5aa534ccbe13d448e27e1782f96-intro_unirios.scn
 res://Menus/MenuPrincipal/menu_opcoes.tscn::0ce02da6eac6bc6fd2bd111ade068dec::1699813933::res://.godot/exported/133200997/export-97fe803f26e22f7db76a5fe0b6fa752b-menu_opcoes.scn
 res://Menus/MenuPrincipal/menu_principal.tscn::cfefc92d1aa584355767cccbd2b04891::1699813933::res://.godot/exported/133200997/export-8687962083dcb862cb483da15d54aa84-menu_principal.scn
@@ -13,7 +13,7 @@ res://Menus/MenuPrincipal/tutorial3.tscn::83770026a34160710c67f06561364043::1699
 res://Menus/MenuPrincipal/tutorial.tscn::e5286063e0b1be553df6c997809322fc::1699813933::res://.godot/exported/133200997/export-8f147e51571038a2befe95ba72b41574-tutorial.scn
 res://Prefabs/MusicController.tscn::73a561f3950727cf1b02fe5c5036ee77::1699813933::res://.godot/exported/133200997/export-bbcba9f0c6cda1f59df100d9c246d7bb-MusicController.scn
 res://Scenes/Ambiente/Laser.tscn::349452726149051ae1b5b67404409d7f::1699813933::res://.godot/exported/133200997/export-82df56fb14195c8edef0494156124f43-Laser.scn
-res://Scenes/Ambiente/PlataformaMovel.tscn::b31605f92e7a1e9ba1109ee4e310f6a7::1699813933::res://.godot/exported/133200997/export-c72c4bc90342acf5322442c4df4557da-PlataformaMovel.scn
+res://Scenes/Ambiente/PlataformaMovel.tscn::b31605f92e7a1e9ba1109ee4e310f6a7::1699824270::res://.godot/exported/133200997/export-c72c4bc90342acf5322442c4df4557da-PlataformaMovel.scn
 res://Scenes/Ambiente/portal.tscn::fbec9e7edd2f523f6d7a0fe40b01f8d3::1699813933::res://.godot/exported/133200997/export-d286a670b6be94c4c3cf6adc1cd42a97-portal.scn
 res://Scenes/Ambiente/zona_fogo.tscn::f528226306bab8a42b82b814893f247f::1699813933::res://.godot/exported/133200997/export-fc7db414ad9b8b01ca083ff2f60d4bd3-zona_fogo.scn
 res://Scenes/Itens/Ag_flutuante.tscn::4405cdade287486fd448925e19e9e8ce::1699813933::res://.godot/exported/133200997/export-0684e5894c374ceb6dcb809110f4649d-Ag_flutuante.scn
