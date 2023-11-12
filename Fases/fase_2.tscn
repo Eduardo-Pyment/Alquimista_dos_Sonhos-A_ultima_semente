@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://rb10rosuh2no"]
+[gd_scene load_steps=52 format=3 uid="uid://rb10rosuh2no"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_jajnq"]
 [ext_resource type="Script" path="res://Scripts/fase_2.gd" id="1_wx3uk"]
@@ -15,6 +15,7 @@
 [ext_resource type="FontFile" uid="uid://dcg4y543ctde3" path="res://Assets/Textures/Assets-dica/RevMiniPixel.ttf" id="19_w88om"]
 [ext_resource type="Script" path="res://Scripts/Zona_mercurio_maquina.gd" id="21_is7gc"]
 [ext_resource type="Script" path="res://Scripts/World.gd" id="21_mhc3p"]
+[ext_resource type="Texture2D" uid="uid://484we34fb8pj" path="res://Assets/Textures/Itens/fumaca/fumaca_6x6.png" id="22_2wa1s"]
 [ext_resource type="PackedScene" uid="uid://dldyhurxfehpn" path="res://Scenes/Itens/cobre.tscn" id="22_8ntn8"]
 [ext_resource type="PackedScene" uid="uid://011dpw7ata52" path="res://Scenes/maquina_solida.tscn" id="22_umjhe"]
 [ext_resource type="PackedScene" uid="uid://c33buwts2rsqv" path="res://Scenes/caixa_dialogo_fase1.tscn" id="23_2dcsi"]
@@ -761,6 +762,32 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_n32h2"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2liyg"]
+gradient = SubResource("Gradient_n32h2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dasfl"]
+emission_shape = 3
+emission_box_extents = Vector3(176, 1, 1)
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+angular_velocity_min = 50.0
+angular_velocity_max = 100.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_max = 242.5
+scale_min = 0.2
+scale_max = 0.6
+color = Color(2, 2, 2, 1)
+color_ramp = SubResource("GradientTexture1D_2liyg")
+attractor_interaction_enabled = false
+
 [node name="Fase_2" type="Node2D"]
 position = Vector2(0, -85)
 script = ExtResource("1_wx3uk")
@@ -1129,6 +1156,15 @@ autoplay = "default"
 position = Vector2(104, -13)
 sprite_frames = SubResource("SpriteFrames_416iu")
 autoplay = "default"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Zona_mercurio_maquina"]
+position = Vector2(-56, 0)
+emitting = false
+amount = 2500
+process_material = SubResource("ParticleProcessMaterial_dasfl")
+texture = ExtResource("22_2wa1s")
+lifetime = 5.0
+one_shot = true
 
 [node name="GameOver" parent="." instance=ExtResource("27_xhdby")]
 visible = false

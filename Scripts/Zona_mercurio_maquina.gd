@@ -1,5 +1,6 @@
 extends Area2D
 
+@onready var gpu_particles_2d = $GPUParticles2D
 
 func _ready():
 	$"/root/Fase_2/maquina_solida".gerar_solido.connect(solidificador)
@@ -11,6 +12,7 @@ func _on_body_entered(body):
 func solidificador():
 	if Globais.solido >= 1:
 		print(Globais.solido)
+		gpu_particles_2d.emitting = true
 		await get_tree().create_timer(5.0).timeout
 		$"/root/Fase_2/Zona_mercurio_maquina/CollisionShape2D".queue_free()
 		get_node("AnimatedSprite2D").stop()
