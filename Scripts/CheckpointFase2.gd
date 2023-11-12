@@ -9,6 +9,7 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name != "Player" or is_active:
+		$animation.play("default")
 		return
 	activate_checkpoint()
 
