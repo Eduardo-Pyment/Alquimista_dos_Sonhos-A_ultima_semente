@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgphl6epb2orn"]
+[gd_scene load_steps=6 format=3 uid="uid://dgphl6epb2orn"]
 
 [ext_resource type="Script" path="res://Menus/MenuPrincipal/tutorial3.gd" id="1_e1wok"]
 [ext_resource type="Texture2D" uid="uid://c18x3bge5r4n" path="res://Assets/AssetsMenu/backgorundmenu.jpg" id="1_smuos"]
 [ext_resource type="Texture2D" uid="uid://pimlclipm4od" path="res://Assets/AssetsMenu/backgroudtutorial3.png" id="3_jn011"]
+[ext_resource type="Texture2D" uid="uid://b5wdbynlnya2d" path="res://Assets/AssetsMenu/BotaoVoltar.png" id="4_jsill"]
 [ext_resource type="Texture2D" uid="uid://cnopie4j6yic6" path="res://Assets/AssetsMenu/BotaoAvancar.png" id="4_lpwvp"]
 
 [node name="tutorial3" type="CanvasLayer"]
@@ -37,6 +38,15 @@ grow_vertical = 2
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_jn011")
 
+[node name="voltar" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 261.0
+offset_right = 416.0
+offset_bottom = 299.0
+icon = ExtResource("4_jsill")
+flat = true
+
 [node name="avancar" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 436.0
@@ -46,4 +56,5 @@ offset_bottom = 299.0
 icon = ExtResource("4_lpwvp")
 flat = true
 
+[connection signal="pressed" from="Control/voltar" to="." method="_on_voltar_pressed"]
 [connection signal="pressed" from="Control/avancar" to="." method="_on_avancar_pressed"]
