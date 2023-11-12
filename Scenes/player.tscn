@@ -1,11 +1,10 @@
-[gd_scene load_steps=35 format=3 uid="uid://dc2epskdddoys"]
+[gd_scene load_steps=34 format=3 uid="uid://dc2epskdddoys"]
 
 [ext_resource type="Script" path="res://Assets/Textures/Animation/Player/Player.gd" id="1_rgexs"]
 [ext_resource type="Texture2D" uid="uid://dwa3l6x5iu3m8" path="res://Assets/Textures/Animation/Player/Player/run cycle 48x48-Sheet.png" id="2_678ga"]
 [ext_resource type="Texture2D" uid="uid://cx0yemkweo2x2" path="res://Assets/Textures/Animation/Player/Player/player jump 48x48-Sheet.png" id="2_p76fa"]
 [ext_resource type="Texture2D" uid="uid://calqysadsoiuy" path="res://Assets/Textures/Itens/fumaca/fumaca_4x4.png" id="2_rehiw"]
 [ext_resource type="Texture2D" uid="uid://cikaq53wswlqr" path="res://Assets/Textures/Animation/Player/Player/Character Idle 48x48-Sheet.png" id="3_2smu8"]
-[ext_resource type="Script" path="res://Scripts/MainCamera.gd" id="3_y1qcw"]
 [ext_resource type="Texture2D" uid="uid://cejt5uf6ksmhm" path="res://Assets/Textures/Animation/Player/Player/player land 48x48-Sheet.png" id="5_lgmqn"]
 [ext_resource type="Script" path="res://Scripts/PlayerStateMachine.gd" id="5_qc70u"]
 [ext_resource type="Script" path="res://Scripts/chao_state.gd" id="6_gojj0"]
@@ -299,17 +298,6 @@ one_shot = true
 libraries = {
 "": SubResource("AnimationLibrary_dxo08")
 }
-
-[node name="CameraPlayerSnappy3" type="Camera2D" parent="."]
-position = Vector2(-347, -220)
-ignore_rotation = false
-limit_left = 0
-limit_top = 0
-position_smoothing_enabled = true
-position_smoothing_speed = 10.0
-editor_draw_limits = true
-editor_draw_drag_margin = true
-script = ExtResource("3_y1qcw")
 
 [node name="CheckChaoRaycasts" type="Node" parent="."]
 

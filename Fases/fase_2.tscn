@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://rb10rosuh2no"]
+[gd_scene load_steps=48 format=3 uid="uid://rb10rosuh2no"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_jajnq"]
 [ext_resource type="Script" path="res://Scripts/fase_2.gd" id="1_wx3uk"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dc2epskdddoys" path="res://Scenes/player.tscn" id="3_4e5wn"]
 [ext_resource type="Script" path="res://Scripts/CameraFase2.gd" id="4_avdjn"]
 [ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="5_h63wd"]
-[ext_resource type="PackedScene" uid="uid://qykltn38fadx" path="res://Scenes/modal-game-over.tscn" id="11_k0o3u"]
 [ext_resource type="PackedScene" uid="uid://k73i0e7vpwbf" path="res://Scenes/Ambiente/PlataformaMovel.tscn" id="12_y2n6u"]
 [ext_resource type="Script" path="res://Scripts/Spikes_area.gd" id="13_espt6"]
 [ext_resource type="Texture2D" uid="uid://cwrw8xred4elg" path="res://Assets/Textures/spikes/Individual Spike.png" id="14_hy2it"]
@@ -783,40 +782,52 @@ layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 position = Vector2(-4, 1)
 navigation_polygon = SubResource("NavigationPolygon_wa32a")
 
 [node name="Player" parent="." instance=ExtResource("3_4e5wn")]
-position = Vector2(1920, 405)
+position = Vector2(1932, 403)
 collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 200
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera_fase2" type="Camera2D" parent="Player"]
+ignore_rotation = false
+limit_left = -64
+limit_right = 3136
+limit_bottom = 1984
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
 script = ExtResource("4_avdjn")
 
 [node name="AnimatableBody2D" parent="." instance=ExtResource("12_y2n6u")]
-position = Vector2(1296, 1275)
-Distancia = Vector2(0, 650)
+position = Vector2(1296, 1264)
+Distancia = Vector2(0, 640)
+TempoTransicao = 9.0
 
 [node name="sprite_plataform" parent="AnimatableBody2D/CollisionShape2D" index="0"]
 modulate = Color(1.55, 2.73, 1.87, 1)
 
 [node name="AnimatableBody2D2" parent="." instance=ExtResource("12_y2n6u")]
-position = Vector2(2192, 1461)
-Distancia = Vector2(152, 0)
+position = Vector2(2224, 1455)
+Distancia = Vector2(144, 0)
 TempoTransicao = 6.0
 
 [node name="sprite_plataform" parent="AnimatableBody2D2/CollisionShape2D" index="0"]
 modulate = Color(1.55, 2.73, 1.87, 1)
 
 [node name="AnimatableBody2D3" parent="." instance=ExtResource("12_y2n6u")]
-position = Vector2(2681, 1461)
-Distancia = Vector2(-152, 0)
+position = Vector2(2704, 1455)
+Distancia = Vector2(-144, 0)
 TempoTransicao = 6.0
 
 [node name="sprite_plataform" parent="AnimatableBody2D3/CollisionShape2D" index="0"]
 modulate = Color(1.55, 2.73, 1.87, 1)
+position = Vector2(0.000118256, -9.53674e-07)
 
 [node name="Spikes_area" type="Area2D" parent="."]
 visibility_layer = 3
@@ -878,8 +889,6 @@ scale = Vector2(1.02903, 1)
 texture = ExtResource("14_hy2it")
 region_enabled = true
 region_rect = Rect2(0, 0, 930, 8)
-
-[node name="LevelProps" type="Node" parent="."]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -1126,51 +1135,43 @@ autoplay = "default"
 visible = false
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
-follow_viewport_enabled = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="BackgroundLayer"]
-offset = Vector2(384, 224)
-transform = Transform2D(1, 0, 0, 1, 384, 224)
+offset = Vector2(400, 227)
+transform = Transform2D(1, 0, 0, 1, 400, 227)
 scroll_base_scale = Vector2(1, 0)
 script = ExtResource("5_h63wd")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
 texture_filter = 1
-position = Vector2(0.666687, 0)
-motion_scale = Vector2(0, 0)
-motion_mirroring = Vector2(576, 0)
+texture_repeat = 2
+motion_scale = Vector2(0.2, 0)
+motion_mirroring = Vector2(768, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer"]
-texture_filter = 2
-texture_repeat = 3
+texture_filter = 1
 texture = ExtResource("25_q2c2k")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
 texture_filter = 1
-texture_repeat = 1
-motion_scale = Vector2(0.4, 0.4)
-motion_mirroring = Vector2(576, 0)
+texture_repeat = 2
+motion_scale = Vector2(0.4, 0)
+motion_mirroring = Vector2(768, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer2"]
 modulate = Color(1.55, 2.3, 6.51, 1)
-texture_filter = 2
-texture_repeat = 3
+texture_filter = 1
 texture = ExtResource("26_4xbq2")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="BackgroundLayer/ParallaxBackground"]
 texture_filter = 1
-texture_repeat = 1
+texture_repeat = 2
 motion_scale = Vector2(0.4, 0)
-motion_mirroring = Vector2(576, 0)
+motion_mirroring = Vector2(768, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="BackgroundLayer/ParallaxBackground/ParallaxLayer3"]
-texture_filter = 2
-texture_repeat = 3
+texture_filter = 1
 texture = ExtResource("27_4m8fe")
-
-[node name="Control" parent="BackgroundLayer" instance=ExtResource("11_k0o3u")]
-offset_left = -128.0
-offset_right = -128.0
 
 [node name="MusicController" parent="." instance=ExtResource("29_avdwf")]
 
