@@ -18,7 +18,7 @@ var PuloDisponivel: bool
 #if PuloDisponivel && Input.is_action_just_pressed("ui_accept"):
 #	velocity.y = -VelocidadePulo
 #	PuloDisponivel = false
-func state_process(delta):
+func state_process(_delta):
 	if(!Player.is_on_floor()):
 		Proximo_state = ar_state
 	if Player.is_on_floor():

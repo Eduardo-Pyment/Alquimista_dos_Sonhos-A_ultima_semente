@@ -17,7 +17,11 @@ func _ready():
 		bg_music_fase_1.play()
 	if get_tree().current_scene == level_2:
 		MusicController.bg_music_fase_1.stop()
+		MusicController.bg_music_fase_2.stop()
+		MusicController.bg_music_fase_3.stop()
 		bg_music_fase_2.play()
 	if get_tree().current_scene == level_3:
+		MusicController.bg_music_fase_1.stop()
 		MusicController.bg_music_fase_2.stop()
+		MusicController.bg_music_fase_3.stop()
 		bg_music_fase_3.play()

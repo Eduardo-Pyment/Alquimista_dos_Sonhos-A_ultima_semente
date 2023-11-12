@@ -5,7 +5,7 @@ class_name air_state
 @export var pouso_state : state
 @export var animacao_pousando : String = "Pouso"
 
-func state_process(delta):
+func state_process(_delta):
 	if(Player.is_on_floor()):
 		Proximo_state = pouso_state
 
