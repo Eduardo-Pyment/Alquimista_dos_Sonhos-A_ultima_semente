@@ -792,7 +792,7 @@ collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 200
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera_fase2" type="Camera2D" parent="Player"]
 ignore_rotation = false
 limit_left = -64
 limit_right = 3136
