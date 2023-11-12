@@ -1,5 +1,4 @@
-
-*.cache
+projeto/.import
 *.cache
 .godot/shader_cache/SceneShaderGLES3/7757391c487ac94cfa6418166bd5fdacce470f09394c1a2a875e878c8c5d8596/0569298c4bd67f71fa194e93b48a113d8bfd63e0.cache
 .godot/shader_cache/SceneShaderGLES3/7757391c487ac94cfa6418166bd5fdacce470f09394c1a2a875e878c8c5d8596/4e002e62ef22dfdcf101da3b462c847e3241dd05.cache
