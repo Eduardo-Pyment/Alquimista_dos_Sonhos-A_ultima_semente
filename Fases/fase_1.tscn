@@ -1,6 +1,7 @@
-[gd_scene load_steps=61 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=62 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
+[ext_resource type="Script" path="res://Scripts/fase_1.gd" id="1_xp5g1"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
 [ext_resource type="Texture2D" uid="uid://dpkkfkareowkk" path="res://Assets/Textures/Background/fase1/pixil-frame-0 (4).png" id="2_adiqc"]
 [ext_resource type="PackedScene" uid="uid://dc2epskdddoys" path="res://Scenes/player.tscn" id="3_3lnc8"]
@@ -1099,6 +1100,7 @@ font_size = 18
 shadow_color = Color(0, 0, 0, 0.6)
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_xp5g1")
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
