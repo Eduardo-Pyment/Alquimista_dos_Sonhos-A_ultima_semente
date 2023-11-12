@@ -25,5 +25,12 @@ func neutralizar_base():
 		get_node("AnimatedSprite2D10").play("aguinha")
 		get_node("AnimatedSprite2D11").play("aguinha")
 		get_node("AnimatedSprite2D12").play("aguinha")
+		get_node("AnimatedSprite2D13").play("aguinha")
+		get_node("AnimatedSprite2D14").play("aguinha")
+		get_node("AnimatedSprite2D15").play("aguinha")
+		get_node("AnimatedSprite2D16").play("aguinha")
+		get_node("AnimatedSprite2D17").play("aguinha")
+		get_node("AnimatedSprite2D18").play("aguinha")
 		$"/root/fase-3/acido_maquina/GPUParticles2D".queue_free()
+		$"/root/fase-3/acido_maquina/GPUParticles2D2".queue_free()
 		
