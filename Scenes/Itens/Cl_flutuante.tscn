@@ -25,7 +25,7 @@ func set_alvo_movimento(PontoAlvo: Vector2):
 	if AlvoMovimento != null:
 		AgenteNavegacao.target_position = PontoAlvo
 
-func _process(delta):
+func _process(_delta):
 	if Globais.base >= 1:
 		$AnimatedSprite2D.play(\"destroy\")
 func _destroy():
@@ -191,6 +191,7 @@ collision_layer = 32
 collision_mask = 32
 motion_mode = 1
 script = SubResource("GDScript_r48vn")
+VelocidadeMovimento = 271.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8a1jc")

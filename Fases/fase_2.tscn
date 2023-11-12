@@ -799,7 +799,6 @@ limit_right = 3136
 limit_bottom = 1984
 limit_smoothed = true
 position_smoothing_enabled = true
-position_smoothing_speed = 3.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource("4_avdjn")
