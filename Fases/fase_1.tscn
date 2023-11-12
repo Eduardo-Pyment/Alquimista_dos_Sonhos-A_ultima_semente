@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cnheov3f87dsx"]
+[gd_scene load_steps=61 format=3 uid="uid://cnheov3f87dsx"]
 
 [ext_resource type="Texture2D" uid="uid://s6sm1dwswbei" path="res://Assets/Textures/Tiles/level_tileset.png" id="1_hsi4l"]
 [ext_resource type="Texture2D" uid="uid://h8pmsdo7vejn" path="res://Assets/Textures/Tiles/Tileset.png" id="2_5fch8"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scripts/ParallaxBackground.gd" id="4_0jjo4"]
 [ext_resource type="Texture2D" uid="uid://drmb2c4jqsyhn" path="res://Assets/Textures/Background/fase1/pixil-frame-0 (6).png" id="4_wboe2"]
 [ext_resource type="Script" path="res://Scripts/World.gd" id="8_a36j6"]
+[ext_resource type="Script" path="res://Scripts/MainCamera.gd" id="9_h0hog"]
 [ext_resource type="PackedScene" uid="uid://bk6t51v2413ci" path="res://Scenes/maquina_agua.tscn" id="12_ufsc5"]
 [ext_resource type="PackedScene" uid="uid://bt5gqx1a1xh4e" path="res://Scenes/Itens/hidrogenios.tscn" id="13_07k27"]
 [ext_resource type="Texture2D" uid="uid://13yv4rt3guwi" path="res://Assets/Textures/Tiles/tiles(600x600).png" id="13_mqhsb"]
@@ -1165,6 +1166,17 @@ unique_name_in_owner = true
 position = Vector2(105, 79)
 collision_layer = 2
 collision_mask = 6
+
+[node name="CameraPlayerSnappy4" type="Camera2D" parent="Player"]
+position = Vector2(-105, -79)
+ignore_rotation = false
+limit_left = 0
+limit_top = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("9_h0hog")
 
 [node name="Zona_fogo_maquina" type="Area2D" parent="."]
 position = Vector2(2064, 416)
