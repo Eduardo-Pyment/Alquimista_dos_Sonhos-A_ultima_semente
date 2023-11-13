@@ -17,10 +17,10 @@ func _on_body_entered(_body):
 		
 		if Globais.zinco > 1 and Globais.current_checkpoint != null:
 			call_deferred("spawn_atomo2")
-			await $collision.call_deferred("queue_free") 
+			$collision.call_deferred("queue_free") 
 		else:
 			call_deferred("spawn_atomo")
-			await $collision.call_deferred("queue_free") 
+			$collision.call_deferred("queue_free") 
 
 func spawn_atomo():
 	var zn_flutuante = load("res://Scenes/Itens/Zn_flutuante.tscn")

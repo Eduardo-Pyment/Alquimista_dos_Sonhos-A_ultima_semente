@@ -12,7 +12,7 @@ func _on_body_entered(_body):
 	Globais.oxigenio += oxigen
 	print(Globais.oxigenio)
 	call_deferred("spawn_atomo")
-	await $collision.call_deferred("queue_free") 
+	$collision.call_deferred("queue_free") 
 
 func spawn_atomo():
 	var hidrogenio_flutuante = load("res://Scenes/Itens/O_flutuante.tscn")

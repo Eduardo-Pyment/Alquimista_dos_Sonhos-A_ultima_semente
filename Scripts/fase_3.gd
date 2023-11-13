@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var player := $Player as CharacterBody2D
 @onready var player_scene = preload("res://Scenes/player.tscn")
-@onready var control = $HUD/control
 
 signal spawnar_na
 signal spawnar_cl
