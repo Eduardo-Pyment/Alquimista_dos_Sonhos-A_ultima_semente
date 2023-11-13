@@ -5,8 +5,8 @@ var silver := 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$animation.play("idle")
-	$"/root/Fase_2".spawnar_ag.connect(spawnar_ag)
-	$"/root/Fase_2".destroy_ag.connect(destroy_ag)
+#	$"/root/Fase_2".spawnar_ag.connect(spawnar_ag)
+#	$"/root/Fase_2".destroy_ag.connect(destroy_ag)
 
 func _on_body_entered(_body):
 	if _body.name == "Player":

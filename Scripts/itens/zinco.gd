@@ -5,8 +5,8 @@ var zinc := 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$animation.play("idle")
-	$"/root/Fase_2".spawnar_zn.connect(spawnar_zn)
-	$"/root/Fase_2".destroy_zn.connect(destroy_zn)
+#	$"/root/Fase_2".spawnar_zn.connect(spawnar_zn)
+#	$"/root/Fase_2".destroy_zn.connect(destroy_zn)
 
 func _on_body_entered(_body):
 	if _body.name == "Player":

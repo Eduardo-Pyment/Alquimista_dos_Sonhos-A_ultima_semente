@@ -85,7 +85,6 @@ script = SubResource("GDScript_734wi")
 
 [node name="Sair" type="Button" parent="MarginContainer/VBoxContainer"]
 process_mode = 3
-visible = false
 layout_mode = 2
 icon = ExtResource("6_b3sv4")
 flat = true

@@ -2396,9 +2396,6 @@ transform = Transform2D(1, 0, 0, 1, 40, 0)
 offset_left = -40.0
 offset_right = -40.0
 
-[node name="Sair" parent="MenuPause/ControlPause/VBoxContainer" index="2"]
-visible = false
-
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="vida_tempo" type="Control" parent="HUD"]

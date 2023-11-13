@@ -12,7 +12,7 @@ script/source = "extends CharacterBody2D
 
 func _ready():
 	AlvoMovimento = get_node_or_null(\"/root/Fase_2/Player\")  # Usando get_node_or_null para evitar erros se o nó não existir
-	$\"/root/Fase_2\".destroy_cu_flutuante.connect(_destroy)
+#	$\"/root/Fase_2\".destroy_cu_flutuante.connect(_destroy)
 	if AlvoMovimento != null:
 		call_deferred(\"actor_setup\")
 		

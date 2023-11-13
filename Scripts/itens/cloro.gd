@@ -5,8 +5,8 @@ var cl := 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$animation.play("idle")
-	$"/root/fase-3".spawnar_cl.connect(spawnar_cl)
-	$"/root/fase-3".destroy_cl.connect(destroy_cl)
+#	$"/root/fase-3".spawnar_cl.connect(spawnar_cl)
+#	$"/root/fase-3".destroy_cl.connect(destroy_cl)
 		
 func _on_body_entered(_body):
 	if _body.name == "Player":
