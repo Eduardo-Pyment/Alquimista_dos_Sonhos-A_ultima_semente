@@ -1105,6 +1105,9 @@ offset_top = 40.0
 offset_right = 56.0
 offset_bottom = 80.0
 
+[node name="MusicaSlider" parent="MenuPause/ControlOpcoes/ScrollContainer/ColorRect/Control" index="2"]
+metadata/_edit_use_anchors_ = true
+
 [node name="Zona_mercurio_maquina" type="Area2D" parent="."]
 position = Vector2(2536, 637)
 collision_layer = 0
@@ -1222,7 +1225,8 @@ motion_mirroring = Vector2(768, 0)
 texture_filter = 1
 texture = ExtResource("27_4m8fe")
 
-[node name="MusicController" parent="." instance=ExtResource("29_avdwf")]
+[node name="MusicController" parent="." node_paths=PackedStringArray("level_2") instance=ExtResource("29_avdwf")]
+level_2 = NodePath("..")
 
 [node name="maquina_solida" parent="." instance=ExtResource("22_umjhe")]
 position = Vector2(2256, 576)
