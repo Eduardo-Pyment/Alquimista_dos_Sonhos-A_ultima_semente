@@ -833,7 +833,7 @@ script = ExtResource("4_avdjn")
 [node name="AnimatableBody2D" parent="." instance=ExtResource("12_y2n6u")]
 position = Vector2(1296, 1264)
 Distancia = Vector2(0, 640)
-TempoTransicao = 9.0
+TempoTransicao = 12.0
 
 [node name="sprite_plataform" parent="AnimatableBody2D/CollisionShape2D" index="0"]
 modulate = Color(1.55, 2.73, 1.87, 1)

@@ -113,7 +113,7 @@ offset_right = 451.092
 offset_bottom = 129.463
 scale = Vector2(1, 1.25077)
 max_value = 10.0
-value = 3.0
+value = 8.0
 
 [node name="SFXVolume" type="Label" parent="ScrollContainer/ColorRect/Control"]
 layout_mode = 0
@@ -132,6 +132,8 @@ offset_top = 286.637
 offset_right = 450.317
 offset_bottom = 302.637
 scale = Vector2(1, 1.37797)
+step = 10.0
+value = 50.0
 
 [node name="TelaCheia" type="Label" parent="ScrollContainer/ColorRect/Control"]
 layout_mode = 0
