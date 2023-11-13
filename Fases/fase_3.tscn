@@ -2388,8 +2388,13 @@ texture = ExtResource("21_vwune")
 visible = false
 
 [node name="MenuPause" parent="." instance=ExtResource("16_ac4cf")]
+layer = 2
 offset = Vector2(40, 0)
 transform = Transform2D(1, 0, 0, 1, 40, 0)
+
+[node name="ColorRect" parent="MenuPause" index="0"]
+offset_left = -40.0
+offset_right = -40.0
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -2471,3 +2476,4 @@ label_settings = SubResource("LabelSettings_rknyg")
 [connection signal="timeout" from="HUD/vida_tempo/clock_timer" to="HUD/vida_tempo" method="_on_clock_timer_timeout"]
 
 [editable path="Control/caixa2"]
+[editable path="MenuPause"]
