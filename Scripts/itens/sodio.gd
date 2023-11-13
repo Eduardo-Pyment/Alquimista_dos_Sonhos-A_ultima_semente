@@ -16,10 +16,10 @@ func _on_body_entered(_body):
 		print(Globais.sodio)
 		
 		if Globais.sodio >= 2 and Globais.current_checkpoint != null:
-			spawn_atomo2()
+			call_deferred("spawn_atomo2")
 			await $collision.call_deferred("queue_free") 
 		else:
-			spawn_atomo()
+			call_deferred("spawn_atomo")
 			await $collision.call_deferred("queue_free") 
 	
 func spawn_atomo():
