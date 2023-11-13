@@ -1,8 +1,5 @@
 extends Control
 
-func _ready():
-	pass
-
 func _on_jogar_pressed():
 	$SelecionarBtn.play()
 	TransicaoDeCena.cena_transicao("res://Fases/fase_1.tscn")

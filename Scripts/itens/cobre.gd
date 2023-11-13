@@ -5,8 +5,8 @@ var copper := 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$animation.play("idle")
-	$"/root/Fase_2".spawnar_cu.connect(spawnar_cu)
-	$"/root/Fase_2".destroy_cu.connect(destroy_cu)
+#	$"/root/Fase_2".spawnar_cu.connect(spawnar_cu)
+#	$"/root/Fase_2".destroy_cu.connect(destroy_cu)
 
 func _on_body_entered(_body):
 	if _body.name == "Player":
