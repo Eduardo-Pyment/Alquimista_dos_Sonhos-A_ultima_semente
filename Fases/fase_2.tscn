@@ -817,7 +817,7 @@ navigation_polygon = SubResource("NavigationPolygon_wa32a")
 position = Vector2(1932, 403)
 collision_layer = 2
 collision_mask = 6
-VelocidadeHorizontal = 200
+VelocidadeHorizontal = 230
 
 [node name="Camera_fase2" type="Camera2D" parent="Player"]
 ignore_rotation = false

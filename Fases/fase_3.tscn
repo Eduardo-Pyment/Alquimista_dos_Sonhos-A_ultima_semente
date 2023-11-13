@@ -1689,9 +1689,10 @@ navigation_polygon = SubResource("NavigationPolygon_pqce3")
 
 [node name="Player" parent="." instance=ExtResource("8_phxq2")]
 unique_name_in_owner = true
-position = Vector2(-636, 63)
+position = Vector2(-669, 66)
 collision_layer = 2
 collision_mask = 6
+VelocidadeHorizontal = 230
 
 [node name="CameraFase3" type="Camera2D" parent="Player"]
 show_behind_parent = true
@@ -1951,13 +1952,13 @@ frame_progress = 0.797999
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="acido_maquina"]
 position = Vector2(123, 13)
-amount = 50
+amount = 30
 process_material = SubResource("ParticleProcessMaterial_hrvae")
 texture = ExtResource("26_kvkwm")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="acido_maquina"]
 position = Vector2(403, 13)
-amount = 50
+amount = 30
 process_material = SubResource("ParticleProcessMaterial_hrvae")
 texture = ExtResource("26_kvkwm")
 
@@ -2063,7 +2064,7 @@ frame_progress = 0.101594
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="acido1"]
 position = Vector2(193, 11)
-amount = 100
+amount = 30
 process_material = SubResource("ParticleProcessMaterial_5embn")
 texture = ExtResource("26_kvkwm")
 
@@ -2120,7 +2121,7 @@ frame_progress = 0.101594
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="acido2"]
 position = Vector2(67, 13)
-amount = 20
+amount = 10
 process_material = SubResource("ParticleProcessMaterial_5laxa")
 texture = ExtResource("26_kvkwm")
 
@@ -2248,7 +2249,7 @@ frame_progress = 0.101594
 [node name="ParticulaAcido" type="GPUParticles2D" parent="acido3"]
 z_index = -3
 position = Vector2(275, 13)
-amount = 200
+amount = 20
 process_material = SubResource("ParticleProcessMaterial_x3yym")
 texture = ExtResource("26_kvkwm")
 
