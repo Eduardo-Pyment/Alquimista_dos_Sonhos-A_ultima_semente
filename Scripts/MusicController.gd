@@ -1,13 +1,12 @@
 extends Node2D
 
-@onready var bgmusic_menu: AudioStreamPlayer = $BgMusicMenu
 @onready var bg_music_fase_1 = $BgMusicFase1
 @onready var bg_music_fase_2 = $BgMusicFase2
 @onready var bg_music_fase_3 = $BgMusicFase3
 
-@onready var level_1 = $"/root/Level1"
-@onready var level_2 = $"/root/Fase_2"
-@onready var level_3 = $"/root/fase-3"
+@export var level_1 = Node
+@export var level_2 = Node
+@export var level_3 = Node
 
 func _ready():
 	if get_tree().current_scene == level_1:

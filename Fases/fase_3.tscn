@@ -1689,7 +1689,7 @@ navigation_polygon = SubResource("NavigationPolygon_pqce3")
 
 [node name="Player" parent="." instance=ExtResource("8_phxq2")]
 unique_name_in_owner = true
-position = Vector2(-669, 66)
+position = Vector2(-634, 95)
 collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 230
@@ -1751,9 +1751,10 @@ position = Vector2(-647, 1989)
 [node name="cloro" parent="." instance=ExtResource("11_6tnn1")]
 position = Vector2(925, 737)
 
-[node name="Portal" parent="." instance=ExtResource("12_120u4")]
+[node name="Portal" parent="." node_paths=PackedStringArray("cena_atual") instance=ExtResource("12_120u4")]
 modulate = Color(3.5, 3.5, 1, 1)
 position = Vector2(1587, 226)
+cena_atual = NodePath("..")
 
 [node name="Spikes_area" type="Area2D" parent="."]
 visibility_layer = 3
@@ -1816,11 +1817,13 @@ texture = ExtResource("17_eydld")
 region_enabled = true
 region_rect = Rect2(0, 0, 930, 8)
 
-[node name="acido_maquina" type="Area2D" parent="."]
+[node name="acido_maquina" type="Area2D" parent="." node_paths=PackedStringArray("gpu_particles_2d", "gpu_particles_2d2")]
 position = Vector2(976, 272)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("25_r7ehs")
+gpu_particles_2d = NodePath("GPUParticles2D")
+gpu_particles_2d2 = NodePath("GPUParticles2D2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="acido_maquina"]
 position = Vector2(273.5, 14)

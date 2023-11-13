@@ -16,11 +16,11 @@ func _on_body_entered(_body):
 		print(Globais.prata)
 		
 		if Globais.prata > 1 and Globais.current_checkpoint != null:
-			spawn_atomo2()
-			await $collision.call_deferred("queue_free") 
+			call_deferred("spawn_atomo2")
+			$collision.call_deferred("queue_free") 
 		else:
-			spawn_atomo()
-			await $collision.call_deferred("queue_free") 
+			call_deferred("spawn_atomo")
+			$collision.call_deferred("queue_free") 
 
 func spawn_atomo():
 	var ag_flutuante = load("res://Scenes/Itens/Ag_flutuante.tscn")
