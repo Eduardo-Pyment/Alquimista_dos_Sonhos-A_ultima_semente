@@ -1467,6 +1467,9 @@ transform = Transform2D(1, 0, 0, 1, 30, 0)
 offset_left = -30.0
 offset_right = -30.0
 
+[node name="Sair" parent="MenuPause/ControlPause/VBoxContainer" index="2"]
+visible = false
+
 [node name="GameOver" parent="." instance=ExtResource("26_2mpt5")]
 layer = 0
 visible = false
