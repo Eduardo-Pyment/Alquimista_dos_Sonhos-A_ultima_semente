@@ -1165,7 +1165,7 @@ navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_3lnc8")]
 unique_name_in_owner = true
-position = Vector2(105, 79)
+position = Vector2(117, 95)
 collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 230
@@ -1383,11 +1383,12 @@ offset_top = 58.0
 offset_right = 708.8
 offset_bottom = 104.2
 
-[node name="Portal" parent="." node_paths=PackedStringArray("cena_atual") instance=ExtResource("25_yskm7")]
+[node name="Portal" parent="." node_paths=PackedStringArray("cena_atual", "level_1") instance=ExtResource("25_yskm7")]
 modulate = Color(2, 2, 2, 1)
 position = Vector2(3766, 220)
 scale = Vector2(1.2, 1.2)
 cena_atual = NodePath("..")
+level_1 = NodePath("..")
 
 [node name="MusicController" parent="." node_paths=PackedStringArray("level_1") instance=ExtResource("27_uj527")]
 level_1 = NodePath("..")

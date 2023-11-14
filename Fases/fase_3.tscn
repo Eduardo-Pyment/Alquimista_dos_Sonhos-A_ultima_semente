@@ -1689,7 +1689,7 @@ navigation_polygon = SubResource("NavigationPolygon_pqce3")
 
 [node name="Player" parent="." instance=ExtResource("8_phxq2")]
 unique_name_in_owner = true
-position = Vector2(1555, 157)
+position = Vector2(-567, 69)
 collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 230
@@ -1751,10 +1751,11 @@ position = Vector2(-647, 1989)
 [node name="cloro" parent="." instance=ExtResource("11_6tnn1")]
 position = Vector2(925, 737)
 
-[node name="Portal" parent="." node_paths=PackedStringArray("cena_atual") instance=ExtResource("12_120u4")]
+[node name="Portal" parent="." node_paths=PackedStringArray("cena_atual", "level_3") instance=ExtResource("12_120u4")]
 modulate = Color(3.5, 3.5, 1, 1)
 position = Vector2(1587, 226)
 cena_atual = NodePath("..")
+level_3 = NodePath("..")
 
 [node name="Spikes_area" type="Area2D" parent="."]
 visibility_layer = 3
@@ -2300,7 +2301,8 @@ amount = 10
 process_material = SubResource("ParticleProcessMaterial_w5rye")
 texture = ExtResource("26_kvkwm")
 
-[node name="MusicController" parent="." instance=ExtResource("26_t0fej")]
+[node name="MusicController" parent="." node_paths=PackedStringArray("level_3") instance=ExtResource("26_t0fej")]
+level_3 = NodePath("..")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
