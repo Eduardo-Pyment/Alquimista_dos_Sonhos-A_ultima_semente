@@ -1,6 +1,5 @@
 extends Area2D
 @export var gpu_particles_2d: GPUParticles2D
-@export var gpu_particles_2d2: GPUParticles2D
 
 func _ready():
 	$"/root/fase-3/maquina_base".gerar_base.connect(neutralizar_base)
@@ -32,6 +31,4 @@ func neutralizar_base():
 		get_node("AnimatedSprite2D16").play("aguinha")
 		get_node("AnimatedSprite2D17").play("aguinha")
 		get_node("AnimatedSprite2D18").play("aguinha")
-		gpu_particles_2d.queue_free()
-		gpu_particles_2d2.queue_free()
-		
+		gpu_particles_2d.queue_free()		

@@ -1497,7 +1497,7 @@ animations = [{
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hrvae"]
 emission_shape = 3
-emission_box_extents = Vector3(142, 1, 1)
+emission_box_extents = Vector3(292, 1, 1)
 particle_flag_disable_z = true
 direction = Vector3(0, -1, 0)
 spread = 20.0
@@ -1594,9 +1594,10 @@ font_color = Color(0, 0, 0, 1)
 shadow_color = Color(0, 0, 0, 0.121569)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13tj5"]
-size = Vector2(17.5, 18)
+size = Vector2(43.5, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2q2ak"]
+size = Vector2(44, 36)
 
 [sub_resource type="LabelSettings" id="LabelSettings_webkc"]
 line_spacing = 0.0
@@ -1818,13 +1819,12 @@ texture = ExtResource("17_eydld")
 region_enabled = true
 region_rect = Rect2(0, 0, 930, 8)
 
-[node name="acido_maquina" type="Area2D" parent="." node_paths=PackedStringArray("gpu_particles_2d", "gpu_particles_2d2")]
+[node name="acido_maquina" type="Area2D" parent="." node_paths=PackedStringArray("gpu_particles_2d")]
 position = Vector2(976, 272)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("25_r7ehs")
 gpu_particles_2d = NodePath("GPUParticles2D")
-gpu_particles_2d2 = NodePath("GPUParticles2D2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="acido_maquina"]
 position = Vector2(273.5, 14)
@@ -1955,16 +1955,11 @@ autoplay = "acido"
 frame_progress = 0.797999
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="acido_maquina"]
-position = Vector2(123, 13)
-amount = 30
+position = Vector2(274, 14)
+amount = 40
 process_material = SubResource("ParticleProcessMaterial_hrvae")
 texture = ExtResource("26_kvkwm")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="acido_maquina"]
-position = Vector2(403, 13)
-amount = 30
-process_material = SubResource("ParticleProcessMaterial_hrvae")
-texture = ExtResource("26_kvkwm")
+visibility_rect = Rect2(-280, -100, 560, 200)
 
 [node name="acido1" type="Area2D" parent="."]
 z_index = -1
@@ -2071,6 +2066,7 @@ position = Vector2(193, 11)
 amount = 30
 process_material = SubResource("ParticleProcessMaterial_5embn")
 texture = ExtResource("26_kvkwm")
+visibility_rect = Rect2(-204, -100, 408, 200)
 
 [node name="acido2" type="Area2D" parent="."]
 position = Vector2(-144, 272)
@@ -2256,6 +2252,7 @@ position = Vector2(275, 13)
 amount = 20
 process_material = SubResource("ParticleProcessMaterial_x3yym")
 texture = ExtResource("26_kvkwm")
+visibility_rect = Rect2(-292, -100, 584, 200)
 
 [node name="acido4" type="Area2D" parent="."]
 position = Vector2(752, 592)
@@ -2366,11 +2363,11 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D"]
-position = Vector2(-264.75, 244)
+position = Vector2(-263, 237)
 shape = SubResource("RectangleShape2D_13tj5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/Area2D"]
-position = Vector2(-264, 245)
+position = Vector2(-264, 249)
 texture = ExtResource("21_vwune")
 
 [node name="Area2D3" type="Area2D" parent="Control"]
@@ -2379,7 +2376,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Area2D3"]
-position = Vector2(-11, 112)
+position = Vector2(-10, 104)
 shape = SubResource("RectangleShape2D_2q2ak")
 
 [node name="Sprite2D" type="Sprite2D" parent="Control/Area2D3"]

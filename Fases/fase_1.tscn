@@ -971,8 +971,8 @@ color_initial_ramp = SubResource("GradientTexture1D_0bbvq")
 [sub_resource type="Curve" id="Curve_edaty"]
 min_value = 0.7
 max_value = 2.0
-_data = [Vector2(0, 2), 0.0, -0.0190243, 0, 0, Vector2(0.497116, 1.70053), 0.0, 0.0, 0, 0, Vector2(1, 1.4361), 1.24681, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 2), 0.0, -0.0190243, 0, 0, Vector2(0.43956, 1.31579), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_h2fbx"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -1073,7 +1073,7 @@ func _on_animated_sprite_2d_animation_finished():
 size = Vector2(32, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w0pur"]
-size = Vector2(32, 23)
+size = Vector2(153, 76.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dvf8b"]
 line_spacing = 0.0
@@ -1165,7 +1165,7 @@ navigation_polygon = SubResource("NavigationPolygon_2chs2")
 
 [node name="Player" parent="." instance=ExtResource("3_3lnc8")]
 unique_name_in_owner = true
-position = Vector2(117, 95)
+position = Vector2(112, 80)
 collision_layer = 2
 collision_mask = 6
 VelocidadeHorizontal = 230
@@ -1201,12 +1201,15 @@ amount = 500
 process_material = SubResource("ParticleProcessMaterial_vvda1")
 texture = ExtResource("16_mvmjj")
 fract_delta = false
+visibility_rect = Rect2(-150, -100, 300, 200)
+draw_order = 0
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+z_index = -2
 position = Vector2(2049, 416)
 emitting = false
-amount = 1300
-lifetime = 1.5
+amount = 500
+lifetime = 2.0
 one_shot = true
 explosiveness = 0.5
 randomness = 1.0
@@ -1240,6 +1243,7 @@ amount = 300
 process_material = SubResource("ParticleProcessMaterial_qhb7x")
 texture = ExtResource("16_mvmjj")
 randomness = 1.0
+visibility_rect = Rect2(-300, -100, 600, 200)
 
 [node name="Zona_fogo2" type="Area2D" parent="."]
 position = Vector2(3216, 440)
@@ -1373,15 +1377,23 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dicas/Area2D"]
-position = Vector2(103, 9)
+position = Vector2(75.5, -17.75)
 shape = SubResource("RectangleShape2D_w0pur")
 
 [node name="caixa2" parent="Dicas" instance=ExtResource("23_b3g00")]
 layout_mode = 1
-offset_left = 411.0
-offset_top = 58.0
-offset_right = 708.8
-offset_bottom = 104.2
+offset_left = 240.0
+offset_top = 40.0
+offset_right = 537.8
+offset_bottom = 86.2
+scale = Vector2(1.4, 1.4)
+
+[node name="RichTextLabel" parent="Dicas/caixa2/NinePatchRect" index="1"]
+offset_left = 4.91304
+offset_top = 22.1622
+offset_right = 283.913
+offset_bottom = 41.1622
+scale = Vector2(1.1, 1.1)
 
 [node name="Portal" parent="." node_paths=PackedStringArray("cena_atual", "level_1") instance=ExtResource("25_yskm7")]
 modulate = Color(2, 2, 2, 1)
@@ -1485,4 +1497,5 @@ visible = false
 [editable path="Plataforma_2"]
 [editable path="Plataforma_3"]
 [editable path="Plataforma_4"]
+[editable path="Dicas/caixa2"]
 [editable path="MenuPause"]
