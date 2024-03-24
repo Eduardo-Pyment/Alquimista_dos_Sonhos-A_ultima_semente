@@ -39,3 +39,7 @@ Para rodar o projeto, siga o seguinte o passo a passo:
 - Pressione f5 para inicializar o projeto
 
 Pronto, com isso já deve ser suficiente para rodar o projeto.
+
+<h2 id="license">License 📃 </h2>
+
+This project is under [MIT](https://github.com/Pyments/QuimiTech/blob/main/LICENSE) license
