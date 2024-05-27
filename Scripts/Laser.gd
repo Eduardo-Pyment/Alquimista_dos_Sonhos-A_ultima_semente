@@ -1,6 +1,3 @@
-# Casts a laser along a raycast, emitting particles on the impact point.
-# Use `is_casting` to make the laser fire and stop.
-# You can attach it to a weapon or a ship; the laser will rotate with its parent.
 extends RayCast2D
 
 # Speed at which the laser extends when first fired, in pixels per seconds.

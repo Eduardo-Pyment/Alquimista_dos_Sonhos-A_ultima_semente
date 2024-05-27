@@ -25,6 +25,7 @@ TransicaoDeCena="*res://Scenes/transicao_de_cena.tscn"
 
 window/size/viewport_width=768
 window/size/viewport_height=448
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [filesystem]

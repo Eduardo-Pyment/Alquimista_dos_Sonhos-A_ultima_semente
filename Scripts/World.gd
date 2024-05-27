@@ -13,7 +13,6 @@ var is_timer_running = false
 
 signal time_is_up
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	show()
 	vida.text = str(Globais.player_life).pad_zeros(3)
@@ -23,7 +22,6 @@ func _ready():
 	reset_clock_timer()
 	start_clock_timer()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	vida.text = str(Globais.player_life).pad_zeros(1)
 	
@@ -53,7 +51,6 @@ func reset_clock_timer():
 	minutos = 0
 	segundos = 0
 
-# Emitir o sinal 'time_is_up' quando necessário
 func check_time_up():
 	if minutos >= 5:  # Defina a condição em que você deseja emitir o sinal
 		emit_signal("time_is_up")

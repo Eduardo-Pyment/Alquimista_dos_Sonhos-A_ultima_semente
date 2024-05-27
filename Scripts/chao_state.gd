@@ -8,16 +8,7 @@ class_name chao_state
 @onready var CayTimer = $"../../CayTimer"
 @onready var particulas = $"../../CPUParticles2D"
 var PuloDisponivel: bool
-	# Handle Jump.
-#if is_on_floor():
-#	PuloDisponivel = true
-#
-#elif PuloDisponivel && CayTimer.is_stopped():
-#	CayTimer.start()
-#
-#if PuloDisponivel && Input.is_action_just_pressed("ui_accept"):
-#	velocity.y = -VelocidadePulo
-#	PuloDisponivel = false
+
 func state_process(_delta):
 	if(!Player.is_on_floor()):
 		Proximo_state = ar_state
@@ -35,5 +26,3 @@ func pular():
 	playback.travel("Pulo")
 	PuloDisponivel = false
 	particulas.emitting = true
-	#particulas.position.y = Player.position.y + 10
-	

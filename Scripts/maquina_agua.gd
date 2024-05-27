@@ -4,11 +4,9 @@ var inside = false
 
 signal gerar_agua
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite2D.modulate.a = 0
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_up") and inside == true:
 		if Globais.hidrogenio >= 2 and Globais.oxigenio >= 1:
